@@ -1,12 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { ComparisonPanel } from "@/components/ComparisonPanel";
+import { DamageTable } from "@/components/DamageTable";
 import { MyTeamPanel } from "@/components/MyTeamPanel";
 import { PokemonSearch } from "@/components/PokemonSearch";
 import { PowerTable } from "@/components/PowerTable";
 import { UsageSummary } from "@/components/UsageSummary";
 import { calculateBulk } from "@/lib/calc/bulk";
+import { calculateDamage } from "@/lib/calc/damage";
 import { calculateMovePower } from "@/lib/calc/power";
 import { applyChoiceScarf } from "@/lib/calc/speed";
 import { calculateStats } from "@/lib/calc/stats";
@@ -66,26 +68,47 @@ export default function Home() {
   const myBulk = calculateBulk(myStats);
   const opponentBulk = calculateBulk(opponentStats);
 
-  const myPowers = useMemo(
-    () =>
-      mySet.moves
-        .map(findMoveByKey)
-        .filter((move) => move !== undefined)
-        .map((move) => calculateMovePower({ pokemonTypes: myPokemon.types, stats: myStats, move, item: myItem }))
-        .filter((result) => result !== undefined),
-    [myItem, myPokemon.types, mySet.moves, myStats]
-  );
+  const myMoves = mySet.moves.map(findMoveByKey).filter((move) => move !== undefined);
+  const opponentMoves = (usage?.data.moves ?? [])
+    .slice(0, 10)
+    .map((entry) => findMoveByKey(entry.key))
+    .filter((move) => move !== undefined);
 
-  const opponentPowers = useMemo(
-    () =>
-      (usage?.data.moves ?? [])
-        .slice(0, 10)
-        .map((entry) => findMoveByKey(entry.key))
-        .filter((move) => move !== undefined)
-        .map((move) => calculateMovePower({ pokemonTypes: opponentPokemon.types, stats: opponentStats, move, item: opponentItem }))
-        .filter((result) => result !== undefined),
-    [opponentItem, opponentPokemon.types, opponentStats, usage?.data.moves]
-  );
+  const myPowers = myMoves
+    .map((move) => calculateMovePower({ pokemonTypes: myPokemon.types, stats: myStats, move, item: myItem }))
+    .filter((result) => result !== undefined);
+
+  const opponentPowers = opponentMoves
+    .map((move) => calculateMovePower({ pokemonTypes: opponentPokemon.types, stats: opponentStats, move, item: opponentItem }))
+    .filter((result) => result !== undefined);
+
+  const myDamageRows = myMoves
+    .map((move) =>
+      calculateDamage({
+        level: mySet.level,
+        attackerTypes: myPokemon.types,
+        defenderTypes: opponentPokemon.types,
+        attackerStats: myStats,
+        defenderStats: opponentStats,
+        move,
+        item: myItem
+      })
+    )
+    .filter((result) => result !== undefined);
+
+  const opponentDamageRows = opponentMoves
+    .map((move) =>
+      calculateDamage({
+        level: 50,
+        attackerTypes: opponentPokemon.types,
+        defenderTypes: myPokemon.types,
+        attackerStats: opponentStats,
+        defenderStats: myStats,
+        move,
+        item: opponentItem
+      })
+    )
+    .filter((result) => result !== undefined);
 
   function handleSearch() {
     const found = findPokemonByName(query);
@@ -116,6 +139,10 @@ export default function Home() {
         myBulk={myBulk}
         opponentBulk={opponentBulk}
       />
+      <div className="grid gap-4 xl:grid-cols-2">
+        <DamageTable title="내 기술 → 상대 몇타/난수" rows={myDamageRows} />
+        <DamageTable title="상대 기술 → 내 포켓몬 몇타/난수" rows={opponentDamageRows} />
+      </div>
       <div className="grid gap-4 xl:grid-cols-2">
         <PowerTable title="내 공격 기술 결정력" rows={myPowers} targetBulk={opponentBulk.physical} />
         <PowerTable title="상대 공격 기술 결정력" rows={opponentPowers} targetBulk={myBulk.physical} />

@@ -21,3 +21,18 @@ export type BulkResult = {
   physical: number;
   special: number;
 };
+
+export type DamageResult = {
+  move: MoveMaster;
+  rolls: number[];
+  minDamage: number;
+  maxDamage: number;
+  minPercent: number;
+  maxPercent: number;
+  typeEffectiveness: number;
+  stab: number;
+  itemMultiplier: number;
+  offensiveStat: number;
+  defensiveStat: number;
+  koSummary: string;
+};
