@@ -1,0 +1,19 @@
+[
+  {
+    "id": "my-garchomp-focus-sash",
+    "pokeKey": "0445-00",
+    "nickname": "샘플 한카리아스",
+    "level": 50,
+    "natureKey": 13,
+    "itemKey": 275,
+    "evs": {
+      "hp": 2,
+      "atk": 32,
+      "def": 0,
+      "spa": 0,
+      "spd": 0,
+      "spe": 32
+    },
+    "moves": [89, 200, 317, 799]
+  }
+]

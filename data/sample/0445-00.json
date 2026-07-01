@@ -1,0 +1,57 @@
+{
+  "season": 3,
+  "rule": 10,
+  "poke_key": "0445-00",
+  "version": "champions",
+  "source": "official",
+  "data": {
+    "items": [
+      { "rank": 1, "key": 275, "name": "기합의띠", "rate": 37.8 },
+      { "rank": 2, "key": 287, "name": "구애스카프", "rate": 23.6 },
+      { "rank": 3, "key": 158, "name": "자뭉열매", "rate": 23.0 },
+      { "rank": 4, "key": 270, "name": "생명의구슬", "rate": 5.1 }
+    ],
+    "abilities": [],
+    "natures": [
+      { "rank": 1, "key": 13, "name": "ようき", "rate": 57.2 },
+      { "rank": 2, "key": 3, "name": "いじっぱり", "rate": 23.1 }
+    ],
+    "moves": [
+      { "rank": 1, "key": 89, "name": "じしん", "rate": 99.5 },
+      { "rank": 2, "key": 446, "name": "ステルスロック", "rate": 48.8 },
+      { "rank": 3, "key": 200, "name": "げきりん", "rate": 45.6 },
+      { "rank": 4, "key": 317, "name": "がんせきふうじ", "rate": 34.5 },
+      { "rank": 5, "key": 799, "name": "スケイルショット", "rate": 30.6 }
+    ],
+    "teammates": [],
+    "battle_teammates": [],
+    "stat_points": {
+      "skeletons": [
+        {
+          "rank": 1,
+          "label": "H2/A32/S32",
+          "raw": "02-20-00-00-00-20",
+          "pct": 53.7,
+          "rep_ev": {
+            "H": 2,
+            "A": 32,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "S": 32
+          }
+        }
+      ],
+      "raw": [],
+      "marginals": []
+    },
+    "win_moves": [],
+    "lose_moves": [],
+    "win_pokemons": [],
+    "lose_pokemons": [],
+    "mega": [],
+    "updated_at": "2026-07-01T05:15:44Z"
+  },
+  "created": 1782882944,
+  "synced_at": 1782882944
+}

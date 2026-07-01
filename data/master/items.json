@@ -1,0 +1,6 @@
+[
+  { "key": 275, "koreanName": "기합의띠", "japaneseName": "きあいのタスキ", "englishName": "Focus Sash", "effectType": "none", "multiplier": 1 },
+  { "key": 287, "koreanName": "구애스카프", "japaneseName": "こだわりスカーフ", "englishName": "Choice Scarf", "effectType": "choice_scarf", "multiplier": 1.5 },
+  { "key": 158, "koreanName": "자뭉열매", "japaneseName": "オボンのみ", "englishName": "Sitrus Berry", "effectType": "none", "multiplier": 1 },
+  { "key": 270, "koreanName": "생명의구슬", "japaneseName": "いのちのたま", "englishName": "Life Orb", "effectType": "life_orb", "multiplier": 1.3 }
+]

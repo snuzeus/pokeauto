@@ -1,0 +1,19 @@
+[
+  {
+    "pokeKey": "0445-00",
+    "dexNo": 445,
+    "formNo": 0,
+    "koreanName": "한카리아스",
+    "japaneseName": "ガブリアス",
+    "englishName": "Garchomp",
+    "types": ["dragon", "ground"],
+    "baseStats": {
+      "hp": 108,
+      "atk": 130,
+      "def": 95,
+      "spa": 80,
+      "spd": 85,
+      "spe": 102
+    }
+  }
+]

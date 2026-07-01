@@ -1,0 +1,7 @@
+[
+  { "key": 89, "koreanName": "지진", "japaneseName": "じしん", "englishName": "Earthquake", "type": "ground", "category": "physical", "power": 100, "accuracy": 100 },
+  { "key": 446, "koreanName": "스텔스록", "japaneseName": "ステルスロック", "englishName": "Stealth Rock", "type": "rock", "category": "status", "power": null, "accuracy": null },
+  { "key": 200, "koreanName": "역린", "japaneseName": "げきりん", "englishName": "Outrage", "type": "dragon", "category": "physical", "power": 120, "accuracy": 100 },
+  { "key": 317, "koreanName": "암석봉인", "japaneseName": "がんせきふうじ", "englishName": "Rock Tomb", "type": "rock", "category": "physical", "power": 60, "accuracy": 95 },
+  { "key": 799, "koreanName": "스케일샷", "japaneseName": "スケイルショット", "englishName": "Scale Shot", "type": "dragon", "category": "physical", "power": 25, "accuracy": 90 }
+]
