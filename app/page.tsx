@@ -7,6 +7,7 @@ import { MySetManager } from "@/components/MySetManager";
 import { MyTeamPanel } from "@/components/MyTeamPanel";
 import { PokemonSearch } from "@/components/PokemonSearch";
 import { PowerTable } from "@/components/PowerTable";
+import { SpeedMatchupPanel } from "@/components/SpeedMatchupPanel";
 import { UsageSummary } from "@/components/UsageSummary";
 import { calculateBulk } from "@/lib/calc/bulk";
 import { calculateDamage } from "@/lib/calc/damage";
@@ -157,40 +158,64 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-6">
-      <header>
-        <h1 className="text-2xl font-semibold text-gray-950">Pokemon Champions 메타 계산기</h1>
-        <p className="mt-1 text-sm text-gray-600">로컬 샘플 데이터 기준 · 시즌 3 · 룰 10</p>
+    <main className="min-h-screen bg-[#f3f4f6]">
+      <header className="border-b border-gray-200 bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-sm font-medium text-gray-500">Pokemon Champions</p>
+            <h1 className="mt-1 text-3xl font-semibold text-gray-950">메타 계산기</h1>
+          </div>
+          <p className="text-sm text-gray-600">로컬 샘플 데이터 기준 · 시즌 3 · 룰 10</p>
+        </div>
       </header>
-      <PokemonSearch query={query} onQueryChange={setQuery} onSearch={handleSearch} error={searchError} />
-      <MySetManager
-        sets={mySets}
-        selectedSetId={mySet.id}
-        pokemon={myPokemon}
-        natures={natures}
-        items={items}
-        moves={moves}
-        onSelectSet={setSelectedSetId}
-        onAddSet={handleAddSet}
-      />
-      <div className="grid gap-4 md:grid-cols-2">
-        <MyTeamPanel set={mySet} pokemon={myPokemon} />
-        <UsageSummary pokemon={opponentPokemon} nature={opponentNature} item={opponentItem} statPoint={opponentStatPoint} />
-      </div>
-      <ComparisonPanel
-        mySpeed={myStats.spe}
-        opponentSpeed={opponentStats.spe}
-        opponentScarfSpeed={applyChoiceScarf(opponentStats.spe)}
-        myBulk={myBulk}
-        opponentBulk={opponentBulk}
-      />
-      <div className="grid gap-4 xl:grid-cols-2">
-        <DamageTable title="내 기술 → 상대 몇타/난수" rows={myDamageRows} />
-        <DamageTable title="상대 기술 → 내 포켓몬 몇타/난수" rows={opponentDamageRows} />
-      </div>
-      <div className="grid gap-4 xl:grid-cols-2">
-        <PowerTable title="내 공격 기술 결정력" rows={myPowers} targetBulk={opponentBulk.physical} />
-        <PowerTable title="상대 공격 기술 결정력" rows={opponentPowers} targetBulk={myBulk.physical} />
+
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-6">
+        <section className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
+          <div className="flex flex-col gap-4">
+            <PokemonSearch query={query} onQueryChange={setQuery} onSearch={handleSearch} error={searchError} />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <MyTeamPanel set={mySet} pokemon={myPokemon} />
+              <UsageSummary pokemon={opponentPokemon} nature={opponentNature} item={opponentItem} statPoint={opponentStatPoint} />
+            </div>
+          </div>
+          <SpeedMatchupPanel
+            myName={mySet.nickname ?? myPokemon.koreanName}
+            opponentName={opponentPokemon.koreanName}
+            mySpeed={myStats.spe}
+            opponentSpeed={opponentStats.spe}
+            opponentScarfSpeed={applyChoiceScarf(opponentStats.spe)}
+          />
+        </section>
+
+        <section className="grid gap-5 xl:grid-cols-2">
+          <DamageTable title="내 기술 → 상대" rows={myDamageRows} tone="mine" />
+          <DamageTable title="상대 기술 → 나" rows={opponentDamageRows} tone="opponent" />
+        </section>
+
+        <section className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+          <MySetManager
+            sets={mySets}
+            selectedSetId={mySet.id}
+            pokemon={myPokemon}
+            natures={natures}
+            items={items}
+            moves={moves}
+            onSelectSet={setSelectedSetId}
+            onAddSet={handleAddSet}
+          />
+          <ComparisonPanel
+            mySpeed={myStats.spe}
+            opponentSpeed={opponentStats.spe}
+            opponentScarfSpeed={applyChoiceScarf(opponentStats.spe)}
+            myBulk={myBulk}
+            opponentBulk={opponentBulk}
+          />
+        </section>
+
+        <section className="grid gap-4 xl:grid-cols-2">
+          <PowerTable title="내 공격 기술 결정력" rows={myPowers} targetBulk={opponentBulk.physical} />
+          <PowerTable title="상대 공격 기술 결정력" rows={opponentPowers} targetBulk={myBulk.physical} />
+        </section>
       </div>
     </main>
   );
