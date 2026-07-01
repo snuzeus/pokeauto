@@ -166,18 +166,20 @@ export type MyPokemonSet = {
 
 ## 4. 계산 엔진 설계
 
-계산 모듈은 UI와 분리하고 순수 함수로 작성한다. Pokemon Champions의 정확한 실수치 공식이 확인되기 전까지는 일반 포켓몬식에 가까운 임시 공식을 사용하며, 교체 가능한 함수 경계를 유지한다.
+계산 모듈은 UI와 분리하고 순수 함수로 작성한다. 2026-07-01 조사 기준, Pokemon Showdown Champions 계산기에는 별도 `calcStatChampions`와 `calculateChampions` 구현이 있다. MVP의 실수치 계산은 이 공개 웹 계산기 구현을 기준으로 맞춘다.
 
 ### `lib/calc/stats.ts`
 
-- 입력: 종족값, 레벨, 노력치, 성격
+- 입력: 종족값, 레벨, Stat Point, 성격
 - 출력: HP, Attack, Defense, Special Attack, Special Defense, Speed 실수치
-- HP와 나머지 스탯 계산식을 분리한다.
-- TODO: Champions 전용 레벨/노력치/스탯 공식이 확인되면 이 파일만 교체한다.
+- HP: `base + statPoint + 75`
+- HP 외: `floor(natureMultiplier * (base + statPoint + 20))`
+- `base === 1`인 HP는 1로 유지한다.
+- `level`은 타입 호환을 위해 입력에 남기되 Champions 공식에서는 직접 사용하지 않는다.
 
 ### `lib/calc/power.ts`
 
-결정력 공식:
+초기 결정력 지표 공식:
 
 ```text
 결정력 = 공격 또는 특공 실수치 × 기술 위력 × STAB × 아이템 보정 × 기타 보정
@@ -191,6 +193,22 @@ MVP 반영 요소:
 - 구애머리띠는 물리 기술에 1.5를 적용한다.
 - 구애안경은 특수 기술에 1.5를 적용한다.
 - status move와 위력이 없는 기술은 계산 대상에서 제외한다.
+
+### `lib/calc/damage.ts` 예정
+
+상호 몇 타/난수 확률 기능은 단순 결정력 지표가 아니라 실제 데미지 범위 계산이 필요하다. Showdown 웹 계산기는 `calc/mechanics/champions.js`에서 다음 구조로 Champions 데미지를 계산한다.
+
+- `calculateChampions(...)`가 공격자, 방어자, 기술, 필드 조건을 받아 결과를 만든다.
+- `calculateBaseDamageChampions(...)`는 기존 본가식 `getBaseDamage(level, basePower, attack, defense)`를 기반으로 한다.
+- 최종 데미지는 16개 난수 roll을 순회해 `getFinalDamage(...)`로 만든다.
+- Life Orb 같은 최종 보정은 4096 기반 modifier로 처리된다.
+
+따라서 다음 구현 단계에서는 `@smogon/calc` npm 패키지를 바로 쓰지 않는다. npm 최신 배포본 `0.11.0`에는 Champions mechanics가 포함되어 있지 않기 때문이다. 대신 다음 중 하나를 선택한다.
+
+1. Showdown 웹 계산기의 `calc/mechanics/champions.js`와 필요한 util을 프로젝트에 맞게 최소 포팅한다.
+2. Showdown 계산기 번들을 oracle로 삼아 fixture를 만들고, MVP 범위의 직접 구현을 검증한다.
+
+초기 MVP는 2번으로 시작한다. 지원 범위는 싱글, 레벨 50, 물리/특수 공격 기술, STAB, 타입 상성, 생명의구슬, 구애류, 16단계 난수, 몇 타 확률이다. 날씨, 필드, 랭크, 특성, 벽, 더블 spread 보정은 후속 단계로 둔다.
 
 ### `lib/calc/speed.ts`
 

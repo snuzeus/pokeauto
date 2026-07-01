@@ -16,11 +16,13 @@ function natureMultiplier(stat: Exclude<StatKey, "hp">, nature?: NatureMaster): 
 }
 
 function calculateHp(base: number, ev: number, level: number): number {
-  return Math.floor(((2 * base + Math.floor(ev / 4)) * level) / 100) + level + 10;
+  void level;
+  return base === 1 ? base : base + ev + 75;
 }
 
 function calculateNonHp(base: number, ev: number, level: number, multiplier: number): number {
-  const raw = Math.floor(((2 * base + Math.floor(ev / 4)) * level) / 100) + 5;
+  void level;
+  const raw = base + ev + 20;
   return Math.floor(raw * multiplier);
 }
 

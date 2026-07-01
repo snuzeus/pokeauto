@@ -11,12 +11,12 @@ describe("calculateStats", () => {
     });
 
     expect(stats).toEqual({
-      hp: 168,
-      atk: 139,
-      def: 100,
-      spa: 76,
-      spd: 90,
-      spe: 122
+      hp: 185,
+      atk: 182,
+      def: 115,
+      spa: 90,
+      spd: 105,
+      spe: 169
     });
   });
 });
