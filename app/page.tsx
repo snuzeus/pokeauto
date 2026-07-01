@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Activity, Database, Swords } from "lucide-react";
 import { ComparisonPanel } from "@/components/ComparisonPanel";
 import { DamageTable } from "@/components/DamageTable";
 import { MySetManager } from "@/components/MySetManager";
@@ -158,26 +159,56 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f3f4f6]">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="text-sm font-medium text-gray-500">Pokemon Champions</p>
-            <h1 className="mt-1 text-3xl font-semibold text-gray-950">메타 계산기</h1>
-          </div>
-          <p className="text-sm text-gray-600">로컬 샘플 데이터 기준 · 시즌 3 · 룰 10</p>
-        </div>
-      </header>
+    <main className="min-h-screen bg-[#eef1f4] text-gray-950">
+      <div className="mx-auto grid min-h-screen max-w-[1600px] gap-0 xl:grid-cols-[420px_1fr]">
+        <aside className="border-r border-gray-200 bg-white">
+          <div className="sticky top-0 flex max-h-screen flex-col gap-5 overflow-y-auto px-5 py-5">
+            <header className="border-b border-gray-200 pb-5">
+              <div className="flex items-center gap-2 text-sm font-semibold text-teal-700">
+                <Swords className="h-4 w-4" aria-hidden="true" />
+                Pokemon Champions
+              </div>
+              <h1 className="mt-2 text-3xl font-semibold tracking-normal text-gray-950">매치업 워크벤치</h1>
+              <p className="mt-2 text-sm leading-6 text-gray-600">로컬 샘플 기준으로 스피드, 양방향 데미지 난수, 몇타 확률을 바로 비교합니다.</p>
+            </header>
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-6">
-        <section className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
-          <div className="flex flex-col gap-4">
             <PokemonSearch query={query} onQueryChange={setQuery} onSearch={handleSearch} error={searchError} />
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+
+            <div className="grid gap-3">
               <MyTeamPanel set={mySet} pokemon={myPokemon} />
               <UsageSummary pokemon={opponentPokemon} nature={opponentNature} item={opponentItem} statPoint={opponentStatPoint} />
             </div>
+
+            <MySetManager
+              sets={mySets}
+              selectedSetId={mySet.id}
+              pokemon={myPokemon}
+              natures={natures}
+              items={items}
+              moves={moves}
+              onSelectSet={setSelectedSetId}
+              onAddSet={handleAddSet}
+            />
           </div>
+        </aside>
+
+        <section className="flex flex-col gap-5 px-5 py-5 lg:px-7">
+          <div className="flex flex-col gap-3 border-b border-gray-300 pb-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="flex items-center gap-2 text-sm font-semibold text-gray-600">
+                <Activity className="h-4 w-4" aria-hidden="true" />
+                Live matchup
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-gray-950">
+                {mySet.nickname ?? myPokemon.koreanName} vs {opponentPokemon.koreanName}
+              </h2>
+            </div>
+            <div className="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-600">
+              <Database className="h-4 w-4 text-teal-700" aria-hidden="true" />
+              시즌 3 · 룰 10 · 로컬 캐시
+            </div>
+          </div>
+
           <SpeedMatchupPanel
             myName={mySet.nickname ?? myPokemon.koreanName}
             opponentName={opponentPokemon.koreanName}
@@ -185,24 +216,13 @@ export default function Home() {
             opponentSpeed={opponentStats.spe}
             opponentScarfSpeed={applyChoiceScarf(opponentStats.spe)}
           />
-        </section>
 
-        <section className="grid gap-5 xl:grid-cols-2">
+          <section className="grid gap-5 2xl:grid-cols-2">
           <DamageTable title="내 기술 → 상대" rows={myDamageRows} tone="mine" />
           <DamageTable title="상대 기술 → 나" rows={opponentDamageRows} tone="opponent" />
-        </section>
+          </section>
 
-        <section className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-          <MySetManager
-            sets={mySets}
-            selectedSetId={mySet.id}
-            pokemon={myPokemon}
-            natures={natures}
-            items={items}
-            moves={moves}
-            onSelectSet={setSelectedSetId}
-            onAddSet={handleAddSet}
-          />
+          <section className="grid gap-5 xl:grid-cols-[0.75fr_1.25fr]">
           <ComparisonPanel
             mySpeed={myStats.spe}
             opponentSpeed={opponentStats.spe}
@@ -210,11 +230,11 @@ export default function Home() {
             myBulk={myBulk}
             opponentBulk={opponentBulk}
           />
-        </section>
-
-        <section className="grid gap-4 xl:grid-cols-2">
-          <PowerTable title="내 공격 기술 결정력" rows={myPowers} targetBulk={opponentBulk.physical} />
-          <PowerTable title="상대 공격 기술 결정력" rows={opponentPowers} targetBulk={myBulk.physical} />
+            <div className="grid gap-5 2xl:grid-cols-2">
+              <PowerTable title="내 공격 기술 결정력" rows={myPowers} targetBulk={opponentBulk.physical} />
+              <PowerTable title="상대 공격 기술 결정력" rows={opponentPowers} targetBulk={myBulk.physical} />
+            </div>
+          </section>
         </section>
       </div>
     </main>

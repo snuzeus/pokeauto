@@ -11,11 +11,11 @@ function formatPercent(value: number): string {
 }
 
 export function DamageTable({ title, rows, tone }: DamageTableProps) {
-  const headerClass = tone === "mine" ? "border-gray-900 bg-gray-950 text-white" : "border-red-900 bg-red-950 text-white";
-  const badgeClass = tone === "mine" ? "bg-gray-100 text-gray-900" : "bg-red-50 text-red-900";
+  const headerClass = tone === "mine" ? "border-teal-900 bg-teal-800 text-white" : "border-rose-900 bg-rose-800 text-white";
+  const badgeClass = tone === "mine" ? "bg-teal-100 text-teal-950" : "bg-rose-100 text-rose-950";
 
   return (
-    <section className="overflow-hidden rounded-md border border-gray-200 bg-white">
+    <section className="overflow-hidden rounded-md border border-gray-300 bg-white">
       <div className={`border-b px-5 py-4 ${headerClass}`}>
         <p className="text-xs font-semibold uppercase tracking-wide opacity-70">Damage Rolls</p>
         <h2 className="mt-1 text-lg font-semibold">{title}</h2>
@@ -47,7 +47,9 @@ export function DamageTable({ title, rows, tone }: DamageTableProps) {
                     <p className="text-xs text-gray-500">{row.move.englishName ?? row.move.japaneseName}</p>
                   </td>
                   <td className="px-4 py-4">
-                    <span className={`inline-flex rounded px-2 py-1 text-sm font-semibold ${badgeClass}`}>{row.koSummary}</span>
+                    <span className={`inline-flex min-w-[120px] justify-center rounded px-2 py-1 text-sm font-semibold ${badgeClass}`}>
+                      {row.koSummary}
+                    </span>
                   </td>
                   <td className="px-4 py-4 text-base font-semibold text-gray-950">
                     {formatPercent(row.minPercent)}-{formatPercent(row.maxPercent)}
