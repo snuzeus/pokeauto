@@ -11,59 +11,52 @@ function formatPercent(value: number): string {
 }
 
 export function DamageTable({ title, rows, tone }: DamageTableProps) {
-  const headerClass = tone === "mine" ? "border-teal-900 bg-teal-800 text-white" : "border-rose-900 bg-rose-800 text-white";
-  const badgeClass = tone === "mine" ? "bg-teal-100 text-teal-950" : "bg-rose-100 text-rose-950";
+  const accentClass = tone === "mine" ? "bg-emerald-500" : "bg-rose-500";
+  const badgeClass = tone === "mine" ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700";
+  const barClass = tone === "mine" ? "bg-emerald-500" : "bg-rose-500";
 
   return (
-    <section className="overflow-hidden rounded-md border border-gray-300 bg-white">
-      <div className={`border-b px-5 py-4 ${headerClass}`}>
-        <p className="text-xs font-semibold uppercase tracking-wide opacity-70">Damage Rolls</p>
-        <h2 className="mt-1 text-lg font-semibold">{title}</h2>
+    <section className="rounded-md border border-gray-200 bg-white p-4">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-xs font-semibold uppercase text-gray-400">Damage Cards</p>
+          <h2 className="mt-1 text-lg font-semibold text-gray-950">{title}</h2>
+        </div>
+        <span className={`h-3 w-3 rounded-full ${accentClass}`} aria-hidden="true" />
       </div>
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[760px] text-left text-sm">
-          <thead className="bg-gray-50 text-xs uppercase text-gray-500">
-            <tr>
-              <th className="px-5 py-3">기술</th>
-              <th className="px-4 py-3">몇타</th>
-              <th className="px-4 py-3">HP 비율</th>
-              <th className="px-4 py-3">데미지</th>
-              <th className="px-4 py-3">상성</th>
-              <th className="px-4 py-3">난수</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.length === 0 ? (
-              <tr>
-                <td className="px-5 py-8 text-gray-500" colSpan={6}>
-                  계산 가능한 공격 기술이 없습니다.
-                </td>
-              </tr>
-            ) : (
-              rows.map((row) => (
-                <tr key={row.move.key} className="border-t border-gray-100 align-top">
-                  <td className="px-5 py-4">
-                    <p className="font-medium text-gray-950">{row.move.koreanName}</p>
-                    <p className="text-xs text-gray-500">{row.move.englishName ?? row.move.japaneseName}</p>
-                  </td>
-                  <td className="px-4 py-4">
-                    <span className={`inline-flex min-w-[120px] justify-center rounded px-2 py-1 text-sm font-semibold ${badgeClass}`}>
-                      {row.koSummary}
-                    </span>
-                  </td>
-                  <td className="px-4 py-4 text-base font-semibold text-gray-950">
+
+      <div className="mt-4 grid gap-3">
+        {rows.length === 0 ? (
+          <div className="rounded-md border border-dashed border-gray-200 p-5 text-sm text-gray-500">계산 가능한 공격 기술이 없습니다.</div>
+        ) : (
+          rows.map((row) => (
+            <article key={row.move.key} className="rounded-md border border-gray-200 bg-gray-50 p-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-base font-semibold text-gray-950">{row.move.koreanName}</p>
+                  <p className="text-xs text-gray-500">{row.move.englishName ?? row.move.japaneseName}</p>
+                </div>
+                <span className={`inline-flex w-fit rounded-md px-2.5 py-1 text-sm font-semibold ${badgeClass}`}>{row.koSummary}</span>
+              </div>
+
+              <div className="mt-4">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-semibold text-gray-950">
                     {formatPercent(row.minPercent)}-{formatPercent(row.maxPercent)}
-                  </td>
-                  <td className="px-4 py-4 text-gray-700">
-                    {row.minDamage}-{row.maxDamage}
-                  </td>
-                  <td className="px-4 py-4 text-gray-600">x{row.typeEffectiveness}</td>
-                  <td className="max-w-[240px] px-4 py-4 text-xs leading-5 text-gray-500">{row.rolls.join(", ")}</td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
+                  </span>
+                  <span className="text-gray-500">
+                    {row.minDamage}-{row.maxDamage} · x{row.typeEffectiveness}
+                  </span>
+                </div>
+                <div className="mt-2 h-2 overflow-hidden rounded-full bg-white">
+                  <div className={`h-full rounded-full ${barClass}`} style={{ width: `${Math.min(100, row.maxPercent)}%` }} />
+                </div>
+              </div>
+
+              <p className="mt-3 line-clamp-2 text-xs leading-5 text-gray-500">난수: {row.rolls.join(", ")}</p>
+            </article>
+          ))
+        )}
       </div>
     </section>
   );

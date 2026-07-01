@@ -7,7 +7,7 @@ type PokemonSearchProps = {
 
 export function PokemonSearch({ query, onQueryChange, onSearch, error }: PokemonSearchProps) {
   return (
-    <section className="rounded-md border border-gray-200 bg-[#f8faf9] p-4">
+    <section className="rounded-md border border-gray-200 bg-white p-4">
       <div className="flex flex-col gap-3">
         <label className="flex-1">
           <span className="text-sm font-medium text-gray-700">상대 포켓몬</span>
