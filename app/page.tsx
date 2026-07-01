@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ComparisonPanel } from "@/components/ComparisonPanel";
 import { DamageTable } from "@/components/DamageTable";
+import { MySetManager } from "@/components/MySetManager";
 import { MyTeamPanel } from "@/components/MyTeamPanel";
 import { PokemonSearch } from "@/components/PokemonSearch";
 import { PowerTable } from "@/components/PowerTable";
@@ -12,14 +13,16 @@ import { calculateDamage } from "@/lib/calc/damage";
 import { calculateMovePower } from "@/lib/calc/power";
 import { applyChoiceScarf } from "@/lib/calc/speed";
 import { calculateStats } from "@/lib/calc/stats";
-import { findItemByKey } from "@/lib/data/itemRepository";
-import { findMoveByKey } from "@/lib/data/moveRepository";
+import { findItemByKey, listItems } from "@/lib/data/itemRepository";
+import { findMoveByKey, listMoves } from "@/lib/data/moveRepository";
 import { listMyPokemonSets } from "@/lib/data/myTeamRepository";
-import { findNatureByKey } from "@/lib/data/natureRepository";
+import { findNatureByKey, listNatures } from "@/lib/data/natureRepository";
 import { findPokemonByKey, findPokemonByName } from "@/lib/data/pokemonRepository";
 import { findUsageByPokeKey } from "@/lib/data/usageRepository";
-import type { EffortValues } from "@/types/team";
+import type { EffortValues, MyPokemonSet } from "@/types/team";
 import type { UsageStatPoint } from "@/types/usage";
+
+const MY_SETS_STORAGE_KEY = "pokeauto.myPokemonSets";
 
 function evsFromUsage(statPoint: UsageStatPoint): EffortValues {
   return {
@@ -36,10 +39,34 @@ export default function Home() {
   const [query, setQuery] = useState("한카리아스");
   const [opponentKey, setOpponentKey] = useState("0445-00");
   const [searchError, setSearchError] = useState<string>();
+  const [mySets, setMySets] = useState<MyPokemonSet[]>(() => listMyPokemonSets());
+  const [selectedSetId, setSelectedSetId] = useState(() => listMyPokemonSets()[0]?.id ?? "");
 
-  const mySet = listMyPokemonSets()[0];
+  useEffect(() => {
+    const stored = window.localStorage.getItem(MY_SETS_STORAGE_KEY);
+    if (!stored) return;
+
+    try {
+      const parsed = JSON.parse(stored) as MyPokemonSet[];
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        setMySets(parsed);
+        setSelectedSetId(parsed[0].id);
+      }
+    } catch {
+      window.localStorage.removeItem(MY_SETS_STORAGE_KEY);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(MY_SETS_STORAGE_KEY, JSON.stringify(mySets));
+  }, [mySets]);
+
+  const mySet = mySets.find((set) => set.id === selectedSetId) ?? mySets[0];
   const myPokemon = findPokemonByKey(mySet.pokeKey);
   const opponentPokemon = findPokemonByKey(opponentKey);
+  const natures = listNatures();
+  const items = listItems();
+  const moves = listMoves();
 
   if (!myPokemon || !opponentPokemon) {
     return (
@@ -121,6 +148,14 @@ export default function Home() {
     setSearchError(undefined);
   }
 
+  function handleAddSet(set: MyPokemonSet) {
+    setMySets((current) => {
+      const next = [...current, set];
+      return next;
+    });
+    setSelectedSetId(set.id);
+  }
+
   return (
     <main className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-6">
       <header>
@@ -128,6 +163,16 @@ export default function Home() {
         <p className="mt-1 text-sm text-gray-600">로컬 샘플 데이터 기준 · 시즌 3 · 룰 10</p>
       </header>
       <PokemonSearch query={query} onQueryChange={setQuery} onSearch={handleSearch} error={searchError} />
+      <MySetManager
+        sets={mySets}
+        selectedSetId={mySet.id}
+        pokemon={myPokemon}
+        natures={natures}
+        items={items}
+        moves={moves}
+        onSelectSet={setSelectedSetId}
+        onAddSet={handleAddSet}
+      />
       <div className="grid gap-4 md:grid-cols-2">
         <MyTeamPanel set={mySet} pokemon={myPokemon} />
         <UsageSummary pokemon={opponentPokemon} nature={opponentNature} item={opponentItem} statPoint={opponentStatPoint} />
