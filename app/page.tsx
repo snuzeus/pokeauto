@@ -536,25 +536,35 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="flex flex-col gap-3 border-b border-slate-200 bg-white/80 px-5 py-2.5 backdrop-blur xl:flex-row xl:items-center">
+      <section className="flex items-center gap-3 border-b border-slate-200 bg-white/80 px-5 py-2.5 backdrop-blur">
         <div className="flex flex-1 items-center gap-2">
-          <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest text-sky-500">내 포켓몬</span>
-          <select
-            value={selectedSetId}
-            onChange={(event) => setSelectedSetId(event.target.value)}
-            className="min-w-0 flex-1 rounded-md border border-sky-200 bg-sky-50 px-3 py-1.5 text-left text-sm font-semibold text-sky-800 transition-colors hover:border-sky-400 focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
-            style={{ fontFamily: "'Rajdhani', sans-serif" }}
+          <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest text-sky-500">My</span>
+          <button
+            type="button"
+            className="flex flex-1 items-center gap-2 rounded-md border border-sky-200 bg-sky-50 px-3 py-1.5 text-left transition-colors hover:border-sky-400 hover:bg-sky-100/60 focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
           >
-            {mySets.map((set) => (
-              <option key={set.id} value={set.id}>
+            <span className="text-sm font-semibold text-sky-800" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
+              {myPokemon.englishName ?? myPokemon.koreanName}
+            </span>
+            <span className="font-mono text-[10px] text-slate-400">{mySet.nickname ?? myPokemon.koreanName}</span>
+            <ChevronDown className="ml-auto h-3.5 w-3.5 shrink-0 text-sky-400" />
+          </button>
+          <div className="hidden gap-1 lg:flex">
+            {mySets.slice(0, 3).map((set) => (
+              <button
+                key={set.id}
+                type="button"
+                onClick={() => setSelectedSetId(set.id)}
+                className="rounded border border-slate-200 bg-slate-100 px-1.5 py-0.5 font-mono text-[9px] text-slate-400 transition-colors hover:text-slate-600"
+              >
                 {set.nickname ?? set.id}
-              </option>
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
         <div className="flex items-center gap-1 rounded-lg border border-slate-200 bg-slate-100 p-0.5">
-          {["사용률 1위", "최속", "최고화력", "내구형", "커스텀"].map((mode, index) => (
+          {["Usage #1", "Fastest", "Strongest", "Bulkiest", "Custom"].map((mode, index) => (
             <button
               key={mode}
               type="button"
@@ -567,9 +577,9 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="flex flex-1 items-center gap-2 xl:flex-row-reverse">
-          <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest text-rose-500">상대</span>
-          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5">
+        <div className="flex flex-1 flex-row-reverse items-center gap-2">
+          <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest text-rose-500">Opp</span>
+          <div className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-rose-200 bg-rose-50 px-3 py-1.5 transition-colors hover:border-rose-400 hover:bg-rose-100/60">
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -584,6 +594,22 @@ export default function Home() {
               검색
             </button>
             <ChevronDown className="h-3.5 w-3.5 shrink-0 text-rose-400" />
+          </div>
+          <div className="hidden flex-row-reverse gap-1 lg:flex">
+            {["한카리아스", "망나뇽", "랜드로스"].map((name) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => {
+                  setQuery(name);
+                  const found = findPokemonByName(name);
+                  if (found) setOpponentKey(found.pokeKey);
+                }}
+                className="rounded border border-slate-200 bg-slate-100 px-1.5 py-0.5 font-mono text-[9px] text-slate-400 transition-colors hover:text-slate-600"
+              >
+                {name}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -657,18 +683,23 @@ export default function Home() {
         <BulkMatrix myBulk={myBulk} opponentBulk={opponentBulk} />
       </section>
 
-      <section className="px-5 pb-6">
-        <MySetManager
-          sets={mySets}
-          selectedSetId={mySet.id}
-          pokemon={myPokemon}
-          natures={natures}
-          items={items}
-          moves={moves}
-          onSelectSet={setSelectedSetId}
-          onAddSet={handleAddSet}
-        />
-      </section>
+      <details className="mx-5 mb-6 rounded-xl border border-slate-200 bg-white shadow-sm">
+        <summary className="cursor-pointer px-4 py-3 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+          Custom sample editor
+        </summary>
+        <div className="border-t border-slate-100 p-4">
+          <MySetManager
+            sets={mySets}
+            selectedSetId={mySet.id}
+            pokemon={myPokemon}
+            natures={natures}
+            items={items}
+            moves={moves}
+            onSelectSet={setSelectedSetId}
+            onAddSet={handleAddSet}
+          />
+        </div>
+      </details>
     </main>
   );
 }
