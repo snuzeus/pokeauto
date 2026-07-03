@@ -182,4 +182,8 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+
+  .font-mono {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
 }

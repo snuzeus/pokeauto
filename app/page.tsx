@@ -516,7 +516,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f0f4f9] text-slate-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <main className="min-h-screen overflow-x-hidden bg-[#f0f4f9] text-slate-800" style={{ fontFamily: "'Noto Sans KR', sans-serif" }}>
       <header className="sticky top-0 z-50 flex h-11 items-center gap-6 border-b border-slate-200 bg-white px-5 shadow-sm">
         <span className="shrink-0 text-sm font-bold uppercase tracking-[0.2em] text-sky-600" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
           Turn Snapshot
