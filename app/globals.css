@@ -1,15 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "./fonts.css";
+@import "./theme.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  color-scheme: light;
-}
-
-body {
-  margin: 0;
-  background: #eef1f4;
-  color: #111827;
-}
