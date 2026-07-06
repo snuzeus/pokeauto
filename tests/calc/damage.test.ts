@@ -33,6 +33,351 @@ describe("calculateDamage", () => {
 
     expect(result).toBeUndefined();
   });
+
+  it("expands two-to-five hit moves by hit count", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["dragon", "ground"],
+      defenderTypes: ["dragon", "ground"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 799, koreanName: "스케일샷", englishName: "Scale Shot", type: "dragon", category: "physical", power: 25, multihit: [2, 5] }
+    });
+
+    expect(result?.multihitResults?.map((entry) => entry.hitCount)).toEqual([2, 3, 4, 5]);
+    expect(result?.multihitResults?.map((entry) => entry.hitChance)).toEqual([0.35, 0.35, 0.15, 0.15]);
+  });
+
+  it("expands Triple Axel by successful hit count and accuracy chain", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["dragon", "ground"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 813, koreanName: "트리플악셀", englishName: "Triple Axel", type: "ice", category: "physical", power: 20, accuracy: 90, multihit: 3 }
+    });
+
+    expect(result?.multihitResults?.map((entry) => entry.hitCount)).toEqual([1, 2, 3]);
+    expect(result?.multihitResults?.map((entry) => Number(entry.hitChance.toFixed(3)))).toEqual([0.09, 0.081, 0.729]);
+  });
+
+  it("applies Protean and Libero style STAB to the used move type", () => {
+    const withoutAbility = calculateDamage({
+      level: 50,
+      attackerTypes: ["dark"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 89, koreanName: "지진", englishName: "Earthquake", type: "ground", category: "physical", power: 100 }
+    });
+    const withProtean = calculateDamage({
+      level: 50,
+      attackerTypes: ["dark"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 89, koreanName: "지진", englishName: "Earthquake", type: "ground", category: "physical", power: 100 },
+      ability: { key: 168, koreanName: "변환자재", englishName: "Protean", showdownId: "protean" }
+    });
+
+    expect(withoutAbility?.stab).toBe(1);
+    expect(withProtean?.stab).toBe(1.5);
+    expect(withProtean!.minDamage).toBeGreaterThan(withoutAbility!.minDamage);
+  });
+
+  it("applies type-changing skin abilities before type effectiveness", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["fairy"],
+      defenderTypes: ["dragon"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 63, koreanName: "파괴광선", englishName: "Hyper Beam", type: "normal", category: "special", power: 150 },
+      ability: { key: 182, koreanName: "페어리스킨", englishName: "Pixilate", showdownId: "pixilate" }
+    });
+
+    expect(result?.typeEffectiveness).toBe(2);
+    expect(result?.stab).toBe(1.5);
+  });
+
+  it("applies offensive ability power multipliers and Adaptability STAB", () => {
+    const normalStab = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", showdownId: "pound", type: "normal", category: "physical", power: 40 }
+    });
+    const adaptability = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", showdownId: "pound", type: "normal", category: "physical", power: 40 },
+      ability: { key: 91, koreanName: "적응력", englishName: "Adaptability", showdownId: "adaptability" }
+    });
+    const technician = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", showdownId: "pound", type: "normal", category: "physical", power: 40 },
+      ability: { key: 101, koreanName: "테크니션", englishName: "Technician", showdownId: "technician" }
+    });
+    const ironFist = calculateDamage({
+      level: 50,
+      attackerTypes: ["electric"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 9, koreanName: "번개펀치", englishName: "Thunder Punch", showdownId: "thunderpunch", type: "electric", category: "physical", power: 75 },
+      ability: { key: 89, koreanName: "철주먹", englishName: "Iron Fist", showdownId: "ironfist" }
+    });
+    const neutralPunch = calculateDamage({
+      level: 50,
+      attackerTypes: ["electric"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 9, koreanName: "번개펀치", englishName: "Thunder Punch", showdownId: "thunderpunch", type: "electric", category: "physical", power: 75 }
+    });
+
+    expect(adaptability?.stab).toBe(2);
+    expect(adaptability!.maxDamage).toBeGreaterThan(normalStab!.maxDamage);
+    expect(technician!.maxDamage).toBeGreaterThan(normalStab!.maxDamage);
+    expect(ironFist!.maxDamage).toBeGreaterThan(neutralPunch!.maxDamage);
+    expect(ironFist?.abilityNotes?.join(" ")).toContain("철주먹");
+  });
+
+  it("applies HP, weather, and status-gated offensive abilities", () => {
+    const blaze = calculateDamage({
+      level: 50,
+      attackerTypes: ["fire"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 53, koreanName: "화염방사", englishName: "Flamethrower", showdownId: "flamethrower", type: "fire", category: "special", power: 90 },
+      ability: { key: 66, koreanName: "맹화", englishName: "Blaze", showdownId: "blaze" },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, hpCurrent: 50, hpMax: 180, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+    const sandForce = calculateDamage({
+      level: 50,
+      attackerTypes: ["ground"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 89, koreanName: "지진", englishName: "Earthquake", showdownId: "earthquake", type: "ground", category: "physical", power: 100 },
+      ability: { key: 159, koreanName: "모래의힘", englishName: "Sand Force", showdownId: "sandforce" },
+      modifiers: {
+        weather: "sand",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(blaze?.abilityNotes?.join(" ")).toContain("맹화");
+    expect(sandForce?.abilityNotes?.join(" ")).toContain("모래의힘");
+  });
+
+  it("applies stat stages, weather, and screens", () => {
+    const neutral = calculateDamage({
+      level: 50,
+      attackerTypes: ["fire"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 53, koreanName: "화염방사", englishName: "Flamethrower", type: "fire", category: "special", power: 90 }
+    });
+    const boosted = calculateDamage({
+      level: 50,
+      attackerTypes: ["fire"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 53, koreanName: "화염방사", englishName: "Flamethrower", type: "fire", category: "special", power: 90 },
+      modifiers: {
+        weather: "sun",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 2, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: -1, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+    const screened = calculateDamage({
+      level: 50,
+      attackerTypes: ["fire"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 53, koreanName: "화염방사", englishName: "Flamethrower", type: "fire", category: "special", power: 90 },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: true }
+      }
+    });
+
+    expect(boosted!.minDamage).toBeGreaterThan(neutral!.minDamage);
+    expect(screened!.maxDamage).toBeLessThan(neutral!.maxDamage);
+  });
+
+  it("uses current defender HP for KO summaries", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, hpPercent: 20, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(result?.koSummary).not.toBe("5타 이상");
+  });
+
+  it("uses current and max HP overrides for KO summaries and percentages", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, hpCurrent: 30, hpMax: 200, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(result?.koSummary).toBe("확정 1타");
+    expect(result?.maxPercent).toBeLessThan(30);
+  });
+
+  it("applies custom move power multipliers", () => {
+    const normal = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 }
+    });
+    const boosted = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, powerMultiplier: 2, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(boosted!.minDamage).toBeGreaterThan(normal!.minDamage);
+  });
+
+  it("halves physical damage when the attacker is burned unless Guts is active", () => {
+    const neutral = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 }
+    });
+    const burned = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, status: "burn", reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+    const gutsBurned = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "막치기", englishName: "Pound", type: "normal", category: "physical", power: 40 },
+      ability: { key: 62, koreanName: "근성", englishName: "Guts", showdownId: "guts" },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, status: "burn", reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(burned!.maxDamage).toBeLessThan(neutral!.maxDamage);
+    expect(gutsBurned!.maxDamage).toBe(neutral!.maxDamage);
+  });
+
+  it("applies sand and snow defensive weather boosts", () => {
+    const neutralRock = calculateDamage({
+      level: 50,
+      attackerTypes: ["water"],
+      defenderTypes: ["rock"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 57, koreanName: "파도타기", englishName: "Surf", type: "water", category: "special", power: 90 }
+    });
+    const sandRock = calculateDamage({
+      level: 50,
+      attackerTypes: ["water"],
+      defenderTypes: ["rock"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 57, koreanName: "파도타기", englishName: "Surf", type: "water", category: "special", power: 90 },
+      modifiers: {
+        weather: "sand",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+    const neutralIce = calculateDamage({
+      level: 50,
+      attackerTypes: ["steel"],
+      defenderTypes: ["ice"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 442, koreanName: "아이언헤드", englishName: "Iron Head", type: "steel", category: "physical", power: 80 }
+    });
+    const snowIce = calculateDamage({
+      level: 50,
+      attackerTypes: ["steel"],
+      defenderTypes: ["ice"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 442, koreanName: "아이언헤드", englishName: "Iron Head", type: "steel", category: "physical", power: 80 },
+      modifiers: {
+        weather: "snow",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(sandRock!.maxDamage).toBeLessThan(neutralRock!.maxDamage);
+    expect(snowIce!.maxDamage).toBeLessThan(neutralIce!.maxDamage);
+  });
 });
 
 describe("summarizeKoChance", () => {

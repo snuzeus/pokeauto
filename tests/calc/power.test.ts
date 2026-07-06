@@ -26,4 +26,21 @@ describe("power calculation", () => {
     expect(result?.itemMultiplier).toBe(1.3);
     expect(result?.power).toBe(35490);
   });
+
+  it("applies offensive stage and weather to move power", () => {
+    const neutral = calculateMovePower({
+      pokemonTypes: ["fire"],
+      stats: { hp: 185, atk: 182, def: 115, spa: 90, spd: 105, spe: 169 },
+      move: { key: 53, koreanName: "화염방사", type: "fire", category: "special", power: 90 }
+    });
+    const boosted = calculateMovePower({
+      pokemonTypes: ["fire"],
+      stats: { hp: 185, atk: 182, def: 115, spa: 90, spd: 105, spe: 169 },
+      move: { key: 53, koreanName: "화염방사", type: "fire", category: "special", power: 90 },
+      stage: 2,
+      weather: "sun"
+    });
+
+    expect(boosted!.power).toBeGreaterThan(neutral!.power);
+  });
 });

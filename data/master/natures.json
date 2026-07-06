@@ -1,4 +1,217 @@
 [
-  { "key": 13, "koreanName": "명랑", "japaneseName": "ようき", "englishName": "Jolly", "up": "spe", "down": "spa" },
-  { "key": 3, "koreanName": "고집", "japaneseName": "いじっぱり", "englishName": "Adamant", "up": "atk", "down": "spa" }
+  {
+    "key": 0,
+    "koreanName": "노력",
+    "japaneseName": "がんばりや",
+    "englishName": "Hardy",
+    "showdownId": "hardy"
+  },
+  {
+    "key": 1,
+    "koreanName": "외로움",
+    "japaneseName": "さみしがり",
+    "englishName": "Lonely",
+    "showdownId": "lonely",
+    "up": "atk",
+    "down": "def"
+  },
+  {
+    "key": 2,
+    "koreanName": "용감",
+    "japaneseName": "ゆうかん",
+    "englishName": "Brave",
+    "showdownId": "brave",
+    "up": "atk",
+    "down": "spe"
+  },
+  {
+    "key": 3,
+    "koreanName": "고집",
+    "japaneseName": "いじっぱり",
+    "englishName": "Adamant",
+    "showdownId": "adamant",
+    "up": "atk",
+    "down": "spa"
+  },
+  {
+    "key": 4,
+    "koreanName": "개구쟁이",
+    "japaneseName": "やんちゃ",
+    "englishName": "Naughty",
+    "showdownId": "naughty",
+    "up": "atk",
+    "down": "spd"
+  },
+  {
+    "key": 5,
+    "koreanName": "대담",
+    "japaneseName": "ずぶとい",
+    "englishName": "Bold",
+    "showdownId": "bold",
+    "up": "def",
+    "down": "atk"
+  },
+  {
+    "key": 6,
+    "koreanName": "온순",
+    "japaneseName": "すなお",
+    "englishName": "Docile",
+    "showdownId": "docile"
+  },
+  {
+    "key": 7,
+    "koreanName": "무사태평",
+    "japaneseName": "のんき",
+    "englishName": "Relaxed",
+    "showdownId": "relaxed",
+    "up": "def",
+    "down": "spe"
+  },
+  {
+    "key": 8,
+    "koreanName": "장난꾸러기",
+    "japaneseName": "わんぱく",
+    "englishName": "Impish",
+    "showdownId": "impish",
+    "up": "def",
+    "down": "spa"
+  },
+  {
+    "key": 9,
+    "koreanName": "촐랑",
+    "japaneseName": "のうてんき",
+    "englishName": "Lax",
+    "showdownId": "lax",
+    "up": "def",
+    "down": "spd"
+  },
+  {
+    "key": 10,
+    "koreanName": "겁쟁이",
+    "japaneseName": "おくびょう",
+    "englishName": "Timid",
+    "showdownId": "timid",
+    "up": "spe",
+    "down": "atk"
+  },
+  {
+    "key": 11,
+    "koreanName": "성급",
+    "japaneseName": "せっかち",
+    "englishName": "Hasty",
+    "showdownId": "hasty",
+    "up": "spe",
+    "down": "def"
+  },
+  {
+    "key": 12,
+    "koreanName": "성실",
+    "japaneseName": "まじめ",
+    "englishName": "Serious",
+    "showdownId": "serious"
+  },
+  {
+    "key": 13,
+    "koreanName": "명랑",
+    "japaneseName": "ようき",
+    "englishName": "Jolly",
+    "showdownId": "jolly",
+    "up": "spe",
+    "down": "spa"
+  },
+  {
+    "key": 14,
+    "koreanName": "천진난만",
+    "japaneseName": "むじゃき",
+    "englishName": "Naive",
+    "showdownId": "naive",
+    "up": "spe",
+    "down": "spd"
+  },
+  {
+    "key": 15,
+    "koreanName": "조심",
+    "japaneseName": "ひかえめ",
+    "englishName": "Modest",
+    "showdownId": "modest",
+    "up": "spa",
+    "down": "atk"
+  },
+  {
+    "key": 16,
+    "koreanName": "의젓",
+    "japaneseName": "おっとり",
+    "englishName": "Mild",
+    "showdownId": "mild",
+    "up": "spa",
+    "down": "def"
+  },
+  {
+    "key": 17,
+    "koreanName": "냉정",
+    "japaneseName": "れいせい",
+    "englishName": "Quiet",
+    "showdownId": "quiet",
+    "up": "spa",
+    "down": "spe"
+  },
+  {
+    "key": 18,
+    "koreanName": "수줍음",
+    "japaneseName": "てれや",
+    "englishName": "Bashful",
+    "showdownId": "bashful"
+  },
+  {
+    "key": 19,
+    "koreanName": "덜렁",
+    "japaneseName": "うっかりや",
+    "englishName": "Rash",
+    "showdownId": "rash",
+    "up": "spa",
+    "down": "spd"
+  },
+  {
+    "key": 20,
+    "koreanName": "차분",
+    "japaneseName": "おだやか",
+    "englishName": "Calm",
+    "showdownId": "calm",
+    "up": "spd",
+    "down": "atk"
+  },
+  {
+    "key": 21,
+    "koreanName": "얌전",
+    "japaneseName": "おとなしい",
+    "englishName": "Gentle",
+    "showdownId": "gentle",
+    "up": "spd",
+    "down": "def"
+  },
+  {
+    "key": 22,
+    "koreanName": "건방",
+    "japaneseName": "なまいき",
+    "englishName": "Sassy",
+    "showdownId": "sassy",
+    "up": "spd",
+    "down": "spe"
+  },
+  {
+    "key": 23,
+    "koreanName": "신중",
+    "japaneseName": "しんちょう",
+    "englishName": "Careful",
+    "showdownId": "careful",
+    "up": "spd",
+    "down": "spa"
+  },
+  {
+    "key": 24,
+    "koreanName": "변덕",
+    "japaneseName": "きまぐれ",
+    "englishName": "Quirky",
+    "showdownId": "quirky"
+  }
 ]

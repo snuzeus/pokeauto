@@ -1,0 +1,3162 @@
+[
+  {
+    "key": 1,
+    "koreanName": "악취",
+    "japaneseName": "あくしゅう",
+    "englishName": "Stench",
+    "showdownId": "stench",
+    "rating": 0.5,
+    "description": "This Pokemon's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch.",
+    "shortDescription": "This Pokemon's attacks without a chance to flinch gain a 10% chance to flinch."
+  },
+  {
+    "key": 2,
+    "koreanName": "잔비",
+    "japaneseName": "あめふらし",
+    "englishName": "Drizzle",
+    "showdownId": "drizzle",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Rain Dance.",
+    "shortDescription": "On switch-in, this Pokemon summons Rain Dance."
+  },
+  {
+    "key": 3,
+    "koreanName": "가속",
+    "japaneseName": "かそく",
+    "englishName": "Speed Boost",
+    "showdownId": "speedboost",
+    "rating": 4.5,
+    "description": "This Pokemon's Speed is raised by 1 stage at the end of each full turn it has been on the field.",
+    "shortDescription": "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field."
+  },
+  {
+    "key": 4,
+    "koreanName": "전투무장",
+    "japaneseName": "カブトアーマー",
+    "englishName": "Battle Armor",
+    "showdownId": "battlearmor",
+    "rating": 1,
+    "description": "This Pokemon cannot be struck by a critical hit.",
+    "shortDescription": "This Pokemon cannot be struck by a critical hit."
+  },
+  {
+    "key": 5,
+    "koreanName": "옹골참",
+    "japaneseName": "がんじょう",
+    "englishName": "Sturdy",
+    "showdownId": "sturdy",
+    "rating": 3,
+    "description": "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
+    "shortDescription": "If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO."
+  },
+  {
+    "key": 6,
+    "koreanName": "습기",
+    "japaneseName": "しめりけ",
+    "englishName": "Damp",
+    "showdownId": "damp",
+    "rating": 1,
+    "description": "While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect.",
+    "shortDescription": "Prevents Explosion/Mind Blown/Misty Explosion/Self-Destruct/Aftermath while active."
+  },
+  {
+    "key": 7,
+    "koreanName": "유연",
+    "japaneseName": "じゅうなん",
+    "englishName": "Limber",
+    "showdownId": "limber",
+    "rating": 2,
+    "description": "This Pokemon cannot be paralyzed. Gaining this Ability while paralyzed cures it.",
+    "shortDescription": "This Pokemon cannot be paralyzed. Gaining this Ability while paralyzed cures it."
+  },
+  {
+    "key": 8,
+    "koreanName": "모래숨기",
+    "japaneseName": "すながくれ",
+    "englishName": "Sand Veil",
+    "showdownId": "sandveil",
+    "rating": 1.5,
+    "description": "If Sandstorm is active, the accuracy of moves used against this Pokemon is multiplied by 0.8. This Pokemon takes no damage from Sandstorm.",
+    "shortDescription": "If Sandstorm is active, this Pokemon's evasiveness is 1.25x; immunity to Sandstorm."
+  },
+  {
+    "key": 9,
+    "koreanName": "정전기",
+    "japaneseName": "せいでんき",
+    "englishName": "Static",
+    "showdownId": "static",
+    "rating": 2,
+    "description": "30% chance a Pokemon making contact with this Pokemon will be paralyzed.",
+    "shortDescription": "30% chance a Pokemon making contact with this Pokemon will be paralyzed."
+  },
+  {
+    "key": 10,
+    "koreanName": "축전",
+    "japaneseName": "ちくでん",
+    "englishName": "Volt Absorb",
+    "showdownId": "voltabsorb",
+    "rating": 3.5,
+    "description": "This Pokemon is immune to Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by an Electric-type move.",
+    "shortDescription": "This Pokemon heals 1/4 of its max HP when hit by Electric moves; Electric immunity."
+  },
+  {
+    "key": 11,
+    "koreanName": "저수",
+    "japaneseName": "ちょすい",
+    "englishName": "Water Absorb",
+    "showdownId": "waterabsorb",
+    "rating": 3.5,
+    "description": "This Pokemon is immune to Water-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Water-type move.",
+    "shortDescription": "This Pokemon heals 1/4 of its max HP when hit by Water moves; Water immunity."
+  },
+  {
+    "key": 12,
+    "koreanName": "둔감",
+    "japaneseName": "どんかん",
+    "englishName": "Oblivious",
+    "showdownId": "oblivious",
+    "rating": 1.5,
+    "description": "This Pokemon cannot be infatuated or taunted. Gaining this Ability while infatuated or taunted cures it. This Pokemon is immune to the effect of the Intimidate Ability.",
+    "shortDescription": "This Pokemon cannot be infatuated or taunted. Immune to Intimidate."
+  },
+  {
+    "key": 13,
+    "koreanName": "날씨부정",
+    "japaneseName": "ノーてんき",
+    "englishName": "Cloud Nine",
+    "showdownId": "cloudnine",
+    "rating": 2,
+    "description": "While this Pokemon is active, the effects of weather conditions are disabled.",
+    "shortDescription": "While this Pokemon is active, the effects of weather conditions are disabled."
+  },
+  {
+    "key": 14,
+    "koreanName": "복안",
+    "japaneseName": "ふくがん",
+    "englishName": "Compound Eyes",
+    "showdownId": "compoundeyes",
+    "rating": 3,
+    "description": "This Pokemon's moves have their accuracy multiplied by 1.3.",
+    "shortDescription": "This Pokemon's moves have their accuracy multiplied by 1.3."
+  },
+  {
+    "key": 15,
+    "koreanName": "불면",
+    "japaneseName": "ふみん",
+    "englishName": "Insomnia",
+    "showdownId": "insomnia",
+    "rating": 2,
+    "description": "This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.",
+    "shortDescription": "This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it."
+  },
+  {
+    "key": 16,
+    "koreanName": "변색",
+    "japaneseName": "へんしょく",
+    "englishName": "Color Change",
+    "showdownId": "colorchange",
+    "rating": 0,
+    "description": "This Pokemon's type changes to match the type of the last move that hit it, unless that type is already one of its types. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
+    "shortDescription": "This Pokemon's type changes to the type of a move it's hit by, unless it has the type."
+  },
+  {
+    "key": 17,
+    "koreanName": "면역",
+    "japaneseName": "めんえき",
+    "englishName": "Immunity",
+    "showdownId": "immunity",
+    "rating": 2,
+    "description": "This Pokemon cannot be poisoned. Gaining this Ability while poisoned cures it.",
+    "shortDescription": "This Pokemon cannot be poisoned. Gaining this Ability while poisoned cures it."
+  },
+  {
+    "key": 18,
+    "koreanName": "타오르는불꽃",
+    "japaneseName": "もらいび",
+    "englishName": "Flash Fire",
+    "showdownId": "flashfire",
+    "rating": 3.5,
+    "description": "This Pokemon is immune to Fire-type moves. The first time it is hit by a Fire-type move, its offensive stat is multiplied by 1.5 while using a Fire-type attack as long as it remains active and has this Ability. If this Pokemon is frozen, it cannot be defrosted by Fire-type attacks.",
+    "shortDescription": "This Pokemon's Fire attacks do 1.5x damage if hit by one Fire move; Fire immunity."
+  },
+  {
+    "key": 19,
+    "koreanName": "인분",
+    "japaneseName": "りんぷん",
+    "englishName": "Shield Dust",
+    "showdownId": "shielddust",
+    "rating": 2,
+    "description": "This Pokemon is not affected by the secondary effect of another Pokemon's attack.",
+    "shortDescription": "This Pokemon is not affected by the secondary effect of another Pokemon's attack."
+  },
+  {
+    "key": 20,
+    "koreanName": "마이페이스",
+    "japaneseName": "マイペース",
+    "englishName": "Own Tempo",
+    "showdownId": "owntempo",
+    "rating": 1.5,
+    "description": "This Pokemon cannot be confused. Gaining this Ability while confused cures it. This Pokemon is immune to the effect of the Intimidate Ability.",
+    "shortDescription": "This Pokemon cannot be confused. Immune to Intimidate."
+  },
+  {
+    "key": 21,
+    "koreanName": "흡반",
+    "japaneseName": "きゅうばん",
+    "englishName": "Suction Cups",
+    "showdownId": "suctioncups",
+    "rating": 1,
+    "description": "This Pokemon cannot be forced to switch out by another Pokemon's attack or item.",
+    "shortDescription": "This Pokemon cannot be forced to switch out by another Pokemon's attack or item."
+  },
+  {
+    "key": 22,
+    "koreanName": "위협",
+    "japaneseName": "いかく",
+    "englishName": "Intimidate",
+    "showdownId": "intimidate",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon lowers the Attack of opposing Pokemon by 1 stage. Pokemon with the Inner Focus, Oblivious, Own Tempo, or Scrappy Abilities and Pokemon behind a substitute are immune.",
+    "shortDescription": "On switch-in, this Pokemon lowers the Attack of opponents by 1 stage."
+  },
+  {
+    "key": 23,
+    "koreanName": "그림자밟기",
+    "japaneseName": "かげふみ",
+    "englishName": "Shadow Tag",
+    "showdownId": "shadowtag",
+    "rating": 5,
+    "description": "Prevents opposing Pokemon from choosing to switch out, unless they are holding a Shed Shell, are a Ghost type, or also have this Ability.",
+    "shortDescription": "Prevents foes from choosing to switch unless they also have this Ability."
+  },
+  {
+    "key": 24,
+    "koreanName": "까칠한피부",
+    "japaneseName": "さめはだ",
+    "englishName": "Rough Skin",
+    "showdownId": "roughskin",
+    "rating": 2.5,
+    "description": "Pokemon making contact with this Pokemon lose 1/8 of their maximum HP, rounded down.",
+    "shortDescription": "Pokemon making contact with this Pokemon lose 1/8 of their max HP."
+  },
+  {
+    "key": 25,
+    "koreanName": "불가사의부적",
+    "japaneseName": "ふしぎなまもり",
+    "englishName": "Wonder Guard",
+    "showdownId": "wonderguard",
+    "rating": 5,
+    "description": "This Pokemon can only be damaged by supereffective moves and indirect damage.",
+    "shortDescription": "This Pokemon can only be damaged by supereffective moves and indirect damage."
+  },
+  {
+    "key": 26,
+    "koreanName": "부유",
+    "japaneseName": "ふゆう",
+    "englishName": "Levitate",
+    "showdownId": "levitate",
+    "rating": 3.5,
+    "description": "This Pokemon is immune to Ground-type attacks and the effects of Spikes, Toxic Spikes, Sticky Web, and the Arena Trap Ability. The effects of Gravity, Ingrain, Smack Down, Thousand Arrows, and Iron Ball nullify the immunity. Thousand Arrows can hit this Pokemon as if it did not have this Ability.",
+    "shortDescription": "This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it."
+  },
+  {
+    "key": 27,
+    "koreanName": "포자",
+    "japaneseName": "ほうし",
+    "englishName": "Effect Spore",
+    "showdownId": "effectspore",
+    "rating": 2,
+    "description": "30% chance a Pokemon making contact with this Pokemon will be poisoned, paralyzed, or fall asleep.",
+    "shortDescription": "30% chance of poison/paralysis/sleep on others making contact with this Pokemon."
+  },
+  {
+    "key": 28,
+    "koreanName": "싱크로",
+    "japaneseName": "シンクロ",
+    "englishName": "Synchronize",
+    "showdownId": "synchronize",
+    "rating": 2,
+    "description": "If another Pokemon burns, paralyzes, poisons, or badly poisons this Pokemon, that Pokemon receives the same non-volatile status condition.",
+    "shortDescription": "If another Pokemon burns/poisons/paralyzes this Pokemon, it also gets that status."
+  },
+  {
+    "key": 29,
+    "koreanName": "클리어바디",
+    "japaneseName": "クリアボディ",
+    "englishName": "Clear Body",
+    "showdownId": "clearbody",
+    "rating": 2,
+    "description": "Prevents other Pokemon from lowering this Pokemon's stat stages.",
+    "shortDescription": "Prevents other Pokemon from lowering this Pokemon's stat stages."
+  },
+  {
+    "key": 30,
+    "koreanName": "자연회복",
+    "japaneseName": "しぜんかいふく",
+    "englishName": "Natural Cure",
+    "showdownId": "naturalcure",
+    "rating": 2.5,
+    "description": "This Pokemon has its non-volatile status condition cured when it switches out.",
+    "shortDescription": "This Pokemon has its non-volatile status condition cured when it switches out."
+  },
+  {
+    "key": 31,
+    "koreanName": "피뢰침",
+    "japaneseName": "ひらいしん",
+    "englishName": "Lightning Rod",
+    "showdownId": "lightningrod",
+    "rating": 3,
+    "description": "This Pokemon is immune to Electric-type moves and raises its Special Attack by 1 stage when hit by an Electric-type move. If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
+    "shortDescription": "This Pokemon draws Electric moves to itself to raise Sp. Atk by 1; Electric immunity."
+  },
+  {
+    "key": 32,
+    "koreanName": "하늘의은총",
+    "japaneseName": "てんのめぐみ",
+    "englishName": "Serene Grace",
+    "showdownId": "serenegrace",
+    "rating": 3.5,
+    "description": "This Pokemon's moves have their secondary effect chance doubled. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
+    "shortDescription": "This Pokemon's moves have their secondary effect chance doubled."
+  },
+  {
+    "key": 33,
+    "koreanName": "쓱쓱",
+    "japaneseName": "すいすい",
+    "englishName": "Swift Swim",
+    "showdownId": "swiftswim",
+    "rating": 3,
+    "description": "If Rain Dance is active, this Pokemon's Speed is doubled. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If Rain Dance is active, this Pokemon's Speed is doubled."
+  },
+  {
+    "key": 34,
+    "koreanName": "엽록소",
+    "japaneseName": "ようりょくそ",
+    "englishName": "Chlorophyll",
+    "showdownId": "chlorophyll",
+    "rating": 3,
+    "description": "If Sunny Day is active, this Pokemon's Speed is doubled. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If Sunny Day is active, this Pokemon's Speed is doubled."
+  },
+  {
+    "key": 35,
+    "koreanName": "발광",
+    "japaneseName": "はっこう",
+    "englishName": "Illuminate",
+    "showdownId": "illuminate",
+    "rating": 0,
+    "description": "No competitive use.",
+    "shortDescription": "No competitive use."
+  },
+  {
+    "key": 36,
+    "koreanName": "트레이스",
+    "japaneseName": "トレース",
+    "englishName": "Trace",
+    "showdownId": "trace",
+    "rating": 2.5,
+    "description": "On switch-in, this Pokemon copies a random opposing Pokemon's Ability. Abilities that cannot be copied are As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, and Zen Mode. If no opposing Pokemon has an Ability that can be copied, this Ability will activate as soon as one does.",
+    "shortDescription": "On switch-in, or when it can, this Pokemon copies a random adjacent foe's Ability."
+  },
+  {
+    "key": 37,
+    "koreanName": "천하장사",
+    "japaneseName": "ちからもち",
+    "englishName": "Huge Power",
+    "showdownId": "hugepower",
+    "rating": 5,
+    "description": "This Pokemon's Attack is doubled.",
+    "shortDescription": "This Pokemon's Attack is doubled."
+  },
+  {
+    "key": 38,
+    "koreanName": "독가시",
+    "japaneseName": "どくのトゲ",
+    "englishName": "Poison Point",
+    "showdownId": "poisonpoint",
+    "rating": 1.5,
+    "description": "30% chance a Pokemon making contact with this Pokemon will be poisoned.",
+    "shortDescription": "30% chance a Pokemon making contact with this Pokemon will be poisoned."
+  },
+  {
+    "key": 39,
+    "koreanName": "정신력",
+    "japaneseName": "せいしんりょく",
+    "englishName": "Inner Focus",
+    "showdownId": "innerfocus",
+    "rating": 1.5,
+    "description": "This Pokemon cannot be made to flinch. This Pokemon is immune to the effect of the Intimidate Ability.",
+    "shortDescription": "This Pokemon cannot be made to flinch. Immune to Intimidate."
+  },
+  {
+    "key": 40,
+    "koreanName": "마그마의무장",
+    "japaneseName": "マグマのよろい",
+    "englishName": "Magma Armor",
+    "showdownId": "magmaarmor",
+    "rating": 1,
+    "description": "This Pokemon cannot be frozen. Gaining this Ability while frozen cures it.",
+    "shortDescription": "This Pokemon cannot be frozen. Gaining this Ability while frozen cures it."
+  },
+  {
+    "key": 41,
+    "koreanName": "수의베일",
+    "japaneseName": "みずのベール",
+    "englishName": "Water Veil",
+    "showdownId": "waterveil",
+    "rating": 2,
+    "description": "This Pokemon cannot be burned. Gaining this Ability while burned cures it.",
+    "shortDescription": "This Pokemon cannot be burned. Gaining this Ability while burned cures it."
+  },
+  {
+    "key": 42,
+    "koreanName": "자력",
+    "japaneseName": "じりょく",
+    "englishName": "Magnet Pull",
+    "showdownId": "magnetpull",
+    "rating": 4,
+    "description": "Prevents opposing Steel-type Pokemon from choosing to switch out, unless they are holding a Shed Shell or are a Ghost type.",
+    "shortDescription": "Prevents opposing Steel-type Pokemon from choosing to switch out."
+  },
+  {
+    "key": 43,
+    "koreanName": "방음",
+    "japaneseName": "ぼうおん",
+    "englishName": "Soundproof",
+    "showdownId": "soundproof",
+    "rating": 1.5,
+    "description": "This Pokemon is immune to sound-based moves, unless it used the move.",
+    "shortDescription": "This Pokemon is immune to sound-based moves, unless it used the move."
+  },
+  {
+    "key": 44,
+    "koreanName": "젖은접시",
+    "japaneseName": "あめうけざら",
+    "englishName": "Rain Dish",
+    "showdownId": "raindish",
+    "rating": 1.5,
+    "description": "If Rain Dance is active, this Pokemon restores 1/16 of its maximum HP, rounded down, at the end of each turn. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If Rain Dance is active, this Pokemon heals 1/16 of its max HP each turn."
+  },
+  {
+    "key": 45,
+    "koreanName": "모래날림",
+    "japaneseName": "すなおこし",
+    "englishName": "Sand Stream",
+    "showdownId": "sandstream",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Sandstorm.",
+    "shortDescription": "On switch-in, this Pokemon summons Sandstorm."
+  },
+  {
+    "key": 46,
+    "koreanName": "프레셔",
+    "japaneseName": "プレッシャー",
+    "englishName": "Pressure",
+    "showdownId": "pressure",
+    "rating": 2.5,
+    "description": "If this Pokemon is the target of an opposing Pokemon's move, that move loses one additional PP. Imprison and Snatch also lose one additional PP when used by an opposing Pokemon, but Sticky Web does not.",
+    "shortDescription": "If this Pokemon is the target of a foe's move, that move loses one additional PP."
+  },
+  {
+    "key": 47,
+    "koreanName": "두꺼운지방",
+    "japaneseName": "あついしぼう",
+    "englishName": "Thick Fat",
+    "showdownId": "thickfat",
+    "rating": 3.5,
+    "description": "If a Pokemon uses a Fire- or Ice-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon.",
+    "shortDescription": "Fire-/Ice-type moves against this Pokemon deal damage with a halved offensive stat."
+  },
+  {
+    "key": 48,
+    "koreanName": "일찍기상",
+    "japaneseName": "はやおき",
+    "englishName": "Early Bird",
+    "showdownId": "earlybird",
+    "rating": 1.5,
+    "description": "This Pokemon's sleep counter drops by 2 instead of 1.",
+    "shortDescription": "This Pokemon's sleep counter drops by 2 instead of 1."
+  },
+  {
+    "key": 49,
+    "koreanName": "불꽃몸",
+    "japaneseName": "ほのおのからだ",
+    "englishName": "Flame Body",
+    "showdownId": "flamebody",
+    "rating": 2,
+    "description": "30% chance a Pokemon making contact with this Pokemon will be burned.",
+    "shortDescription": "30% chance a Pokemon making contact with this Pokemon will be burned."
+  },
+  {
+    "key": 50,
+    "koreanName": "도주",
+    "japaneseName": "にげあし",
+    "englishName": "Run Away",
+    "showdownId": "runaway",
+    "rating": 0,
+    "description": "No competitive use.",
+    "shortDescription": "No competitive use."
+  },
+  {
+    "key": 51,
+    "koreanName": "날카로운눈",
+    "japaneseName": "するどいめ",
+    "englishName": "Keen Eye",
+    "showdownId": "keeneye",
+    "rating": 0.5,
+    "description": "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
+    "shortDescription": "This Pokemon's accuracy can't be lowered by others; ignores their evasiveness stat."
+  },
+  {
+    "key": 52,
+    "koreanName": "괴력집게",
+    "japaneseName": "かいりきバサミ",
+    "englishName": "Hyper Cutter",
+    "showdownId": "hypercutter",
+    "rating": 1.5,
+    "description": "Prevents other Pokemon from lowering this Pokemon's Attack stat stage.",
+    "shortDescription": "Prevents other Pokemon from lowering this Pokemon's Attack stat stage."
+  },
+  {
+    "key": 53,
+    "koreanName": "픽업",
+    "japaneseName": "ものひろい",
+    "englishName": "Pickup",
+    "showdownId": "pickup",
+    "rating": 0.5,
+    "description": "If this Pokemon has no item, it finds one used by an adjacent Pokemon this turn.",
+    "shortDescription": "If this Pokemon has no item, it finds one used by an adjacent Pokemon this turn."
+  },
+  {
+    "key": 54,
+    "koreanName": "게으름",
+    "japaneseName": "なまけ",
+    "englishName": "Truant",
+    "showdownId": "truant",
+    "rating": -1,
+    "description": "This Pokemon skips every other turn instead of using a move.",
+    "shortDescription": "This Pokemon skips every other turn instead of using a move."
+  },
+  {
+    "key": 55,
+    "koreanName": "의욕",
+    "japaneseName": "はりきり",
+    "englishName": "Hustle",
+    "showdownId": "hustle",
+    "rating": 3.5,
+    "description": "This Pokemon's Attack is multiplied by 1.5 and the accuracy of its physical attacks is multiplied by 0.8.",
+    "shortDescription": "This Pokemon's Attack is 1.5x and accuracy of its physical attacks is 0.8x."
+  },
+  {
+    "key": 56,
+    "koreanName": "헤롱헤롱바디",
+    "japaneseName": "メロメロボディ",
+    "englishName": "Cute Charm",
+    "showdownId": "cutecharm",
+    "rating": 0.5,
+    "description": "There is a 30% chance a Pokemon making contact with this Pokemon will become infatuated if it is of the opposite gender.",
+    "shortDescription": "30% chance of infatuating Pokemon of the opposite gender if they make contact."
+  },
+  {
+    "key": 57,
+    "koreanName": "플러스",
+    "japaneseName": "プラス",
+    "englishName": "Plus",
+    "showdownId": "plus",
+    "rating": 0,
+    "description": "If an active ally has this Ability or the Minus Ability, this Pokemon's Special Attack is multiplied by 1.5.",
+    "shortDescription": "If an active ally has this Ability or the Minus Ability, this Pokemon's Sp. Atk is 1.5x."
+  },
+  {
+    "key": 58,
+    "koreanName": "마이너스",
+    "japaneseName": "マイナス",
+    "englishName": "Minus",
+    "showdownId": "minus",
+    "rating": 0,
+    "description": "If an active ally has this Ability or the Plus Ability, this Pokemon's Special Attack is multiplied by 1.5.",
+    "shortDescription": "If an active ally has this Ability or the Plus Ability, this Pokemon's Sp. Atk is 1.5x."
+  },
+  {
+    "key": 59,
+    "koreanName": "기분파",
+    "japaneseName": "てんきや",
+    "englishName": "Forecast",
+    "showdownId": "forecast",
+    "rating": 2,
+    "description": "If this Pokemon is a Castform, its type changes to the current weather condition's type, except Sandstorm. This effect is prevented if this Pokemon is holding a Utility Umbrella and the weather is Rain Dance or Sunny Day.",
+    "shortDescription": "Castform's type changes to the current weather condition's type, except Sandstorm."
+  },
+  {
+    "key": 60,
+    "koreanName": "점착",
+    "japaneseName": "ねんちゃく",
+    "englishName": "Sticky Hold",
+    "showdownId": "stickyhold",
+    "rating": 2,
+    "description": "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack, unless the attack knocks out this Pokemon. A Sticky Barb will be transferred to other Pokemon regardless of this Ability.",
+    "shortDescription": "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack."
+  },
+  {
+    "key": 61,
+    "koreanName": "탈피",
+    "japaneseName": "だっぴ",
+    "englishName": "Shed Skin",
+    "showdownId": "shedskin",
+    "rating": 3,
+    "description": "This Pokemon has a 33% chance to have its non-volatile status condition cured at the end of each turn.",
+    "shortDescription": "This Pokemon has a 33% chance to have its status cured at the end of each turn."
+  },
+  {
+    "key": 62,
+    "koreanName": "근성",
+    "japaneseName": "こんじょう",
+    "englishName": "Guts",
+    "showdownId": "guts",
+    "rating": 3,
+    "description": "If this Pokemon has a non-volatile status condition, its Attack is multiplied by 1.5. This Pokemon's physical attacks ignore the burn effect of halving damage.",
+    "shortDescription": "If this Pokemon is statused, its Attack is 1.5x; ignores burn halving physical damage."
+  },
+  {
+    "key": 63,
+    "koreanName": "이상한비늘",
+    "japaneseName": "ふしぎなうろこ",
+    "englishName": "Marvel Scale",
+    "showdownId": "marvelscale",
+    "rating": 2.5,
+    "description": "If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5.",
+    "shortDescription": "If this Pokemon has a non-volatile status condition, its Defense is multiplied by 1.5."
+  },
+  {
+    "key": 64,
+    "koreanName": "해감액",
+    "japaneseName": "ヘドロえき",
+    "englishName": "Liquid Ooze",
+    "showdownId": "liquidooze",
+    "rating": 1.5,
+    "description": "This Pokemon damages those draining HP from it for as much as they would heal.",
+    "shortDescription": "This Pokemon damages those draining HP from it for as much as they would heal."
+  },
+  {
+    "key": 65,
+    "koreanName": "심록",
+    "japaneseName": "しんりょく",
+    "englishName": "Overgrow",
+    "showdownId": "overgrow",
+    "rating": 2,
+    "description": "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Grass-type attack.",
+    "shortDescription": "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Grass attacks."
+  },
+  {
+    "key": 66,
+    "koreanName": "맹화",
+    "japaneseName": "もうか",
+    "englishName": "Blaze",
+    "showdownId": "blaze",
+    "rating": 2,
+    "description": "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Fire-type attack.",
+    "shortDescription": "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fire attacks."
+  },
+  {
+    "key": 67,
+    "koreanName": "급류",
+    "japaneseName": "げきりゅう",
+    "englishName": "Torrent",
+    "showdownId": "torrent",
+    "rating": 2,
+    "description": "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Water-type attack.",
+    "shortDescription": "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Water attacks."
+  },
+  {
+    "key": 68,
+    "koreanName": "벌레의알림",
+    "japaneseName": "むしのしらせ",
+    "englishName": "Swarm",
+    "showdownId": "swarm",
+    "rating": 2,
+    "description": "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Bug-type attack.",
+    "shortDescription": "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Bug attacks."
+  },
+  {
+    "key": 69,
+    "koreanName": "돌머리",
+    "japaneseName": "いしあたま",
+    "englishName": "Rock Head",
+    "showdownId": "rockhead",
+    "rating": 3,
+    "description": "This Pokemon does not take recoil damage, except Struggle. Does not affect Life Orb damage or crash damage.",
+    "shortDescription": "This Pokemon does not take recoil damage besides Struggle/Life Orb/crash damage."
+  },
+  {
+    "key": 70,
+    "koreanName": "가뭄",
+    "japaneseName": "ひでり",
+    "englishName": "Drought",
+    "showdownId": "drought",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Sunny Day.",
+    "shortDescription": "On switch-in, this Pokemon summons Sunny Day."
+  },
+  {
+    "key": 71,
+    "koreanName": "개미지옥",
+    "japaneseName": "ありじごく",
+    "englishName": "Arena Trap",
+    "showdownId": "arenatrap",
+    "rating": 5,
+    "description": "Prevents opposing Pokemon from choosing to switch out unless they are airborne, are holding a Shed Shell, or are a Ghost type.",
+    "shortDescription": "Prevents opposing Pokemon from choosing to switch out unless they are airborne."
+  },
+  {
+    "key": 72,
+    "koreanName": "의기양양",
+    "japaneseName": "やるき",
+    "englishName": "Vital Spirit",
+    "showdownId": "vitalspirit",
+    "rating": 2,
+    "description": "This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it.",
+    "shortDescription": "This Pokemon cannot fall asleep. Gaining this Ability while asleep cures it."
+  },
+  {
+    "key": 73,
+    "koreanName": "하얀연기",
+    "japaneseName": "しろいけむり",
+    "englishName": "White Smoke",
+    "showdownId": "whitesmoke",
+    "rating": 2,
+    "description": "Prevents other Pokemon from lowering this Pokemon's stat stages.",
+    "shortDescription": "Prevents other Pokemon from lowering this Pokemon's stat stages."
+  },
+  {
+    "key": 74,
+    "koreanName": "순수한힘",
+    "japaneseName": "ヨガパワー",
+    "englishName": "Pure Power",
+    "showdownId": "purepower",
+    "rating": 5,
+    "description": "This Pokemon's Attack is doubled.",
+    "shortDescription": "This Pokemon's Attack is doubled."
+  },
+  {
+    "key": 75,
+    "koreanName": "조가비갑옷",
+    "japaneseName": "シェルアーマー",
+    "englishName": "Shell Armor",
+    "showdownId": "shellarmor",
+    "rating": 1,
+    "description": "This Pokemon cannot be struck by a critical hit.",
+    "shortDescription": "This Pokemon cannot be struck by a critical hit."
+  },
+  {
+    "key": 76,
+    "koreanName": "에어록",
+    "japaneseName": "エアロック",
+    "englishName": "Air Lock",
+    "showdownId": "airlock",
+    "rating": 2,
+    "description": "While this Pokemon is active, the effects of weather conditions are disabled.",
+    "shortDescription": "While this Pokemon is active, the effects of weather conditions are disabled."
+  },
+  {
+    "key": 77,
+    "koreanName": "갈지자걸음",
+    "japaneseName": "ちどりあし",
+    "englishName": "Tangled Feet",
+    "showdownId": "tangledfeet",
+    "rating": 1,
+    "description": "This Pokemon's evasiveness is doubled as long as it is confused.",
+    "shortDescription": "This Pokemon's evasiveness is doubled as long as it is confused."
+  },
+  {
+    "key": 78,
+    "koreanName": "전기엔진",
+    "japaneseName": "でんきエンジン",
+    "englishName": "Motor Drive",
+    "showdownId": "motordrive",
+    "rating": 3,
+    "description": "This Pokemon is immune to Electric-type moves and raises its Speed by 1 stage when hit by an Electric-type move.",
+    "shortDescription": "This Pokemon's Speed is raised 1 stage if hit by an Electric move; Electric immunity."
+  },
+  {
+    "key": 79,
+    "koreanName": "투쟁심",
+    "japaneseName": "とうそうしん",
+    "englishName": "Rivalry",
+    "showdownId": "rivalry",
+    "rating": 0,
+    "description": "This Pokemon's attacks have their power multiplied by 1.25 against targets of the same gender or multiplied by 0.75 against targets of the opposite gender. There is no modifier if either this Pokemon or the target is genderless.",
+    "shortDescription": "This Pokemon's attacks do 1.25x on same gender targets; 0.75x on opposite gender."
+  },
+  {
+    "key": 80,
+    "koreanName": "불굴의마음",
+    "japaneseName": "ふくつのこころ",
+    "englishName": "Steadfast",
+    "showdownId": "steadfast",
+    "rating": 1,
+    "description": "If this Pokemon flinches, its Speed is raised by 1 stage.",
+    "shortDescription": "If this Pokemon flinches, its Speed is raised by 1 stage."
+  },
+  {
+    "key": 81,
+    "koreanName": "눈숨기",
+    "japaneseName": "ゆきがくれ",
+    "englishName": "Snow Cloak",
+    "showdownId": "snowcloak",
+    "rating": 1.5,
+    "description": "If Hail is active, the accuracy of moves used against this Pokemon is multiplied by 0.8. This Pokemon takes no damage from Hail.",
+    "shortDescription": "If Hail is active, this Pokemon's evasiveness is 1.25x; immunity to Hail."
+  },
+  {
+    "key": 82,
+    "koreanName": "먹보",
+    "japaneseName": "くいしんぼう",
+    "englishName": "Gluttony",
+    "showdownId": "gluttony",
+    "rating": 1.5,
+    "description": "When this Pokemon is holding a Berry that usually activates with 1/4 or less of its maximum HP, it is eaten at 1/2 or less of its maximum HP instead.",
+    "shortDescription": "This Pokemon eats Berries at 1/2 max HP or less instead of their usual 1/4 max HP."
+  },
+  {
+    "key": 83,
+    "koreanName": "분노의경혈",
+    "japaneseName": "いかりのつぼ",
+    "englishName": "Anger Point",
+    "showdownId": "angerpoint",
+    "rating": 1.5,
+    "description": "If this Pokemon, but not its substitute, is struck by a critical hit, its Attack is raised by 12 stages.",
+    "shortDescription": "If this Pokemon (not its substitute) takes a critical hit, its Attack is raised 12 stages."
+  },
+  {
+    "key": 84,
+    "koreanName": "곡예",
+    "japaneseName": "かるわざ",
+    "englishName": "Unburden",
+    "showdownId": "unburden",
+    "rating": 3.5,
+    "description": "If this Pokemon loses its held item for any reason, its Speed is doubled as long as it remains active, has this Ability, and is not holding an item.",
+    "shortDescription": "Speed is doubled on held item loss; boost is lost if it switches, gets new item/Ability."
+  },
+  {
+    "key": 85,
+    "koreanName": "내열",
+    "japaneseName": "たいねつ",
+    "englishName": "Heatproof",
+    "showdownId": "heatproof",
+    "rating": 2,
+    "description": "The power of Fire-type attacks against this Pokemon is halved. This Pokemon takes half of the usual burn damage, rounded down.",
+    "shortDescription": "The power of Fire-type attacks against this Pokemon is halved; burn damage halved."
+  },
+  {
+    "key": 86,
+    "koreanName": "단순",
+    "japaneseName": "たんじゅん",
+    "englishName": "Simple",
+    "showdownId": "simple",
+    "rating": 4,
+    "description": "When one of this Pokemon's stat stages is raised or lowered, the amount is doubled.",
+    "shortDescription": "When one of this Pokemon's stat stages is raised or lowered, the amount is doubled."
+  },
+  {
+    "key": 87,
+    "koreanName": "건조피부",
+    "japaneseName": "かんそうはだ",
+    "englishName": "Dry Skin",
+    "showdownId": "dryskin",
+    "rating": 3,
+    "description": "This Pokemon is immune to Water-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Water-type move. The power of Fire-type moves is multiplied by 1.25 when used on this Pokemon. At the end of each turn, this Pokemon restores 1/8 of its maximum HP, rounded down, if the weather is Rain Dance, and loses 1/8 of its maximum HP, rounded down, if the weather is Sunny Day. The weather effects are prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "This Pokemon is healed 1/4 by Water, 1/8 by Rain; is hurt 1.25x by Fire, 1/8 by Sun."
+  },
+  {
+    "key": 88,
+    "koreanName": "다운로드",
+    "japaneseName": "ダウンロード",
+    "englishName": "Download",
+    "showdownId": "download",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Attack or Special Attack is raised by 1 stage based on the weaker combined defensive stat of all opposing Pokemon. Attack is raised if their Defense is lower, and Special Attack is raised if their Special Defense is the same or lower.",
+    "shortDescription": "On switch-in, Attack or Sp. Atk is raised 1 stage based on the foes' weaker Defense."
+  },
+  {
+    "key": 89,
+    "koreanName": "철주먹",
+    "japaneseName": "てつのこぶし",
+    "englishName": "Iron Fist",
+    "showdownId": "ironfist",
+    "rating": 3,
+    "description": "This Pokemon's punch-based attacks have their power multiplied by 1.2.",
+    "shortDescription": "This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted."
+  },
+  {
+    "key": 90,
+    "koreanName": "포이즌힐",
+    "japaneseName": "ポイズンヒール",
+    "englishName": "Poison Heal",
+    "showdownId": "poisonheal",
+    "rating": 4,
+    "description": "If this Pokemon is poisoned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP.",
+    "shortDescription": "This Pokemon is healed by 1/8 of its max HP each turn when poisoned; no HP loss."
+  },
+  {
+    "key": 91,
+    "koreanName": "적응력",
+    "japaneseName": "てきおうりょく",
+    "englishName": "Adaptability",
+    "showdownId": "adaptability",
+    "rating": 4,
+    "description": "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
+    "shortDescription": "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5."
+  },
+  {
+    "key": 92,
+    "koreanName": "스킬링크",
+    "japaneseName": "スキルリンク",
+    "englishName": "Skill Link",
+    "showdownId": "skilllink",
+    "rating": 3,
+    "description": "This Pokemon's multi-hit attacks always hit the maximum number of times. Triple Kick and Triple Axel do not check accuracy for the second and third hits.",
+    "shortDescription": "This Pokemon's multi-hit attacks always hit the maximum number of times."
+  },
+  {
+    "key": 93,
+    "koreanName": "촉촉바디",
+    "japaneseName": "うるおいボディ",
+    "englishName": "Hydration",
+    "showdownId": "hydration",
+    "rating": 1.5,
+    "description": "This Pokemon has its non-volatile status condition cured at the end of each turn if Rain Dance is active. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "This Pokemon has its status cured at the end of each turn if Rain Dance is active."
+  },
+  {
+    "key": 94,
+    "koreanName": "선파워",
+    "japaneseName": "サンパワー",
+    "englishName": "Solar Power",
+    "showdownId": "solarpower",
+    "rating": 2,
+    "description": "If Sunny Day is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/8 of its maximum HP, rounded down, at the end of each turn. These effects are prevented if the Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If Sunny Day is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn."
+  },
+  {
+    "key": 95,
+    "koreanName": "속보",
+    "japaneseName": "はやあし",
+    "englishName": "Quick Feet",
+    "showdownId": "quickfeet",
+    "rating": 2.5,
+    "description": "If this Pokemon has a non-volatile status condition, its Speed is multiplied by 1.5. This Pokemon ignores the paralysis effect of halving Speed.",
+    "shortDescription": "If this Pokemon is statused, its Speed is 1.5x; ignores Speed drop from paralysis."
+  },
+  {
+    "key": 96,
+    "koreanName": "노말스킨",
+    "japaneseName": "ノーマルスキン",
+    "englishName": "Normalize",
+    "showdownId": "normalize",
+    "rating": 0,
+    "description": "This Pokemon's moves are changed to be Normal type and have their power multiplied by 1.2. This effect comes before other effects that change a move's type.",
+    "shortDescription": "This Pokemon's moves are changed to be Normal type and have 1.2x power."
+  },
+  {
+    "key": 97,
+    "koreanName": "스나이퍼",
+    "japaneseName": "スナイパー",
+    "englishName": "Sniper",
+    "showdownId": "sniper",
+    "rating": 2,
+    "description": "If this Pokemon strikes with a critical hit, the damage is multiplied by 1.5.",
+    "shortDescription": "If this Pokemon strikes with a critical hit, the damage is multiplied by 1.5."
+  },
+  {
+    "key": 98,
+    "koreanName": "매직가드",
+    "japaneseName": "マジックガード",
+    "englishName": "Magic Guard",
+    "showdownId": "magicguard",
+    "rating": 4,
+    "description": "This Pokemon can only be damaged by direct attacks. Curse and Substitute on use, Belly Drum, Pain Split, Struggle recoil, and confusion damage are considered direct damage.",
+    "shortDescription": "This Pokemon can only be damaged by direct attacks."
+  },
+  {
+    "key": 99,
+    "koreanName": "노가드",
+    "japaneseName": "ノーガード",
+    "englishName": "No Guard",
+    "showdownId": "noguard",
+    "rating": 4,
+    "description": "Every move used by or against this Pokemon will always hit.",
+    "shortDescription": "Every move used by or against this Pokemon will always hit."
+  },
+  {
+    "key": 100,
+    "koreanName": "시간벌기",
+    "japaneseName": "あとだし",
+    "englishName": "Stall",
+    "showdownId": "stall",
+    "rating": -1,
+    "description": "This Pokemon moves last among Pokemon using the same or greater priority moves.",
+    "shortDescription": "This Pokemon moves last among Pokemon using the same or greater priority moves."
+  },
+  {
+    "key": 101,
+    "koreanName": "테크니션",
+    "japaneseName": "テクニシャン",
+    "englishName": "Technician",
+    "showdownId": "technician",
+    "rating": 3.5,
+    "description": "This Pokemon's moves of 60 power or less have their power multiplied by 1.5, including Struggle. This effect comes after a move's effect changes its own power.",
+    "shortDescription": "This Pokemon's moves of 60 power or less have 1.5x power, including Struggle."
+  },
+  {
+    "key": 102,
+    "koreanName": "리프가드",
+    "japaneseName": "リーフガード",
+    "englishName": "Leaf Guard",
+    "showdownId": "leafguard",
+    "rating": 0.5,
+    "description": "If Sunny Day is active, this Pokemon cannot become affected by a non-volatile status condition or Yawn, and Rest will fail for it. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If Sunny Day is active, this Pokemon cannot be statused and Rest will fail for it."
+  },
+  {
+    "key": 103,
+    "koreanName": "서투름",
+    "japaneseName": "ぶきよう",
+    "englishName": "Klutz",
+    "showdownId": "klutz",
+    "rating": -1,
+    "description": "This Pokemon's held item has no effect. This Pokemon cannot use Fling successfully. Macho Brace, Power Anklet, Power Band, Power Belt, Power Bracer, Power Lens, and Power Weight still have their effects.",
+    "shortDescription": "This Pokemon's held item has no effect, except Macho Brace. Fling cannot be used."
+  },
+  {
+    "key": 104,
+    "koreanName": "틀깨기",
+    "japaneseName": "かたやぶり",
+    "englishName": "Mold Breaker",
+    "showdownId": "moldbreaker",
+    "rating": 3.5,
+    "description": "This Pokemon's moves and their effects ignore certain Abilities of other Pokemon. The Abilities that can be negated are Aroma Veil, Aura Break, Battle Armor, Big Pecks, Bulletproof, Clear Body, Contrary, Damp, Dazzling, Disguise, Dry Skin, Filter, Flash Fire, Flower Gift, Flower Veil, Fluffy, Friend Guard, Fur Coat, Grass Pelt, Heatproof, Heavy Metal, Hyper Cutter, Ice Face, Ice Scales, Immunity, Inner Focus, Insomnia, Keen Eye, Leaf Guard, Levitate, Light Metal, Lightning Rod, Limber, Magic Bounce, Magma Armor, Marvel Scale, Mirror Armor, Motor Drive, Multiscale, Oblivious, Overcoat, Own Tempo, Pastel Veil, Punk Rock, Queenly Majesty, Sand Veil, Sap Sipper, Shell Armor, Shield Dust, Simple, Snow Cloak, Solid Rock, Soundproof, Sticky Hold, Storm Drain, Sturdy, Suction Cups, Sweet Veil, Tangled Feet, Telepathy, Thick Fat, Unaware, Vital Spirit, Volt Absorb, Water Absorb, Water Bubble, Water Veil, White Smoke, Wonder Guard, and Wonder Skin. This affects every other Pokemon on the field, whether or not it is a target of this Pokemon's move, and whether or not their Ability is beneficial to this Pokemon.",
+    "shortDescription": "This Pokemon's moves and their effects ignore the Abilities of other Pokemon."
+  },
+  {
+    "key": 105,
+    "koreanName": "대운",
+    "japaneseName": "きょううん",
+    "englishName": "Super Luck",
+    "showdownId": "superluck",
+    "rating": 1.5,
+    "description": "This Pokemon's critical hit ratio is raised by 1 stage.",
+    "shortDescription": "This Pokemon's critical hit ratio is raised by 1 stage."
+  },
+  {
+    "key": 106,
+    "koreanName": "유폭",
+    "japaneseName": "ゆうばく",
+    "englishName": "Aftermath",
+    "showdownId": "aftermath",
+    "rating": 2.5,
+    "description": "If this Pokemon is knocked out with a contact move, that move's user loses 1/4 of its maximum HP, rounded down. If any active Pokemon has the Damp Ability, this effect is prevented.",
+    "shortDescription": "If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP."
+  },
+  {
+    "key": 107,
+    "koreanName": "위험예지",
+    "japaneseName": "きけんよち",
+    "englishName": "Anticipation",
+    "showdownId": "anticipation",
+    "rating": 0.5,
+    "description": "On switch-in, this Pokemon is alerted if any opposing Pokemon has an attack that is super effective against this Pokemon, or an OHKO move. This effect considers any move that deals direct damage as an attacking move of its respective type, Hidden Power counts as its determined type, and Judgment, Multi-Attack, Natural Gift, Revelation Dance, Techno Blast, and Weather Ball are considered Normal-type moves.",
+    "shortDescription": "On switch-in, this Pokemon shudders if any foe has a supereffective or OHKO move."
+  },
+  {
+    "key": 108,
+    "koreanName": "예지몽",
+    "japaneseName": "よちむ",
+    "englishName": "Forewarn",
+    "showdownId": "forewarn",
+    "rating": 0.5,
+    "description": "On switch-in, this Pokemon is alerted to the move with the highest power, at random, known by an opposing Pokemon. This effect considers OHKO moves to have 150 power, Counter, Mirror Coat, and Metal Burst to have 120 power, every other attacking move with an unspecified power to have 80 power, and non-damaging moves to have 1 power.",
+    "shortDescription": "On switch-in, this Pokemon is alerted to the foes' move with the highest power."
+  },
+  {
+    "key": 109,
+    "koreanName": "천진",
+    "japaneseName": "てんねん",
+    "englishName": "Unaware",
+    "showdownId": "unaware",
+    "rating": 4,
+    "description": "This Pokemon ignores other Pokemon's Attack, Special Attack, and accuracy stat stages when taking damage, and ignores other Pokemon's Defense, Special Defense, and evasiveness stat stages when dealing damage.",
+    "shortDescription": "This Pokemon ignores other Pokemon's stat stages when taking or doing damage."
+  },
+  {
+    "key": 110,
+    "koreanName": "색안경",
+    "japaneseName": "いろめがね",
+    "englishName": "Tinted Lens",
+    "showdownId": "tintedlens",
+    "rating": 4,
+    "description": "This Pokemon's attacks that are not very effective on a target deal double damage.",
+    "shortDescription": "This Pokemon's attacks that are not very effective on a target deal double damage."
+  },
+  {
+    "key": 111,
+    "koreanName": "필터",
+    "japaneseName": "フィルター",
+    "englishName": "Filter",
+    "showdownId": "filter",
+    "rating": 3,
+    "description": "This Pokemon receives 3/4 damage from supereffective attacks.",
+    "shortDescription": "This Pokemon receives 3/4 damage from supereffective attacks."
+  },
+  {
+    "key": 112,
+    "koreanName": "슬로스타트",
+    "japaneseName": "スロースタート",
+    "englishName": "Slow Start",
+    "showdownId": "slowstart",
+    "rating": -1,
+    "description": "On switch-in, this Pokemon's Attack and Speed are halved for 5 turns.",
+    "shortDescription": "On switch-in, this Pokemon's Attack and Speed are halved for 5 turns."
+  },
+  {
+    "key": 113,
+    "koreanName": "배짱",
+    "japaneseName": "きもったま",
+    "englishName": "Scrappy",
+    "showdownId": "scrappy",
+    "rating": 3,
+    "description": "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. This Pokemon is immune to the effect of the Intimidate Ability.",
+    "shortDescription": "Fighting, Normal moves hit Ghost. Immune to Intimidate."
+  },
+  {
+    "key": 114,
+    "koreanName": "마중물",
+    "japaneseName": "よびみず",
+    "englishName": "Storm Drain",
+    "showdownId": "stormdrain",
+    "rating": 3,
+    "description": "This Pokemon is immune to Water-type moves and raises its Special Attack by 1 stage when hit by a Water-type move. If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
+    "shortDescription": "This Pokemon draws Water moves to itself to raise Sp. Atk by 1; Water immunity."
+  },
+  {
+    "key": 115,
+    "koreanName": "아이스바디",
+    "japaneseName": "アイスボディ",
+    "englishName": "Ice Body",
+    "showdownId": "icebody",
+    "rating": 1,
+    "description": "If Hail is active, this Pokemon restores 1/16 of its maximum HP, rounded down, at the end of each turn. This Pokemon takes no damage from Hail.",
+    "shortDescription": "If Hail is active, this Pokemon heals 1/16 of its max HP each turn; immunity to Hail."
+  },
+  {
+    "key": 116,
+    "koreanName": "하드록",
+    "japaneseName": "ハードロック",
+    "englishName": "Solid Rock",
+    "showdownId": "solidrock",
+    "rating": 3,
+    "description": "This Pokemon receives 3/4 damage from supereffective attacks.",
+    "shortDescription": "This Pokemon receives 3/4 damage from supereffective attacks."
+  },
+  {
+    "key": 117,
+    "koreanName": "눈퍼뜨리기",
+    "japaneseName": "ゆきふらし",
+    "englishName": "Snow Warning",
+    "showdownId": "snowwarning",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Hail.",
+    "shortDescription": "On switch-in, this Pokemon summons Hail."
+  },
+  {
+    "key": 118,
+    "koreanName": "꿀모으기",
+    "japaneseName": "みつあつめ",
+    "englishName": "Honey Gather",
+    "showdownId": "honeygather",
+    "rating": 0,
+    "description": "No competitive use.",
+    "shortDescription": "No competitive use."
+  },
+  {
+    "key": 119,
+    "koreanName": "통찰",
+    "japaneseName": "おみとおし",
+    "englishName": "Frisk",
+    "showdownId": "frisk",
+    "rating": 1.5,
+    "description": "On switch-in, this Pokemon identifies the held items of all opposing Pokemon.",
+    "shortDescription": "On switch-in, this Pokemon identifies the held items of all opposing Pokemon."
+  },
+  {
+    "key": 120,
+    "koreanName": "이판사판",
+    "japaneseName": "すてみ",
+    "englishName": "Reckless",
+    "showdownId": "reckless",
+    "rating": 3,
+    "description": "This Pokemon's attacks with recoil or crash damage have their power multiplied by 1.2. Does not affect Struggle.",
+    "shortDescription": "This Pokemon's attacks with recoil or crash damage have 1.2x power; not Struggle."
+  },
+  {
+    "key": 121,
+    "koreanName": "멀티타입",
+    "japaneseName": "マルチタイプ",
+    "englishName": "Multitype",
+    "showdownId": "multitype",
+    "rating": 4,
+    "description": "If this Pokemon is an Arceus, its type changes to match its held Plate.",
+    "shortDescription": "If this Pokemon is an Arceus, its type changes to match its held Plate."
+  },
+  {
+    "key": 122,
+    "koreanName": "플라워기프트",
+    "japaneseName": "フラワーギフト",
+    "englishName": "Flower Gift",
+    "showdownId": "flowergift",
+    "rating": 1,
+    "description": "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5. These effects are prevented if the Pokemon is holding a Utility Umbrella.",
+    "shortDescription": "If user is Cherrim and Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x."
+  },
+  {
+    "key": 123,
+    "koreanName": "나이트메어",
+    "japaneseName": "ナイトメア",
+    "englishName": "Bad Dreams",
+    "showdownId": "baddreams",
+    "rating": 1.5,
+    "description": "Causes opposing Pokemon to lose 1/8 of their maximum HP, rounded down, at the end of each turn if they are asleep.",
+    "shortDescription": "Causes sleeping foes to lose 1/8 of their max HP at the end of each turn."
+  },
+  {
+    "key": 124,
+    "koreanName": "나쁜손버릇",
+    "japaneseName": "わるいてぐせ",
+    "englishName": "Pickpocket",
+    "showdownId": "pickpocket",
+    "rating": 1,
+    "description": "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
+    "shortDescription": "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item."
+  },
+  {
+    "key": 125,
+    "koreanName": "우격다짐",
+    "japaneseName": "ちからずく",
+    "englishName": "Sheer Force",
+    "showdownId": "sheerforce",
+    "rating": 3.5,
+    "description": "This Pokemon's attacks with secondary effects have their power multiplied by 1.3, but the secondary effects are removed. If a secondary effect was removed, it also removes the user's Life Orb recoil and Shell Bell recovery, and prevents the target's Berserk, Color Change, Emergency Exit, Pickpocket, Wimp Out, Red Card, Eject Button, Kee Berry, and Maranga Berry from activating.",
+    "shortDescription": "This Pokemon's attacks with secondary effects have 1.3x power; nullifies the effects."
+  },
+  {
+    "key": 126,
+    "koreanName": "심술꾸러기",
+    "japaneseName": "あまのじゃく",
+    "englishName": "Contrary",
+    "showdownId": "contrary",
+    "rating": 4.5,
+    "description": "If this Pokemon has a stat stage raised it is lowered instead, and vice versa.",
+    "shortDescription": "If this Pokemon has a stat stage raised it is lowered instead, and vice versa."
+  },
+  {
+    "key": 127,
+    "koreanName": "긴장감",
+    "japaneseName": "きんちょうかん",
+    "englishName": "Unnerve",
+    "showdownId": "unnerve",
+    "rating": 1.5,
+    "description": "While this Pokemon is active, it prevents opposing Pokemon from using their Berries. This Ability activates before hazards and other Abilities take effect.",
+    "shortDescription": "While this Pokemon is active, it prevents opposing Pokemon from using their Berries."
+  },
+  {
+    "key": 128,
+    "koreanName": "오기",
+    "japaneseName": "まけんき",
+    "englishName": "Defiant",
+    "showdownId": "defiant",
+    "rating": 2.5,
+    "description": "This Pokemon's Attack is raised by 2 stages for each of its stat stages that is lowered by an opposing Pokemon.",
+    "shortDescription": "This Pokemon's Attack is raised by 2 for each of its stats that is lowered by a foe."
+  },
+  {
+    "key": 129,
+    "koreanName": "무기력",
+    "japaneseName": "よわき",
+    "englishName": "Defeatist",
+    "showdownId": "defeatist",
+    "rating": -1,
+    "description": "While this Pokemon has 1/2 or less of its maximum HP, its Attack and Special Attack are halved.",
+    "shortDescription": "While this Pokemon has 1/2 or less of its max HP, its Attack and Sp. Atk are halved."
+  },
+  {
+    "key": 130,
+    "koreanName": "저주받은바디",
+    "japaneseName": "のろわれボディ",
+    "englishName": "Cursed Body",
+    "showdownId": "cursedbody",
+    "rating": 2,
+    "description": "If this Pokemon is hit by an attack, there is a 30% chance that move gets disabled unless one of the attacker's moves is already disabled.",
+    "shortDescription": "If this Pokemon is hit by an attack, there is a 30% chance that move gets disabled."
+  },
+  {
+    "key": 131,
+    "koreanName": "치유의마음",
+    "japaneseName": "いやしのこころ",
+    "englishName": "Healer",
+    "showdownId": "healer",
+    "rating": 0,
+    "description": "30% chance this Pokemon's ally has its non-volatile status condition cured at the end of each turn.",
+    "shortDescription": "30% chance this Pokemon's ally has its status cured at the end of each turn."
+  },
+  {
+    "key": 132,
+    "koreanName": "프렌드가드",
+    "japaneseName": "フレンドガード",
+    "englishName": "Friend Guard",
+    "showdownId": "friendguard",
+    "rating": 0,
+    "description": "This Pokemon's allies receive 3/4 damage from other Pokemon's attacks.",
+    "shortDescription": "This Pokemon's allies receive 3/4 damage from other Pokemon's attacks."
+  },
+  {
+    "key": 133,
+    "koreanName": "깨어진갑옷",
+    "japaneseName": "くだけるよろい",
+    "englishName": "Weak Armor",
+    "showdownId": "weakarmor",
+    "rating": 1,
+    "description": "If a physical attack hits this Pokemon, its Defense is lowered by 1 stage and its Speed is raised by 2 stages.",
+    "shortDescription": "If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 2."
+  },
+  {
+    "key": 134,
+    "koreanName": "헤비메탈",
+    "japaneseName": "ヘヴィメタル",
+    "englishName": "Heavy Metal",
+    "showdownId": "heavymetal",
+    "rating": 0,
+    "description": "This Pokemon's weight is doubled. This effect is calculated after the effect of Autotomize, and before the effect of Float Stone.",
+    "shortDescription": "This Pokemon's weight is doubled."
+  },
+  {
+    "key": 135,
+    "koreanName": "라이트메탈",
+    "japaneseName": "ライトメタル",
+    "englishName": "Light Metal",
+    "showdownId": "lightmetal",
+    "rating": 1,
+    "description": "This Pokemon's weight is halved, rounded down to a tenth of a kilogram. This effect is calculated after the effect of Autotomize, and before the effect of Float Stone. A Pokemon's weight will not drop below 0.1 kg.",
+    "shortDescription": "This Pokemon's weight is halved."
+  },
+  {
+    "key": 136,
+    "koreanName": "멀티스케일",
+    "japaneseName": "マルチスケイル",
+    "englishName": "Multiscale",
+    "showdownId": "multiscale",
+    "rating": 3.5,
+    "description": "If this Pokemon is at full HP, damage taken from attacks is halved.",
+    "shortDescription": "If this Pokemon is at full HP, damage taken from attacks is halved."
+  },
+  {
+    "key": 137,
+    "koreanName": "독폭주",
+    "japaneseName": "どくぼうそう",
+    "englishName": "Toxic Boost",
+    "showdownId": "toxicboost",
+    "rating": 2.5,
+    "description": "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5.",
+    "shortDescription": "While this Pokemon is poisoned, its physical attacks have 1.5x power."
+  },
+  {
+    "key": 138,
+    "koreanName": "열폭주",
+    "japaneseName": "ねつぼうそう",
+    "englishName": "Flare Boost",
+    "showdownId": "flareboost",
+    "rating": 2,
+    "description": "While this Pokemon is burned, the power of its special attacks is multiplied by 1.5.",
+    "shortDescription": "While this Pokemon is burned, its special attacks have 1.5x power."
+  },
+  {
+    "key": 139,
+    "koreanName": "수확",
+    "japaneseName": "しゅうかく",
+    "englishName": "Harvest",
+    "showdownId": "harvest",
+    "rating": 2.5,
+    "description": "If the last item this Pokemon used is a Berry, there is a 50% chance it gets restored at the end of each turn. If Sunny Day is active, this chance is 100%.",
+    "shortDescription": "If last item used is a Berry, 50% chance to restore it each end of turn. 100% in Sun."
+  },
+  {
+    "key": 140,
+    "koreanName": "텔레파시",
+    "japaneseName": "テレパシー",
+    "englishName": "Telepathy",
+    "showdownId": "telepathy",
+    "rating": 0,
+    "description": "This Pokemon does not take damage from attacks made by its allies.",
+    "shortDescription": "This Pokemon does not take damage from attacks made by its allies."
+  },
+  {
+    "key": 141,
+    "koreanName": "변덕쟁이",
+    "japaneseName": "ムラっけ",
+    "englishName": "Moody",
+    "showdownId": "moody",
+    "rating": 5,
+    "description": "This Pokemon has a random stat, other than accuracy or evasiveness, raised by 2 stages and another stat lowered by 1 stage at the end of each turn.",
+    "shortDescription": "Boosts a random stat (except accuracy/evasion) +2 and another stat -1 every turn."
+  },
+  {
+    "key": 142,
+    "koreanName": "방진",
+    "japaneseName": "ぼうじん",
+    "englishName": "Overcoat",
+    "showdownId": "overcoat",
+    "rating": 2,
+    "description": "This Pokemon is immune to powder moves, damage from Sandstorm or Hail, and the effects of Rage Powder and the Effect Spore Ability.",
+    "shortDescription": "This Pokemon is immune to powder moves, Sandstorm or Hail damage, Effect Spore."
+  },
+  {
+    "key": 143,
+    "koreanName": "독수",
+    "japaneseName": "どくしゅ",
+    "englishName": "Poison Touch",
+    "showdownId": "poisontouch",
+    "rating": 2,
+    "description": "This Pokemon's contact moves have a 30% chance of poisoning. This effect comes after a move's inherent secondary effect chance.",
+    "shortDescription": "This Pokemon's contact moves have a 30% chance of poisoning."
+  },
+  {
+    "key": 144,
+    "koreanName": "재생력",
+    "japaneseName": "さいせいりょく",
+    "englishName": "Regenerator",
+    "showdownId": "regenerator",
+    "rating": 4.5,
+    "description": "This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out.",
+    "shortDescription": "This Pokemon restores 1/3 of its maximum HP, rounded down, when it switches out."
+  },
+  {
+    "key": 145,
+    "koreanName": "부풀린가슴",
+    "japaneseName": "はとむね",
+    "englishName": "Big Pecks",
+    "showdownId": "bigpecks",
+    "rating": 0.5,
+    "description": "Prevents other Pokemon from lowering this Pokemon's Defense stat stage.",
+    "shortDescription": "Prevents other Pokemon from lowering this Pokemon's Defense stat stage."
+  },
+  {
+    "key": 146,
+    "koreanName": "모래헤치기",
+    "japaneseName": "すなかき",
+    "englishName": "Sand Rush",
+    "showdownId": "sandrush",
+    "rating": 3,
+    "description": "If Sandstorm is active, this Pokemon's Speed is doubled. This Pokemon takes no damage from Sandstorm.",
+    "shortDescription": "If Sandstorm is active, this Pokemon's Speed is doubled; immunity to Sandstorm."
+  },
+  {
+    "key": 147,
+    "koreanName": "미라클스킨",
+    "japaneseName": "ミラクルスキン",
+    "englishName": "Wonder Skin",
+    "showdownId": "wonderskin",
+    "rating": 2,
+    "description": "Non-damaging moves that check accuracy have their accuracy changed to 50% when used against this Pokemon. This effect comes before other effects that modify accuracy.",
+    "shortDescription": "Status moves with accuracy checks are 50% accurate when used on this Pokemon."
+  },
+  {
+    "key": 148,
+    "koreanName": "애널라이즈",
+    "japaneseName": "アナライズ",
+    "englishName": "Analytic",
+    "showdownId": "analytic",
+    "rating": 2.5,
+    "description": "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
+    "shortDescription": "This Pokemon's attacks have 1.3x power if it is the last to move in a turn."
+  },
+  {
+    "key": 149,
+    "koreanName": "일루전",
+    "japaneseName": "イリュージョン",
+    "englishName": "Illusion",
+    "showdownId": "illusion",
+    "rating": 4.5,
+    "description": "When this Pokemon switches in, it appears as the last unfainted Pokemon in its party until it takes direct damage from another Pokemon's attack. This Pokemon's actual level and HP are displayed instead of those of the mimicked Pokemon.",
+    "shortDescription": "This Pokemon appears as the last Pokemon in the party until it takes direct damage."
+  },
+  {
+    "key": 150,
+    "koreanName": "괴짜",
+    "japaneseName": "かわりもの",
+    "englishName": "Imposter",
+    "showdownId": "imposter",
+    "rating": 5,
+    "description": "On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it. If there is no Pokemon at that position, this Pokemon does not Transform.",
+    "shortDescription": "On switch-in, this Pokemon Transforms into the opposing Pokemon that is facing it."
+  },
+  {
+    "key": 151,
+    "koreanName": "틈새포착",
+    "japaneseName": "すりぬけ",
+    "englishName": "Infiltrator",
+    "showdownId": "infiltrator",
+    "rating": 2.5,
+    "description": "This Pokemon's moves ignore substitutes and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
+    "shortDescription": "Moves ignore substitutes and foe's Reflect/Light Screen/Safeguard/Mist/Aurora Veil."
+  },
+  {
+    "key": 152,
+    "koreanName": "미라",
+    "japaneseName": "ミイラ",
+    "englishName": "Mummy",
+    "showdownId": "mummy",
+    "rating": 2,
+    "description": "Pokemon making contact with this Pokemon have their Ability changed to Mummy. Does not affect Pokemon with the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Mummy, Power Construct, RKS System, Schooling, Shields Down, Stance Change, or Zen Mode Abilities.",
+    "shortDescription": "Pokemon making contact with this Pokemon have their Ability changed to Mummy."
+  },
+  {
+    "key": 153,
+    "koreanName": "자기과신",
+    "japaneseName": "じしんかじょう",
+    "englishName": "Moxie",
+    "showdownId": "moxie",
+    "rating": 3,
+    "description": "This Pokemon's Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
+    "shortDescription": "This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon."
+  },
+  {
+    "key": 154,
+    "koreanName": "정의의마음",
+    "japaneseName": "せいぎのこころ",
+    "englishName": "Justified",
+    "showdownId": "justified",
+    "rating": 2.5,
+    "description": "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move.",
+    "shortDescription": "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark-type move."
+  },
+  {
+    "key": 155,
+    "koreanName": "주눅",
+    "japaneseName": "びびり",
+    "englishName": "Rattled",
+    "showdownId": "rattled",
+    "rating": 1.5,
+    "description": "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, or Ghost-type attack, or if an opposing Pokemon affected this Pokemon with the Intimidate Ability.",
+    "shortDescription": "Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack, or Intimidated."
+  },
+  {
+    "key": 156,
+    "koreanName": "매직미러",
+    "japaneseName": "マジックミラー",
+    "englishName": "Magic Bounce",
+    "showdownId": "magicbounce",
+    "rating": 4,
+    "description": "This Pokemon is unaffected by certain non-damaging moves directed at it and will instead use such moves against the original user. Moves reflected in this way are unable to be reflected again by this or Magic Coat's effect. Spikes, Stealth Rock, Sticky Web, and Toxic Spikes can only be reflected once per side, by the leftmost Pokemon under this or Magic Coat's effect. The Lightning Rod and Storm Drain Abilities redirect their respective moves before this Ability takes effect.",
+    "shortDescription": "This Pokemon blocks certain Status moves and bounces them back to the user."
+  },
+  {
+    "key": 157,
+    "koreanName": "초식",
+    "japaneseName": "そうしょく",
+    "englishName": "Sap Sipper",
+    "showdownId": "sapsipper",
+    "rating": 3,
+    "description": "This Pokemon is immune to Grass-type moves and raises its Attack by 1 stage when hit by a Grass-type move.",
+    "shortDescription": "This Pokemon's Attack is raised 1 stage if hit by a Grass move; Grass immunity."
+  },
+  {
+    "key": 158,
+    "koreanName": "짓궂은마음",
+    "japaneseName": "いたずらごころ",
+    "englishName": "Prankster",
+    "showdownId": "prankster",
+    "rating": 4,
+    "description": "This Pokemon's non-damaging moves have their priority increased by 1. Opposing Dark-type Pokemon are immune to these moves, and any move called by these moves, if the resulting user of the move has this Ability.",
+    "shortDescription": "This Pokemon's Status moves have priority raised by 1, but Dark types are immune."
+  },
+  {
+    "key": 159,
+    "koreanName": "모래의힘",
+    "japaneseName": "すなのちから",
+    "englishName": "Sand Force",
+    "showdownId": "sandforce",
+    "rating": 2,
+    "description": "If Sandstorm is active, this Pokemon's Ground-, Rock-, and Steel-type attacks have their power multiplied by 1.3. This Pokemon takes no damage from Sandstorm.",
+    "shortDescription": "This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm; immunity to it."
+  },
+  {
+    "key": 160,
+    "koreanName": "철가시",
+    "japaneseName": "てつのトゲ",
+    "englishName": "Iron Barbs",
+    "showdownId": "ironbarbs",
+    "rating": 2.5,
+    "description": "Pokemon making contact with this Pokemon lose 1/8 of their maximum HP, rounded down.",
+    "shortDescription": "Pokemon making contact with this Pokemon lose 1/8 of their max HP."
+  },
+  {
+    "key": 161,
+    "koreanName": "달마모드",
+    "japaneseName": "ダルマモード",
+    "englishName": "Zen Mode",
+    "showdownId": "zenmode",
+    "rating": 0,
+    "description": "If this Pokemon is a Darmanitan or Galarian Darmanitan, it changes to Zen Mode if it has 1/2 or less of its maximum HP at the end of a turn. If Darmanitan's HP is above 1/2 of its maximum HP at the end of a turn, it changes back to Standard Mode.",
+    "shortDescription": "If Darmanitan, at end of turn changes Mode to Standard if > 1/2 max HP, else Zen."
+  },
+  {
+    "key": 162,
+    "koreanName": "승리의별",
+    "japaneseName": "しょうりのほし",
+    "englishName": "Victory Star",
+    "showdownId": "victorystar",
+    "rating": 2,
+    "description": "This Pokemon and its allies' moves have their accuracy multiplied by 1.1.",
+    "shortDescription": "This Pokemon and its allies' moves have their accuracy multiplied by 1.1."
+  },
+  {
+    "key": 163,
+    "koreanName": "터보블레이즈",
+    "japaneseName": "ターボブレイズ",
+    "englishName": "Turboblaze",
+    "showdownId": "turboblaze",
+    "rating": 3.5,
+    "description": "This Pokemon's moves and their effects ignore certain Abilities of other Pokemon. The Abilities that can be negated are Aroma Veil, Aura Break, Battle Armor, Big Pecks, Bulletproof, Clear Body, Contrary, Damp, Dazzling, Disguise, Dry Skin, Filter, Flash Fire, Flower Gift, Flower Veil, Fluffy, Friend Guard, Fur Coat, Grass Pelt, Heatproof, Heavy Metal, Hyper Cutter, Ice Face, Ice Scales, Immunity, Inner Focus, Insomnia, Keen Eye, Leaf Guard, Levitate, Light Metal, Lightning Rod, Limber, Magic Bounce, Magma Armor, Marvel Scale, Mirror Armor, Motor Drive, Multiscale, Oblivious, Overcoat, Own Tempo, Pastel Veil, Punk Rock, Queenly Majesty, Sand Veil, Sap Sipper, Shell Armor, Shield Dust, Simple, Snow Cloak, Solid Rock, Soundproof, Sticky Hold, Storm Drain, Sturdy, Suction Cups, Sweet Veil, Tangled Feet, Telepathy, Thick Fat, Unaware, Vital Spirit, Volt Absorb, Water Absorb, Water Bubble, Water Veil, White Smoke, Wonder Guard, and Wonder Skin. This affects every other Pokemon on the field, whether or not it is a target of this Pokemon's move, and whether or not their Ability is beneficial to this Pokemon.",
+    "shortDescription": "This Pokemon's moves and their effects ignore the Abilities of other Pokemon."
+  },
+  {
+    "key": 164,
+    "koreanName": "테라볼티지",
+    "japaneseName": "テラボルテージ",
+    "englishName": "Teravolt",
+    "showdownId": "teravolt",
+    "rating": 3.5,
+    "description": "This Pokemon's moves and their effects ignore certain Abilities of other Pokemon. The Abilities that can be negated are Aroma Veil, Aura Break, Battle Armor, Big Pecks, Bulletproof, Clear Body, Contrary, Damp, Dazzling, Disguise, Dry Skin, Filter, Flash Fire, Flower Gift, Flower Veil, Fluffy, Friend Guard, Fur Coat, Grass Pelt, Heatproof, Heavy Metal, Hyper Cutter, Ice Face, Ice Scales, Immunity, Inner Focus, Insomnia, Keen Eye, Leaf Guard, Levitate, Light Metal, Lightning Rod, Limber, Magic Bounce, Magma Armor, Marvel Scale, Mirror Armor, Motor Drive, Multiscale, Oblivious, Overcoat, Own Tempo, Pastel Veil, Punk Rock, Queenly Majesty, Sand Veil, Sap Sipper, Shell Armor, Shield Dust, Simple, Snow Cloak, Solid Rock, Soundproof, Sticky Hold, Storm Drain, Sturdy, Suction Cups, Sweet Veil, Tangled Feet, Telepathy, Thick Fat, Unaware, Vital Spirit, Volt Absorb, Water Absorb, Water Bubble, Water Veil, White Smoke, Wonder Guard, and Wonder Skin. This affects every other Pokemon on the field, whether or not it is a target of this Pokemon's move, and whether or not their Ability is beneficial to this Pokemon.",
+    "shortDescription": "This Pokemon's moves and their effects ignore the Abilities of other Pokemon."
+  },
+  {
+    "key": 165,
+    "koreanName": "아로마베일",
+    "japaneseName": "アロマベール",
+    "englishName": "Aroma Veil",
+    "showdownId": "aromaveil",
+    "rating": 2,
+    "description": "This Pokemon and its allies cannot become affected by Attract, Disable, Encore, Heal Block, Taunt, or Torment.",
+    "shortDescription": "Protects user/allies from Attract, Disable, Encore, Heal Block, Taunt, and Torment."
+  },
+  {
+    "key": 166,
+    "koreanName": "플라워베일",
+    "japaneseName": "フラワーベール",
+    "englishName": "Flower Veil",
+    "showdownId": "flowerveil",
+    "rating": 0,
+    "description": "Grass-type Pokemon on this Pokemon's side cannot have their stat stages lowered by other Pokemon or have a non-volatile status condition inflicted on them by other Pokemon.",
+    "shortDescription": "This side's Grass types can't have stats lowered or status inflicted by other Pokemon."
+  },
+  {
+    "key": 167,
+    "koreanName": "볼주머니",
+    "japaneseName": "ほおぶくろ",
+    "englishName": "Cheek Pouch",
+    "showdownId": "cheekpouch",
+    "rating": 2,
+    "description": "If this Pokemon eats a held Berry, it restores 1/3 of its maximum HP, rounded down, in addition to the Berry's effect. This effect can also activate after the effects of Bug Bite, Fling, Pluck, Stuff Cheeks, and Teatime if the eaten Berry had an effect on this Pokemon.",
+    "shortDescription": "If this Pokemon eats a Berry, it restores 1/3 of its max HP after the Berry's effect."
+  },
+  {
+    "key": 168,
+    "koreanName": "변환자재",
+    "japaneseName": "へんげんじざい",
+    "englishName": "Protean",
+    "showdownId": "protean",
+    "rating": 4.5,
+    "description": "This Pokemon's type changes to match the type of the move it is about to use. This effect comes after all effects that change a move's type.",
+    "shortDescription": "This Pokemon's type changes to match the type of the move it is about to use."
+  },
+  {
+    "key": 169,
+    "koreanName": "퍼코트",
+    "japaneseName": "ファーコート",
+    "englishName": "Fur Coat",
+    "showdownId": "furcoat",
+    "rating": 4,
+    "description": "This Pokemon's Defense is doubled.",
+    "shortDescription": "This Pokemon's Defense is doubled."
+  },
+  {
+    "key": 170,
+    "koreanName": "매지션",
+    "japaneseName": "マジシャン",
+    "englishName": "Magician",
+    "showdownId": "magician",
+    "rating": 1.5,
+    "description": "If this Pokemon has no item, it steals the item off a Pokemon it hits with an attack. Does not affect Doom Desire and Future Sight.",
+    "shortDescription": "If this Pokemon has no item, it steals the item off a Pokemon it hits with an attack."
+  },
+  {
+    "key": 171,
+    "koreanName": "방탄",
+    "japaneseName": "ぼうだん",
+    "englishName": "Bulletproof",
+    "showdownId": "bulletproof",
+    "rating": 3,
+    "description": "This Pokemon is immune to bullet moves.",
+    "shortDescription": "This Pokemon is immune to bullet moves."
+  },
+  {
+    "key": 172,
+    "koreanName": "승기",
+    "japaneseName": "かちき",
+    "englishName": "Competitive",
+    "showdownId": "competitive",
+    "rating": 2.5,
+    "description": "This Pokemon's Special Attack is raised by 2 stages for each of its stat stages that is lowered by an opposing Pokemon.",
+    "shortDescription": "This Pokemon's Sp. Atk is raised by 2 for each of its stats that is lowered by a foe."
+  },
+  {
+    "key": 173,
+    "koreanName": "옹골찬턱",
+    "japaneseName": "がんじょうあご",
+    "englishName": "Strong Jaw",
+    "showdownId": "strongjaw",
+    "rating": 3,
+    "description": "This Pokemon's bite-based attacks have their power multiplied by 1.5.",
+    "shortDescription": "This Pokemon's bite-based attacks have 1.5x power. Bug Bite is not boosted."
+  },
+  {
+    "key": 174,
+    "koreanName": "프리즈스킨",
+    "japaneseName": "フリーズスキン",
+    "englishName": "Refrigerate",
+    "showdownId": "refrigerate",
+    "rating": 4,
+    "description": "This Pokemon's Normal-type moves become Ice-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's Normal-type moves become Ice type and have 1.2x power."
+  },
+  {
+    "key": 175,
+    "koreanName": "스위트베일",
+    "japaneseName": "スイートベール",
+    "englishName": "Sweet Veil",
+    "showdownId": "sweetveil",
+    "rating": 2,
+    "description": "This Pokemon and its allies cannot fall asleep, but those already asleep do not wake up immediately. This Pokemon and its allies cannot use Rest successfully or become affected by Yawn, and those previously affected will not fall asleep.",
+    "shortDescription": "This Pokemon and its allies cannot fall asleep; those already asleep do not wake up."
+  },
+  {
+    "key": 176,
+    "koreanName": "배틀스위치",
+    "japaneseName": "バトルスイッチ",
+    "englishName": "Stance Change",
+    "showdownId": "stancechange",
+    "rating": 4,
+    "description": "If this Pokemon is an Aegislash, it changes to Blade Forme before using an attacking move, and changes to Shield Forme before using King's Shield.",
+    "shortDescription": "If Aegislash, changes Forme to Blade before attacks and Shield before King's Shield."
+  },
+  {
+    "key": 177,
+    "koreanName": "질풍날개",
+    "japaneseName": "はやてのつばさ",
+    "englishName": "Gale Wings",
+    "showdownId": "galewings",
+    "rating": 2.5,
+    "description": "If this Pokemon is at full HP, its Flying-type moves have their priority increased by 1.",
+    "shortDescription": "If this Pokemon is at full HP, its Flying-type moves have their priority increased by 1."
+  },
+  {
+    "key": 178,
+    "koreanName": "메가런처",
+    "japaneseName": "メガランチャー",
+    "englishName": "Mega Launcher",
+    "showdownId": "megalauncher",
+    "rating": 3,
+    "description": "This Pokemon's pulse moves have their power multiplied by 1.5. Heal Pulse restores 3/4 of a target's maximum HP, rounded half down.",
+    "shortDescription": "This Pokemon's pulse moves have 1.5x power. Heal Pulse heals 3/4 target's max HP."
+  },
+  {
+    "key": 179,
+    "koreanName": "풀모피",
+    "japaneseName": "くさのけがわ",
+    "englishName": "Grass Pelt",
+    "showdownId": "grasspelt",
+    "rating": 0.5,
+    "description": "If Grassy Terrain is active, this Pokemon's Defense is multiplied by 1.5.",
+    "shortDescription": "If Grassy Terrain is active, this Pokemon's Defense is multiplied by 1.5."
+  },
+  {
+    "key": 180,
+    "koreanName": "공생",
+    "japaneseName": "きょうせい",
+    "englishName": "Symbiosis",
+    "showdownId": "symbiosis",
+    "rating": 0,
+    "description": "If an ally uses its item, this Pokemon gives its item to that ally immediately. Does not activate if the ally's item was stolen or knocked off, or if the ally used an Eject Button or Eject Pack.",
+    "shortDescription": "If an ally uses its item, this Pokemon gives its item to that ally immediately."
+  },
+  {
+    "key": 181,
+    "koreanName": "단단한발톱",
+    "japaneseName": "かたいツメ",
+    "englishName": "Tough Claws",
+    "showdownId": "toughclaws",
+    "rating": 3.5,
+    "description": "This Pokemon's contact moves have their power multiplied by 1.3.",
+    "shortDescription": "This Pokemon's contact moves have their power multiplied by 1.3."
+  },
+  {
+    "key": 182,
+    "koreanName": "페어리스킨",
+    "japaneseName": "フェアリースキン",
+    "englishName": "Pixilate",
+    "showdownId": "pixilate",
+    "rating": 4,
+    "description": "This Pokemon's Normal-type moves become Fairy-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's Normal-type moves become Fairy type and have 1.2x power."
+  },
+  {
+    "key": 183,
+    "koreanName": "미끈미끈",
+    "japaneseName": "ぬめぬめ",
+    "englishName": "Gooey",
+    "showdownId": "gooey",
+    "rating": 2,
+    "description": "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
+    "shortDescription": "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage."
+  },
+  {
+    "key": 184,
+    "koreanName": "스카이스킨",
+    "japaneseName": "スカイスキン",
+    "englishName": "Aerilate",
+    "showdownId": "aerilate",
+    "rating": 4,
+    "description": "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's Normal-type moves become Flying type and have 1.2x power."
+  },
+  {
+    "key": 185,
+    "koreanName": "부자유친",
+    "japaneseName": "おやこあい",
+    "englishName": "Parental Bond",
+    "showdownId": "parentalbond",
+    "rating": 4.5,
+    "description": "This Pokemon's damaging moves become multi-hit moves that hit twice. The second hit has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
+    "shortDescription": "This Pokemon's damaging moves hit twice. The second hit has its damage quartered."
+  },
+  {
+    "key": 186,
+    "koreanName": "다크오라",
+    "japaneseName": "ダークオーラ",
+    "englishName": "Dark Aura",
+    "showdownId": "darkaura",
+    "rating": 3,
+    "description": "While this Pokemon is active, the power of Dark-type moves used by active Pokemon is multiplied by 1.33.",
+    "shortDescription": "While this Pokemon is active, a Dark move used by any Pokemon has 1.33x power."
+  },
+  {
+    "key": 187,
+    "koreanName": "페어리오라",
+    "japaneseName": "フェアリーオーラ",
+    "englishName": "Fairy Aura",
+    "showdownId": "fairyaura",
+    "rating": 3,
+    "description": "While this Pokemon is active, the power of Fairy-type moves used by active Pokemon is multiplied by 1.33.",
+    "shortDescription": "While this Pokemon is active, a Fairy move used by any Pokemon has 1.33x power."
+  },
+  {
+    "key": 188,
+    "koreanName": "오라브레이크",
+    "japaneseName": "オーラブレイク",
+    "englishName": "Aura Break",
+    "showdownId": "aurabreak",
+    "rating": 1,
+    "description": "While this Pokemon is active, the effects of the Dark Aura and Fairy Aura Abilities are reversed, multiplying the power of Dark- and Fairy-type moves, respectively, by 3/4 instead of 1.33.",
+    "shortDescription": "While this Pokemon is active, the Dark Aura and Fairy Aura power modifier is 0.75x."
+  },
+  {
+    "key": 189,
+    "koreanName": "시작의바다",
+    "japaneseName": "はじまりのうみ",
+    "englishName": "Primordial Sea",
+    "showdownId": "primordialsea",
+    "rating": 4.5,
+    "description": "On switch-in, the weather becomes Primordial Sea, which includes all the effects of Rain Dance and prevents damaging Fire-type moves from executing. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Delta Stream or Desolate Land Abilities.",
+    "shortDescription": "On switch-in, heavy rain begins until this Ability is not active in battle."
+  },
+  {
+    "key": 190,
+    "koreanName": "끝의대지",
+    "japaneseName": "おわりのだいち",
+    "englishName": "Desolate Land",
+    "showdownId": "desolateland",
+    "rating": 4.5,
+    "description": "On switch-in, the weather becomes Desolate Land, which includes all the effects of Sunny Day and prevents damaging Water-type moves from executing. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Delta Stream or Primordial Sea Abilities.",
+    "shortDescription": "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle."
+  },
+  {
+    "key": 191,
+    "koreanName": "델타스트림",
+    "japaneseName": "デルタストリーム",
+    "englishName": "Delta Stream",
+    "showdownId": "deltastream",
+    "rating": 4,
+    "description": "On switch-in, the weather becomes Delta Stream, which removes the weaknesses of the Flying type from Flying-type Pokemon. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Desolate Land or Primordial Sea Abilities.",
+    "shortDescription": "On switch-in, strong winds begin until this Ability is not active in battle."
+  },
+  {
+    "key": 192,
+    "koreanName": "지구력",
+    "japaneseName": "じきゅうりょく",
+    "englishName": "Stamina",
+    "showdownId": "stamina",
+    "rating": 3.5,
+    "description": "This Pokemon's Defense is raised by 1 stage after it is damaged by a move.",
+    "shortDescription": "This Pokemon's Defense is raised by 1 stage after it is damaged by a move."
+  },
+  {
+    "key": 193,
+    "koreanName": "도망태세",
+    "japaneseName": "にげごし",
+    "englishName": "Wimp Out",
+    "showdownId": "wimpout",
+    "rating": 1,
+    "description": "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
+    "shortDescription": "This Pokemon switches out when it reaches 1/2 or less of its maximum HP."
+  },
+  {
+    "key": 194,
+    "koreanName": "위기회피",
+    "japaneseName": "ききかいひ",
+    "englishName": "Emergency Exit",
+    "showdownId": "emergencyexit",
+    "rating": 1,
+    "description": "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
+    "shortDescription": "This Pokemon switches out when it reaches 1/2 or less of its maximum HP."
+  },
+  {
+    "key": 195,
+    "koreanName": "꾸덕꾸덕굳기",
+    "japaneseName": "みずがため",
+    "englishName": "Water Compaction",
+    "showdownId": "watercompaction",
+    "rating": 1.5,
+    "description": "This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move.",
+    "shortDescription": "This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move."
+  },
+  {
+    "key": 196,
+    "koreanName": "무도한행동",
+    "japaneseName": "ひとでなし",
+    "englishName": "Merciless",
+    "showdownId": "merciless",
+    "rating": 1.5,
+    "description": "This Pokemon's attacks are critical hits if the target is poisoned.",
+    "shortDescription": "This Pokemon's attacks are critical hits if the target is poisoned."
+  },
+  {
+    "key": 197,
+    "koreanName": "리밋실드",
+    "japaneseName": "リミットシールド",
+    "englishName": "Shields Down",
+    "showdownId": "shieldsdown",
+    "rating": 3,
+    "description": "If this Pokemon is a Minior, it changes to its Core forme if it has 1/2 or less of its maximum HP, and changes to Meteor Form if it has more than 1/2 its maximum HP. This check is done on switch-in and at the end of each turn. While in its Meteor Form, it cannot become affected by a non-volatile status condition or Yawn.",
+    "shortDescription": "If Minior, switch-in/end of turn it changes to Core at 1/2 max HP or less, else Meteor."
+  },
+  {
+    "key": 198,
+    "koreanName": "잠복",
+    "japaneseName": "はりこみ",
+    "englishName": "Stakeout",
+    "showdownId": "stakeout",
+    "rating": 4.5,
+    "description": "This Pokemon's offensive stat is doubled against a target that switched in this turn.",
+    "shortDescription": "This Pokemon's offensive stat is doubled against a target that switched in this turn."
+  },
+  {
+    "key": 199,
+    "koreanName": "수포",
+    "japaneseName": "すいほう",
+    "englishName": "Water Bubble",
+    "showdownId": "waterbubble",
+    "rating": 4.5,
+    "description": "This Pokemon's offensive stat is doubled while using a Water-type attack. If a Pokemon uses a Fire-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be burned. Gaining this Ability while burned cures it.",
+    "shortDescription": "This Pokemon's Water power is 2x; it can't be burned; Fire power against it is halved."
+  },
+  {
+    "key": 200,
+    "koreanName": "강철술사",
+    "japaneseName": "はがねつかい",
+    "englishName": "Steelworker",
+    "showdownId": "steelworker",
+    "rating": 3.5,
+    "description": "This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.",
+    "shortDescription": "This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack."
+  },
+  {
+    "key": 201,
+    "koreanName": "발끈",
+    "japaneseName": "ぎゃくじょう",
+    "englishName": "Berserk",
+    "showdownId": "berserk",
+    "rating": 2,
+    "description": "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Special Attack is raised by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
+    "shortDescription": "This Pokemon's Sp. Atk is raised by 1 when it reaches 1/2 or less of its max HP."
+  },
+  {
+    "key": 202,
+    "koreanName": "눈치우기",
+    "japaneseName": "ゆきかき",
+    "englishName": "Slush Rush",
+    "showdownId": "slushrush",
+    "rating": 3,
+    "description": "If Hail is active, this Pokemon's Speed is doubled.",
+    "shortDescription": "If Hail is active, this Pokemon's Speed is doubled."
+  },
+  {
+    "key": 203,
+    "koreanName": "원격",
+    "japaneseName": "えんかく",
+    "englishName": "Long Reach",
+    "showdownId": "longreach",
+    "rating": 1,
+    "description": "This Pokemon's attacks do not make contact with the target.",
+    "shortDescription": "This Pokemon's attacks do not make contact with the target."
+  },
+  {
+    "key": 204,
+    "koreanName": "촉촉보이스",
+    "japaneseName": "うるおいボイス",
+    "englishName": "Liquid Voice",
+    "showdownId": "liquidvoice",
+    "rating": 1.5,
+    "description": "This Pokemon's sound-based moves become Water-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's sound-based moves become Water type."
+  },
+  {
+    "key": 205,
+    "koreanName": "힐링시프트",
+    "japaneseName": "ヒーリングシフト",
+    "englishName": "Triage",
+    "showdownId": "triage",
+    "rating": 3.5,
+    "description": "This Pokemon's healing moves have their priority increased by 3.",
+    "shortDescription": "This Pokemon's healing moves have their priority increased by 3."
+  },
+  {
+    "key": 206,
+    "koreanName": "일렉트릭스킨",
+    "japaneseName": "エレキスキン",
+    "englishName": "Galvanize",
+    "showdownId": "galvanize",
+    "rating": 4,
+    "description": "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's Normal-type moves become Electric type and have 1.2x power."
+  },
+  {
+    "key": 207,
+    "koreanName": "서핑테일",
+    "japaneseName": "サーフテール",
+    "englishName": "Surge Surfer",
+    "showdownId": "surgesurfer",
+    "rating": 3,
+    "description": "If Electric Terrain is active, this Pokemon's Speed is doubled.",
+    "shortDescription": "If Electric Terrain is active, this Pokemon's Speed is doubled."
+  },
+  {
+    "key": 208,
+    "koreanName": "어군",
+    "japaneseName": "ぎょぐん",
+    "englishName": "Schooling",
+    "showdownId": "schooling",
+    "rating": 3,
+    "description": "On switch-in, if this Pokemon is a Wishiwashi that is level 20 or above and has more than 1/4 of its maximum HP left, it changes to School Form. If it is in School Form and its HP drops to 1/4 of its maximum HP or less, it changes to Solo Form at the end of the turn. If it is in Solo Form and its HP is greater than 1/4 its maximum HP at the end of the turn, it changes to School Form.",
+    "shortDescription": "If user is Wishiwashi, changes to School Form if it has > 1/4 max HP, else Solo Form."
+  },
+  {
+    "key": 209,
+    "koreanName": "탈",
+    "japaneseName": "ばけのかわ",
+    "englishName": "Disguise",
+    "showdownId": "disguise",
+    "rating": 3.5,
+    "description": "If this Pokemon is a Mimikyu, the first hit it takes in battle deals 0 neutral damage. Its disguise is then broken, it changes to Busted Form, and it loses 1/8 of its max HP. Confusion damage also breaks the disguise.",
+    "shortDescription": "(Mimikyu only) The first hit it takes is blocked, and it takes 1/8 HP damage instead."
+  },
+  {
+    "key": 210,
+    "koreanName": "유대변화",
+    "japaneseName": "きずなへんげ",
+    "englishName": "Battle Bond",
+    "showdownId": "battlebond",
+    "rating": 4,
+    "description": "If this Pokemon is a Greninja, it transforms into Ash-Greninja if it attacks and knocks out another Pokemon. If this Pokemon is an Ash-Greninja, its Water Shuriken has 20 power and always hits three times.",
+    "shortDescription": "After KOing a Pokemon: becomes Ash-Greninja, Water Shuriken: 20 power, hits 3x."
+  },
+  {
+    "key": 211,
+    "koreanName": "스웜체인지",
+    "japaneseName": "スワームチェンジ",
+    "englishName": "Power Construct",
+    "showdownId": "powerconstruct",
+    "rating": 5,
+    "description": "If this Pokemon is a Zygarde in its 10% or 50% Forme, it changes to Complete Forme when it has 1/2 or less of its maximum HP at the end of the turn.",
+    "shortDescription": "If Zygarde 10%/50%, changes to Complete if at 1/2 max HP or less at end of turn."
+  },
+  {
+    "key": 212,
+    "koreanName": "부식",
+    "japaneseName": "ふしょく",
+    "englishName": "Corrosion",
+    "showdownId": "corrosion",
+    "rating": 2.5,
+    "description": "This Pokemon can poison or badly poison a Pokemon regardless of its typing.",
+    "shortDescription": "This Pokemon can poison or badly poison a Pokemon regardless of its typing."
+  },
+  {
+    "key": 213,
+    "koreanName": "절대안깸",
+    "japaneseName": "ぜったいねむり",
+    "englishName": "Comatose",
+    "showdownId": "comatose",
+    "rating": 4,
+    "description": "This Pokemon is considered to be asleep and cannot become affected by a non-volatile status condition or Yawn.",
+    "shortDescription": "This Pokemon cannot be statused, and is considered to be asleep."
+  },
+  {
+    "key": 214,
+    "koreanName": "여왕의위엄",
+    "japaneseName": "じょおうのいげん",
+    "englishName": "Queenly Majesty",
+    "showdownId": "queenlymajesty",
+    "rating": 2.5,
+    "description": "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+    "shortDescription": "This Pokemon and its allies are protected from opposing priority moves."
+  },
+  {
+    "key": 215,
+    "koreanName": "내용물분출",
+    "japaneseName": "とびだすなかみ",
+    "englishName": "Innards Out",
+    "showdownId": "innardsout",
+    "rating": 4,
+    "description": "If this Pokemon is knocked out with a move, that move's user loses HP equal to the amount of damage inflicted on this Pokemon.",
+    "shortDescription": "If this Pokemon is KOed with a move, that move's user loses an equal amount of HP."
+  },
+  {
+    "key": 216,
+    "koreanName": "무희",
+    "japaneseName": "おどりこ",
+    "englishName": "Dancer",
+    "showdownId": "dancer",
+    "rating": 1.5,
+    "description": "After another Pokemon uses a dance move, this Pokemon uses the same move. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
+    "shortDescription": "After another Pokemon uses a dance move, this Pokemon uses the same move."
+  },
+  {
+    "key": 217,
+    "koreanName": "배터리",
+    "japaneseName": "バッテリー",
+    "englishName": "Battery",
+    "showdownId": "battery",
+    "rating": 0,
+    "description": "This Pokemon's allies have the power of their special attacks multiplied by 1.3.",
+    "shortDescription": "This Pokemon's allies have the power of their special attacks multiplied by 1.3."
+  },
+  {
+    "key": 218,
+    "koreanName": "복슬복슬",
+    "japaneseName": "もふもふ",
+    "englishName": "Fluffy",
+    "showdownId": "fluffy",
+    "rating": 3.5,
+    "description": "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
+    "shortDescription": "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves."
+  },
+  {
+    "key": 219,
+    "koreanName": "비비드바디",
+    "japaneseName": "ビビッドボディ",
+    "englishName": "Dazzling",
+    "showdownId": "dazzling",
+    "rating": 2.5,
+    "description": "While this Pokemon is active, priority moves from opposing Pokemon that target this Pokemon or its allies are prevented from having an effect.",
+    "shortDescription": "This Pokemon and its allies are protected from opposing priority moves."
+  },
+  {
+    "key": 220,
+    "koreanName": "소울하트",
+    "japaneseName": "ソウルハート",
+    "englishName": "Soul-Heart",
+    "showdownId": "soulheart",
+    "rating": 3.5,
+    "description": "This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints.",
+    "shortDescription": "This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints."
+  },
+  {
+    "key": 221,
+    "koreanName": "컬리헤어",
+    "japaneseName": "カーリーヘアー",
+    "englishName": "Tangling Hair",
+    "showdownId": "tanglinghair",
+    "rating": 2,
+    "description": "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
+    "shortDescription": "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage."
+  },
+  {
+    "key": 222,
+    "koreanName": "리시버",
+    "japaneseName": "レシーバー",
+    "englishName": "Receiver",
+    "showdownId": "receiver",
+    "rating": 0,
+    "description": "This Pokemon copies the Ability of an ally that faints. Abilities that cannot be copied are As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, and Zen Mode.",
+    "shortDescription": "This Pokemon copies the Ability of an ally that faints."
+  },
+  {
+    "key": 223,
+    "koreanName": "과학의힘",
+    "japaneseName": "かがくのちから",
+    "englishName": "Power of Alchemy",
+    "showdownId": "powerofalchemy",
+    "rating": 0,
+    "description": "This Pokemon copies the Ability of an ally that faints. Abilities that cannot be copied are As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, and Zen Mode.",
+    "shortDescription": "This Pokemon copies the Ability of an ally that faints."
+  },
+  {
+    "key": 224,
+    "koreanName": "비스트부스트",
+    "japaneseName": "ビーストブースト",
+    "englishName": "Beast Boost",
+    "showdownId": "beastboost",
+    "rating": 3.5,
+    "description": "This Pokemon's highest stat is raised by 1 stage if it attacks and knocks out another Pokemon. Stat stage changes are not considered. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order.",
+    "shortDescription": "This Pokemon's highest stat is raised by 1 if it attacks and KOes another Pokemon."
+  },
+  {
+    "key": 225,
+    "koreanName": "AR시스템",
+    "japaneseName": "ＡＲシステム",
+    "englishName": "RKS System",
+    "showdownId": "rkssystem",
+    "rating": 4,
+    "description": "If this Pokemon is a Silvally, its type changes to match its held Memory.",
+    "shortDescription": "If this Pokemon is a Silvally, its type changes to match its held Memory."
+  },
+  {
+    "key": 226,
+    "koreanName": "일렉트릭메이커",
+    "japaneseName": "エレキメイカー",
+    "englishName": "Electric Surge",
+    "showdownId": "electricsurge",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Electric Terrain.",
+    "shortDescription": "On switch-in, this Pokemon summons Electric Terrain."
+  },
+  {
+    "key": 227,
+    "koreanName": "사이코메이커",
+    "japaneseName": "サイコメイカー",
+    "englishName": "Psychic Surge",
+    "showdownId": "psychicsurge",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Psychic Terrain.",
+    "shortDescription": "On switch-in, this Pokemon summons Psychic Terrain."
+  },
+  {
+    "key": 228,
+    "koreanName": "미스트메이커",
+    "japaneseName": "ミストメイカー",
+    "englishName": "Misty Surge",
+    "showdownId": "mistysurge",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon summons Misty Terrain.",
+    "shortDescription": "On switch-in, this Pokemon summons Misty Terrain."
+  },
+  {
+    "key": 229,
+    "koreanName": "그래스메이커",
+    "japaneseName": "グラスメイカー",
+    "englishName": "Grassy Surge",
+    "showdownId": "grassysurge",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon summons Grassy Terrain.",
+    "shortDescription": "On switch-in, this Pokemon summons Grassy Terrain."
+  },
+  {
+    "key": 230,
+    "koreanName": "메탈프로텍트",
+    "japaneseName": "メタルプロテクト",
+    "englishName": "Full Metal Body",
+    "showdownId": "fullmetalbody",
+    "rating": 2,
+    "description": "Prevents other Pokemon from lowering this Pokemon's stat stages.",
+    "shortDescription": "Prevents other Pokemon from lowering this Pokemon's stat stages."
+  },
+  {
+    "key": 231,
+    "koreanName": "스펙터가드",
+    "japaneseName": "ファントムガード",
+    "englishName": "Shadow Shield",
+    "showdownId": "shadowshield",
+    "rating": 3.5,
+    "description": "If this Pokemon is at full HP, damage taken from attacks is halved.",
+    "shortDescription": "If this Pokemon is at full HP, damage taken from attacks is halved."
+  },
+  {
+    "key": 232,
+    "koreanName": "프리즘아머",
+    "japaneseName": "プリズムアーマー",
+    "englishName": "Prism Armor",
+    "showdownId": "prismarmor",
+    "rating": 3,
+    "description": "This Pokemon receives 3/4 damage from supereffective attacks.",
+    "shortDescription": "This Pokemon receives 3/4 damage from supereffective attacks."
+  },
+  {
+    "key": 233,
+    "koreanName": "브레인포스",
+    "japaneseName": "ブレインフォース",
+    "englishName": "Neuroforce",
+    "showdownId": "neuroforce",
+    "rating": 2.5,
+    "description": "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.25.",
+    "shortDescription": "This Pokemon's attacks that are super effective against the target do 1.25x damage."
+  },
+  {
+    "key": 234,
+    "koreanName": "불요의검",
+    "japaneseName": "ふとうのけん",
+    "englishName": "Intrepid Sword",
+    "showdownId": "intrepidsword",
+    "rating": 4,
+    "description": "On switch-in, this Pokemon's Attack is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Attack is raised by 1 stage."
+  },
+  {
+    "key": 235,
+    "koreanName": "불굴의방패",
+    "japaneseName": "ふくつのたて",
+    "englishName": "Dauntless Shield",
+    "showdownId": "dauntlessshield",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Defense is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Defense is raised by 1 stage."
+  },
+  {
+    "key": 236,
+    "koreanName": "리베로",
+    "japaneseName": "リベロ",
+    "englishName": "Libero",
+    "showdownId": "libero",
+    "rating": 4.5,
+    "description": "This Pokemon's type changes to match the type of the move it is about to use. This effect comes after all effects that change a move's type.",
+    "shortDescription": "This Pokemon's type changes to match the type of the move it is about to use."
+  },
+  {
+    "key": 237,
+    "koreanName": "볼줍기",
+    "japaneseName": "たまひろい",
+    "englishName": "Ball Fetch",
+    "showdownId": "ballfetch",
+    "rating": 0,
+    "description": "No competitive use.",
+    "shortDescription": "No competitive use."
+  },
+  {
+    "key": 238,
+    "koreanName": "솜털",
+    "japaneseName": "わたげ",
+    "englishName": "Cotton Down",
+    "showdownId": "cottondown",
+    "rating": 2,
+    "description": "When this Pokemon is hit by an attack, the Speed of all other Pokemon on the field is lowered by 1 stage.",
+    "shortDescription": "If this Pokemon is hit, it lowers the Speed of all other Pokemon on the field 1 stage."
+  },
+  {
+    "key": 239,
+    "koreanName": "스크루지느러미",
+    "japaneseName": "スクリューおびれ",
+    "englishName": "Propeller Tail",
+    "showdownId": "propellertail",
+    "rating": 0,
+    "description": "This Pokemon's moves cannot be redirected to a different target by any effect.",
+    "shortDescription": "This Pokemon's moves cannot be redirected to a different target by any effect."
+  },
+  {
+    "key": 240,
+    "koreanName": "미러아머",
+    "japaneseName": "ミラーアーマー",
+    "englishName": "Mirror Armor",
+    "showdownId": "mirrorarmor",
+    "rating": 2,
+    "description": "When one of this Pokemon's stat stages would be lowered by another Pokemon, that Pokemon's stat stage is lowered instead. This effect does not happen if this Pokemon's stat stage was already -6. If the other Pokemon has a substitute, neither Pokemon has its stat stage lowered.",
+    "shortDescription": "If this Pokemon's stat stages would be lowered, the attacker's are lowered instead."
+  },
+  {
+    "key": 241,
+    "koreanName": "그대로꿀꺽미사일",
+    "japaneseName": "うのミサイル",
+    "englishName": "Gulp Missile",
+    "showdownId": "gulpmissile",
+    "rating": 2.5,
+    "description": "If this Pokemon is a Cramorant, it changes forme when it hits a target with Surf or uses the first turn of Dive successfully. It becomes Gulping Form with an Arrokuda in its mouth if it has more than 1/2 of its maximum HP remaining, or Gorging Form with a Pikachu in its mouth if it has 1/2 or less of its maximum HP remaining. If Cramorant gets hit in Gulping or Gorging Form, it spits the Arrokuda or Pikachu at its attacker, even if it has no HP remaining. The projectile deals damage equal to 1/4 of the target's maximum HP, rounded down; this damage is blocked by the Magic Guard Ability but not by a substitute. An Arrokuda also lowers the target's Defense by 1 stage, and a Pikachu paralyzes the target. Cramorant will return to normal if it spits out a projectile, switches out, or Dynamaxes.",
+    "shortDescription": "When hit after Surf/Dive, attacker takes 1/4 max HP and -1 Defense or paralysis."
+  },
+  {
+    "key": 242,
+    "koreanName": "굳건한신념",
+    "japaneseName": "すじがねいり",
+    "englishName": "Stalwart",
+    "showdownId": "stalwart",
+    "rating": 0,
+    "description": "This Pokemon's moves cannot be redirected to a different target by any effect.",
+    "shortDescription": "This Pokemon's moves cannot be redirected to a different target by any effect."
+  },
+  {
+    "key": 243,
+    "koreanName": "증기기관",
+    "japaneseName": "じょうききかん",
+    "englishName": "Steam Engine",
+    "showdownId": "steamengine",
+    "rating": 2,
+    "description": "This Pokemon's Speed is raised by 6 stages after it is damaged by a Fire- or Water-type move.",
+    "shortDescription": "This Pokemon's Speed is raised by 6 stages after it is damaged by Fire/Water moves."
+  },
+  {
+    "key": 244,
+    "koreanName": "펑크록",
+    "japaneseName": "パンクロック",
+    "englishName": "Punk Rock",
+    "showdownId": "punkrock",
+    "rating": 3.5,
+    "description": "This Pokemon's sound-based moves have their power multiplied by 1.3. This Pokemon takes halved damage from sound-based moves.",
+    "shortDescription": "This Pokemon receives 1/2 damage from sound moves. Its own have 1.3x power."
+  },
+  {
+    "key": 245,
+    "koreanName": "모래뿜기",
+    "japaneseName": "すなはき",
+    "englishName": "Sand Spit",
+    "showdownId": "sandspit",
+    "rating": 2,
+    "description": "When this Pokemon is hit by an attack, the effect of Sandstorm begins. This effect comes after the effects of Max and G-Max Moves.",
+    "shortDescription": "When this Pokemon is hit by an attack, the effect of Sandstorm begins."
+  },
+  {
+    "key": 246,
+    "koreanName": "얼음인분",
+    "japaneseName": "こおりのりんぷん",
+    "englishName": "Ice Scales",
+    "showdownId": "icescales",
+    "rating": 4,
+    "description": "This Pokemon receives 1/2 damage from special attacks.",
+    "shortDescription": "This Pokemon receives 1/2 damage from special attacks."
+  },
+  {
+    "key": 247,
+    "koreanName": "숙성",
+    "japaneseName": "じゅくせい",
+    "englishName": "Ripen",
+    "showdownId": "ripen",
+    "rating": 2,
+    "description": "When this Pokemon eats certain Berries, the effects are doubled. Berries that restore HP or PP have the amount doubled, Berries that raise stat stages have the amount doubled, Berries that halve damage taken quarter it instead, and a Jaboca Berry or Rowap Berry has the attacker lose 1/4 of its maximum HP, rounded down.",
+    "shortDescription": "When this Pokemon eats certain Berries, the effects are doubled."
+  },
+  {
+    "key": 248,
+    "koreanName": "아이스페이스",
+    "japaneseName": "アイスフェイス",
+    "englishName": "Ice Face",
+    "showdownId": "iceface",
+    "rating": 3,
+    "description": "If this Pokemon is an Eiscue, the first physical hit it takes in battle deals 0 neutral damage. Its ice face is then broken and it changes forme to Noice Face. Eiscue regains its Ice Face forme when Hail begins or when Eiscue switches in while Hail is active. Confusion damage also breaks the ice face.",
+    "shortDescription": "If Eiscue, the first physical hit it takes deals 0 damage. This effect is restored in Hail."
+  },
+  {
+    "key": 249,
+    "koreanName": "파워스폿",
+    "japaneseName": "パワースポット",
+    "englishName": "Power Spot",
+    "showdownId": "powerspot",
+    "rating": 1,
+    "description": "This Pokemon's allies have the power of their moves multiplied by 1.3. This affects Doom Desire and Future Sight, even if the user is not on the field.",
+    "shortDescription": "This Pokemon's allies have the power of their moves multiplied by 1.3."
+  },
+  {
+    "key": 250,
+    "koreanName": "의태",
+    "japaneseName": "ぎたい",
+    "englishName": "Mimicry",
+    "showdownId": "mimicry",
+    "rating": 0.5,
+    "description": "This Pokemon's types change to match the active Terrain when this Pokemon acquires this Ability, or whenever a Terrain begins. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain. If this Ability is acquired without an active Terrain, or a Terrain ends, this Pokemon's types become the original types for its species.",
+    "shortDescription": "This Pokemon's types change to match the Terrain. Type reverts when Terrain ends."
+  },
+  {
+    "key": 251,
+    "koreanName": "배리어프리",
+    "japaneseName": "バリアフリー",
+    "englishName": "Screen Cleaner",
+    "showdownId": "screencleaner",
+    "rating": 2,
+    "description": "On switch-in, the effects of Aurora Veil, Light Screen, and Reflect end for both sides.",
+    "shortDescription": "On switch-in, the effects of Aurora Veil, Light Screen, and Reflect end for both sides."
+  },
+  {
+    "key": 252,
+    "koreanName": "강철정신",
+    "japaneseName": "はがねのせいしん",
+    "englishName": "Steely Spirit",
+    "showdownId": "steelyspirit",
+    "rating": 3.5,
+    "description": "This Pokemon and its allies' Steel-type moves have their power multiplied by 1.5. This affects Doom Desire even if the user is not on the field.",
+    "shortDescription": "This Pokemon and its allies' Steel-type moves have their power multiplied by 1.5."
+  },
+  {
+    "key": 253,
+    "koreanName": "멸망의바디",
+    "japaneseName": "ほろびのボディ",
+    "englishName": "Perish Body",
+    "showdownId": "perishbody",
+    "rating": 1,
+    "description": "Making contact with this Pokemon starts the Perish Song effect for it and the attacker. This effect does not happen for this Pokemon if the attacker already has a perish count.",
+    "shortDescription": "Making contact with this Pokemon starts the Perish Song effect for it and the attacker."
+  },
+  {
+    "key": 254,
+    "koreanName": "떠도는영혼",
+    "japaneseName": "さまようたましい",
+    "englishName": "Wandering Spirit",
+    "showdownId": "wanderingspirit",
+    "rating": 2.5,
+    "description": "Pokemon making contact with this Pokemon have their Ability swapped with this one. Does not affect Pokemon with the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Hunger Switch, Ice Face, Illusion, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Wonder Guard, or Zen Mode Abilities.",
+    "shortDescription": "Pokemon making contact with this Pokemon have their Ability swapped with this one."
+  },
+  {
+    "key": 255,
+    "koreanName": "무아지경",
+    "japaneseName": "ごりむちゅう",
+    "englishName": "Gorilla Tactics",
+    "showdownId": "gorillatactics",
+    "rating": 4.5,
+    "description": "This Pokemon's Attack is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+    "shortDescription": "This Pokemon's Attack is 1.5x, but it can only select the first move it executes."
+  },
+  {
+    "key": 256,
+    "koreanName": "화학변화가스",
+    "japaneseName": "かがくへんかガス",
+    "englishName": "Neutralizing Gas",
+    "showdownId": "neutralizinggas",
+    "rating": 4,
+    "description": "While this Pokemon is active, Abilities have no effect. This Ability activates before hazards and other Abilities take effect. Does not affect the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, or Zen Mode Abilities.",
+    "shortDescription": "While this Pokemon is active, Abilities have no effect."
+  },
+  {
+    "key": 257,
+    "koreanName": "파스텔베일",
+    "japaneseName": "パステルベール",
+    "englishName": "Pastel Veil",
+    "showdownId": "pastelveil",
+    "rating": 2,
+    "description": "This Pokemon and its allies cannot be poisoned. Gaining this Ability while this Pokemon or its ally is poisoned cures them. If this Ability is being ignored during an effect that causes poison, this Pokemon is cured immediately but its ally is not.",
+    "shortDescription": "This Pokemon and its allies cannot be poisoned. On switch-in, cures poisoned allies."
+  },
+  {
+    "key": 258,
+    "koreanName": "꼬르륵스위치",
+    "japaneseName": "はらぺこスイッチ",
+    "englishName": "Hunger Switch",
+    "showdownId": "hungerswitch",
+    "rating": 1,
+    "description": "If this Pokemon is a Morpeko, it changes formes between its Full Belly Mode and Hangry Mode at the end of each turn.",
+    "shortDescription": "If Morpeko, it changes between Full Belly and Hangry Mode at the end of each turn."
+  },
+  {
+    "key": 259,
+    "koreanName": "퀵드로",
+    "japaneseName": "クイックドロウ",
+    "englishName": "Quick Draw",
+    "showdownId": "quickdraw",
+    "rating": 2.5,
+    "description": "This Pokemon has a 30% chance to move first in its priority bracket with attacking moves.",
+    "shortDescription": "This Pokemon has a 30% chance to move first in its priority bracket with attacking moves."
+  },
+  {
+    "key": 260,
+    "koreanName": "보이지않는주먹",
+    "japaneseName": "ふかしのこぶし",
+    "englishName": "Unseen Fist",
+    "showdownId": "unseenfist",
+    "rating": 2,
+    "description": "The Pokémon can deal damage with moves that make physical contact, even if the target is protected.",
+    "shortDescription": "Contact moves can hit through Protect."
+  },
+  {
+    "key": 261,
+    "koreanName": "기묘한약",
+    "japaneseName": null,
+    "englishName": "Curious Medicine",
+    "showdownId": "curiousmedicine",
+    "rating": 0,
+    "description": "On switch-in, this Pokemon's allies have their stat stages reset to 0.",
+    "shortDescription": "On switch-in, this Pokemon's allies have their stat stages reset to 0."
+  },
+  {
+    "key": 262,
+    "koreanName": "트랜지스터",
+    "japaneseName": null,
+    "englishName": "Transistor",
+    "showdownId": "transistor",
+    "rating": 3.5,
+    "description": "This Pokemon's offensive stat is multiplied by 1.5 while using an Electric-type attack.",
+    "shortDescription": "This Pokemon's offensive stat is multiplied by 1.5 while using an Electric-type attack."
+  },
+  {
+    "key": 263,
+    "koreanName": "용의턱",
+    "japaneseName": null,
+    "englishName": "Dragon's Maw",
+    "showdownId": "dragonsmaw",
+    "rating": 3.5,
+    "description": "This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack.",
+    "shortDescription": "This Pokemon's offensive stat is multiplied by 1.5 while using a Dragon-type attack."
+  },
+  {
+    "key": 264,
+    "koreanName": "백의울음",
+    "japaneseName": null,
+    "englishName": "Chilling Neigh",
+    "showdownId": "chillingneigh",
+    "rating": 3,
+    "description": "This Pokemon's Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
+    "shortDescription": "This Pokemon's Attack is raised by 1 stage if it attacks and KOes another Pokemon."
+  },
+  {
+    "key": 265,
+    "koreanName": "흑의울음",
+    "japaneseName": null,
+    "englishName": "Grim Neigh",
+    "showdownId": "grimneigh",
+    "rating": 3,
+    "description": "This Pokemon's Special Attack is raised by 1 stage if it attacks and knocks out another Pokemon.",
+    "shortDescription": "This Pokemon's Sp. Atk is raised by 1 stage if it attacks and KOes another Pokemon."
+  },
+  {
+    "key": 266,
+    "koreanName": "혼연일체 (블리자포스)",
+    "japaneseName": null,
+    "englishName": "As One (Glastrier)",
+    "showdownId": "asoneglastrier",
+    "rating": 3.5,
+    "description": "Combination of the Unnerve and Chilling Neigh Abilities.",
+    "shortDescription": "Combination of the Unnerve and Chilling Neigh Abilities."
+  },
+  {
+    "key": 267,
+    "koreanName": "혼연일체 (레이스포스)",
+    "japaneseName": null,
+    "englishName": "As One (Spectrier)",
+    "showdownId": "asonespectrier",
+    "rating": 3.5,
+    "description": "Combination of the Unnerve and Grim Neigh Abilities.",
+    "shortDescription": "Combination of the Unnerve and Grim Neigh Abilities."
+  },
+  {
+    "key": 268,
+    "koreanName": "가시지않는향기",
+    "japaneseName": null,
+    "englishName": "Lingering Aroma",
+    "showdownId": "lingeringaroma",
+    "rating": 2,
+    "description": "Pokemon making contact with this Pokemon have their Ability changed to Lingering Aroma. Does not affect Pokemon with the As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Mummy, Power Construct, RKS System, Schooling, Shields Down, Stance Change, or Zen Mode Abilities.",
+    "shortDescription": "Pokemon making contact with this Pokemon have their Ability changed to Lingering Aroma."
+  },
+  {
+    "key": 269,
+    "koreanName": "넘치는씨",
+    "japaneseName": null,
+    "englishName": "Seed Sower",
+    "showdownId": "seedsower",
+    "rating": 2,
+    "description": "When this Pokemon is hit by an attack, the effect of Grassy Terrain begins.",
+    "shortDescription": "When this Pokemon is hit by an attack, the effect of Grassy Terrain begins."
+  },
+  {
+    "key": 270,
+    "koreanName": "열교환",
+    "japaneseName": null,
+    "englishName": "Thermal Exchange",
+    "showdownId": "thermalexchange",
+    "rating": 2.5,
+    "description": "This Pokemon's Attack is raised 1 stage after it is damaged by a Fire-type move. This Pokemon cannot be burned.",
+    "shortDescription": "This Pokemon's Attack is raised by 1 stage when hit by Fire moves; it can't be burned."
+  },
+  {
+    "key": 271,
+    "koreanName": "분노의껍질",
+    "japaneseName": null,
+    "englishName": "Anger Shell",
+    "showdownId": "angershell",
+    "rating": 2,
+    "description": "When this Pokemon has more than 1/2 its maximum HP and takes damage from an attack bringing it to 1/2 or less of its maximum HP, its Attack, Special Attack, and Speed are raised by 1 stage, and its Defense and Speed are lowered by 1 stage. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
+    "shortDescription": "When this Pokemon reaches 1/2 or less of its max HP: +1 Atk, Sp. Atk, and Spe; -1 Def and Sp. Def."
+  },
+  {
+    "key": 272,
+    "koreanName": "정화의소금",
+    "japaneseName": null,
+    "englishName": "Purifying Salt",
+    "showdownId": "purifyingsalt",
+    "rating": 2,
+    "description": "This Pokemon cannot become affected by a status condition or Yawn. If a Pokemon uses a Ghost-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon.",
+    "shortDescription": "This Pokemon cannot be statused; Ghost power against it is halved."
+  },
+  {
+    "key": 273,
+    "koreanName": "노릇노릇바디",
+    "japaneseName": null,
+    "englishName": "Well-Baked Body",
+    "showdownId": "wellbakedbody",
+    "rating": 2,
+    "description": "This Pokemon is immune to Fire-type moves and raises its Defense by 2 stages when hit by a Fire-type move.",
+    "shortDescription": "This Pokemon's Defense is raised 2 stages if hit by a Fire move; Fire immunity."
+  },
+  {
+    "key": 274,
+    "koreanName": "바람타기",
+    "japaneseName": null,
+    "englishName": "Wind Rider",
+    "showdownId": "windrider",
+    "rating": 3,
+    "description": "This Pokemon is immune to wind moves and raises its Attack by 1 stage when hit by a wind move. Attack is also raised when Tailwind begins on this Pokemon's side.",
+    "shortDescription": "If hit by a wind move or Tailwind begins: +1 Attack. Wind move immunity."
+  },
+  {
+    "key": 275,
+    "koreanName": "파수견",
+    "japaneseName": null,
+    "englishName": "Guard Dog",
+    "showdownId": "guarddog",
+    "rating": 3,
+    "description": "Immune to Intimidate. Intimidated: +1 Attack. Cannot be forced to switch out.",
+    "shortDescription": "Immune to Intimidate. Intimidated: +1 Attack. Cannot be forced to switch out."
+  },
+  {
+    "key": 276,
+    "koreanName": "바위나르기",
+    "japaneseName": null,
+    "englishName": "Rocky Payload",
+    "showdownId": "rockypayload",
+    "rating": 3,
+    "description": "This Pokemon's offensive stat is multiplied by 1.5 while using a Rock-type attack.",
+    "shortDescription": "This Pokemon's offensive stat is multiplied by 1.5 while using a Rock-type attack."
+  },
+  {
+    "key": 277,
+    "koreanName": "풍력발전",
+    "japaneseName": null,
+    "englishName": "Wind Power",
+    "showdownId": "windpower",
+    "rating": 2,
+    "description": "If this Pokemon is hit by a wind move or Tailwind begins, it becomes charged.",
+    "shortDescription": "If this Pokemon is hit by a wind move or Tailwind begins, it becomes charged."
+  },
+  {
+    "key": 278,
+    "koreanName": "마이티체인지",
+    "japaneseName": null,
+    "englishName": "Zero to Hero",
+    "showdownId": "zerotohero",
+    "rating": 2,
+    "description": "If this Pokemon is Palafin, it changes to Hero Mode when it switches out.",
+    "shortDescription": "If this Pokemon is Palafin, it changes to Hero Mode when it switches out."
+  },
+  {
+    "key": 279,
+    "koreanName": "사령탑",
+    "japaneseName": null,
+    "englishName": "Commander",
+    "showdownId": "commander",
+    "rating": 2,
+    "description": "If this Pokemon is Tatsugiri and Dondozo is an active ally, Dondozo will swallow this Pokemon. This prevents this Pokemon from acting and boosts all of Dondozo's stats by 2 stages. Attacks targeted at this Pokemon will fail if it has been swallowed. Tatsugiri can still take indirect damage while swallowed.",
+    "shortDescription": "If ally is Dondozo: this Pokemon cannot act or be hit, +2 to all Dondozo's stats."
+  },
+  {
+    "key": 280,
+    "koreanName": "전기로바꾸기",
+    "japaneseName": null,
+    "englishName": "Electromorphosis",
+    "showdownId": "electromorphosis",
+    "rating": 3,
+    "description": "This Pokemon's next Electric-type move has its damage boosted if it takes direct damage.",
+    "shortDescription": "This Pokemon becomes charged if it takes direct damage."
+  },
+  {
+    "key": 281,
+    "koreanName": "고대활성",
+    "japaneseName": null,
+    "englishName": "Protosynthesis",
+    "showdownId": "protosynthesis",
+    "rating": 2,
+    "description": "If Sunny Day is active, or this Pokemon is holding Booster Energy, this Pokemon's highest stat is boosted by 50%.",
+    "shortDescription": "If Sunny Day is active or Booster Energy held, the highest stat is 1.5x."
+  },
+  {
+    "key": 282,
+    "koreanName": "쿼크차지",
+    "japaneseName": null,
+    "englishName": "Quark Drive",
+    "showdownId": "quarkdrive",
+    "rating": 2,
+    "description": "If Electric Terrain is active, or this Pokemon is holding Booster Energy, this Pokemon's highest stat is boosted by 50%.",
+    "shortDescription": "If Electric Terrain is active or Booster Energy held, the highest stat is 1.5x."
+  },
+  {
+    "key": 283,
+    "koreanName": "황금몸",
+    "japaneseName": null,
+    "englishName": "Good as Gold",
+    "showdownId": "goodasgold",
+    "rating": 2,
+    "description": "This Pokemon is immune to Status moves.",
+    "shortDescription": "This Pokemon is immune to Status moves."
+  },
+  {
+    "key": 284,
+    "koreanName": "재앙의그릇",
+    "japaneseName": null,
+    "englishName": "Vessel of Ruin",
+    "showdownId": "vesselofruin",
+    "rating": 3,
+    "description": "The Sp. Atk stat of all other active Pokemon is reduced by 25%.",
+    "shortDescription": "The Sp. Atk stat of all other active Pokemon is reduced by 25%."
+  },
+  {
+    "key": 285,
+    "koreanName": "재앙의검",
+    "japaneseName": null,
+    "englishName": "Sword of Ruin",
+    "showdownId": "swordofruin",
+    "rating": 3,
+    "description": "The Defense stat of all other active Pokemon is reduced by 25%.",
+    "shortDescription": "The Defense stat of all other active Pokemon is reduced by 25%."
+  },
+  {
+    "key": 286,
+    "koreanName": "재앙의목간",
+    "japaneseName": null,
+    "englishName": "Tablets of Ruin",
+    "showdownId": "tabletsofruin",
+    "rating": 3,
+    "description": "The Attack stat of all other active Pokemon is reduced by 25%.",
+    "shortDescription": "The Attack stat of all other active Pokemon is reduced by 25%."
+  },
+  {
+    "key": 287,
+    "koreanName": "재앙의구슬",
+    "japaneseName": null,
+    "englishName": "Beads of Ruin",
+    "showdownId": "beadsofruin",
+    "rating": 3,
+    "description": "The Sp. Def stat of all other active Pokemon is reduced by 25%.",
+    "shortDescription": "The Sp. Def stat of all other active Pokemon is reduced by 25%."
+  },
+  {
+    "key": 288,
+    "koreanName": "진홍빛고동",
+    "japaneseName": null,
+    "englishName": "Orichalcum Pulse",
+    "showdownId": "orichalcumpulse",
+    "rating": 4,
+    "description": "On switch-in, summons Sunny Day. Attack is boosted by 30% in Sunny Day.",
+    "shortDescription": "On switch-in, summons Sunny Day. Attack is boosted by 30% in Sunny Day."
+  },
+  {
+    "key": 289,
+    "koreanName": "하드론엔진",
+    "japaneseName": null,
+    "englishName": "Hadron Engine",
+    "showdownId": "hadronengine",
+    "rating": 3,
+    "description": "On switch-in, summons Electric Terrain. Sp. Atk is boosted by 30% in Electric Terrain.",
+    "shortDescription": "On switch-in, summons Electric Terrain. Sp. Atk is boosted by 30% in Electric Terrain."
+  },
+  {
+    "key": 290,
+    "koreanName": "편승",
+    "japaneseName": null,
+    "englishName": "Opportunist",
+    "showdownId": "opportunist",
+    "rating": 3,
+    "description": "When an opposing Pokemon recieves stat boosts, this Pokemon gets the same boosts.",
+    "shortDescription": "When an opposing Pokemon recieves stat boosts, this Pokemon gets the same boosts."
+  },
+  {
+    "key": 291,
+    "koreanName": "되새김질",
+    "japaneseName": null,
+    "englishName": "Cud Chew",
+    "showdownId": "cudchew",
+    "rating": 3,
+    "description": "When this Pokemon consumes a berry, it will consume the berry again at the end of the following turn.",
+    "shortDescription": "If this Pokemon eats a berry, it will consume the berry again at the end of next turn."
+  },
+  {
+    "key": 292,
+    "koreanName": "예리함",
+    "japaneseName": null,
+    "englishName": "Sharpness",
+    "showdownId": "sharpness",
+    "rating": 2,
+    "description": "This Pokemon's slicing attacks have their power multiplied by 1.5.",
+    "shortDescription": "This Pokemon's slicing attacks have 1.5x power."
+  },
+  {
+    "key": 293,
+    "koreanName": "총대장",
+    "japaneseName": null,
+    "englishName": "Supreme Overlord",
+    "showdownId": "supremeoverlord",
+    "rating": 2.5,
+    "description": "This Pokemon's Attack and Special Attack stats are increased by 10% for each fainted teammate.",
+    "shortDescription": "This Pokemon's Attack and Special Attack raise by 10% per fainted teammate."
+  },
+  {
+    "key": 294,
+    "koreanName": "협연",
+    "japaneseName": null,
+    "englishName": "Costar",
+    "showdownId": "costar",
+    "rating": 2.5,
+    "description": "On switch-in, this Pokemon copies an ally's stat changes.",
+    "shortDescription": "On switch-in, this Pokemon copies an ally's stat changes."
+  },
+  {
+    "key": 295,
+    "koreanName": "독치장",
+    "japaneseName": null,
+    "englishName": "Toxic Debris",
+    "showdownId": "toxicdebris",
+    "rating": 2,
+    "description": "When this Pokemon is hit by an attack, Toxic Spikes are set on the opposing side of the field.",
+    "shortDescription": "When this Pokemon is hit by an attack, Toxic Spikes are set around the attacker."
+  },
+  {
+    "key": 296,
+    "koreanName": "테일아머",
+    "japaneseName": null,
+    "englishName": "Armor Tail",
+    "showdownId": "armortail",
+    "rating": 2.5,
+    "description": "While this Pokemon is active, priority moves from opposing Pokemon that target this Pokemon or its allies are prevented from having an effect.",
+    "shortDescription": "This Pokemon and its allies are protected from opposing priority moves."
+  },
+  {
+    "key": 297,
+    "koreanName": "흙먹기",
+    "japaneseName": null,
+    "englishName": "Earth Eater",
+    "showdownId": "eartheater",
+    "rating": 3,
+    "description": "This Pokemon is immune to Ground-type moves and restores 1/3 of its maximum HP, rounded down, when hit by a Ground-type move.",
+    "shortDescription": "This Pokemon heals 1/3 of its max HP when hit by Ground moves; Ground immunity."
+  },
+  {
+    "key": 298,
+    "koreanName": "균사의힘",
+    "japaneseName": null,
+    "englishName": "Mycelium Might",
+    "showdownId": "myceliummight",
+    "rating": 2,
+    "description": "This Pokemon's Status moves have lowered priority and ignore their targets' Abilities.",
+    "shortDescription": "This Pokemon's Status moves have lowered priority and ignore their targets' Abilities."
+  },
+  {
+    "key": 299,
+    "koreanName": "대접",
+    "japaneseName": "おもてなし",
+    "englishName": "Hospitality",
+    "showdownId": "hospitality",
+    "rating": 0,
+    "description": "On switch-in, this Pokemon restores 1/4 of its ally's maximum HP, rounded down.",
+    "shortDescription": "On switch-in, this Pokemon restores 1/4 of its ally's maximum HP, rounded down."
+  },
+  {
+    "key": 300,
+    "koreanName": "심안",
+    "japaneseName": "しんがん",
+    "englishName": "Mind's Eye",
+    "showdownId": "mindseye",
+    "rating": 0,
+    "description": "This Pokemon can hit Ghost types with Normal- and Fighting-type moves. Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
+    "shortDescription": "Fighting, Normal moves hit Ghost. Accuracy can't be lowered, ignores evasiveness."
+  },
+  {
+    "key": 301,
+    "koreanName": "초상투영 (벽록)",
+    "japaneseName": "おもかげやどし",
+    "englishName": "Embody Aspect (Teal)",
+    "showdownId": "embodyaspectteal",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Speed is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Speed is raised by 1 stage."
+  },
+  {
+    "key": 302,
+    "koreanName": "초상투영 (우물)",
+    "japaneseName": "おもかげやどし",
+    "englishName": "Embody Aspect (Wellspring)",
+    "showdownId": "embodyaspectwellspring",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Special Defense is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Special Defense is raised by 1 stage."
+  },
+  {
+    "key": 303,
+    "koreanName": "초상투영 (화덕)",
+    "japaneseName": "おもかげやどし",
+    "englishName": "Embody Aspect (Hearthflame)",
+    "showdownId": "embodyaspecthearthflame",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Attack is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Attack is raised by 1 stage."
+  },
+  {
+    "key": 304,
+    "koreanName": "초상투영 (주춧돌)",
+    "japaneseName": "おもかげやどし",
+    "englishName": "Embody Aspect (Cornerstone)",
+    "showdownId": "embodyaspectcornerstone",
+    "rating": 3.5,
+    "description": "On switch-in, this Pokemon's Defense is raised by 1 stage.",
+    "shortDescription": "On switch-in, this Pokemon's Defense is raised by 1 stage."
+  },
+  {
+    "key": 305,
+    "koreanName": "독사슬",
+    "japaneseName": "どくのくさり",
+    "englishName": "Toxic Chain",
+    "showdownId": "toxicchain",
+    "rating": 4.5,
+    "description": "This Pokemon's moves have a 30% chance of badly poisoning. This effect comes after a move's inherent secondary effect chance.",
+    "shortDescription": "This Pokemon's moves have a 30% chance of badly poisoning."
+  },
+  {
+    "key": 306,
+    "koreanName": "감미로운꿀",
+    "japaneseName": "かんろなミツ",
+    "englishName": "Supersweet Syrup",
+    "showdownId": "supersweetsyrup",
+    "rating": 1.5,
+    "description": "On switch-in, this Pokemon lowers the evasiveness of opponents 1 stage. Once per battle.",
+    "shortDescription": "On switch-in, this Pokemon lowers the evasiveness of opponents 1 stage. Once per battle."
+  },
+  {
+    "key": 307,
+    "koreanName": "테라체인지",
+    "japaneseName": "テラスチェンジ",
+    "englishName": "Tera Shift",
+    "showdownId": "terashift",
+    "rating": 3,
+    "description": "If this Pokemon is a Terapagos, it transforms into its Terastal Form on entry.",
+    "shortDescription": "If this Pokemon is a Terapagos, it transforms into its Terastal Form on entry."
+  },
+  {
+    "key": 308,
+    "koreanName": "테라셸",
+    "japaneseName": "テラスシェル",
+    "englishName": "Tera Shell",
+    "showdownId": "terashell",
+    "rating": 3.5,
+    "description": "If this Pokemon is a Terapagos at full HP, the effectiveness of attacks against it is changed to 0.5 unless this Pokemon is immune to the move. Multi-hit moves retain the same effectiveness throughout the attack.",
+    "shortDescription": "If full HP, attacks taken have effectiveness changed to 0.5 unless naturally immune."
+  },
+  {
+    "key": 309,
+    "koreanName": "제로포밍",
+    "japaneseName": "ゼロフォーミング",
+    "englishName": "Teraform Zero",
+    "showdownId": "teraformzero",
+    "rating": 3,
+    "description": "Terapagos: Terastallizing ends the effects of weather and terrain. Once per battle.",
+    "shortDescription": "Terapagos: Terastallizing ends the effects of weather and terrain. Once per battle."
+  },
+  {
+    "key": 310,
+    "koreanName": "독조종",
+    "japaneseName": "どくくぐつ",
+    "englishName": "Poison Puppeteer",
+    "showdownId": "poisonpuppeteer",
+    "rating": 3,
+    "description": "If this Pokemon poisons or badly poisons a target, the target also becomes confused.",
+    "shortDescription": "If this Pokemon poisons or badly poisons a target, the target also becomes confused."
+  },
+  {
+    "key": 311,
+    "koreanName": "메가솔라",
+    "japaneseName": "メガソーラー",
+    "englishName": "Mega Sol",
+    "showdownId": "megasol",
+    "rating": 3,
+    "description": "This Pokemon's moves are used as if the effects of Sunny Day were active.",
+    "shortDescription": "This Pokemon's moves are used as if the effects of Sunny Day were active."
+  },
+  {
+    "key": 312,
+    "koreanName": "드래곤스킨",
+    "japaneseName": "ドラゴンスキン",
+    "englishName": "Dragonize",
+    "showdownId": "dragonize",
+    "rating": 4,
+    "description": "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+    "shortDescription": "This Pokemon's Normal-type moves become Dragon type and have 1.2x power."
+  },
+  {
+    "key": 313,
+    "koreanName": "관통드릴",
+    "japaneseName": "",
+    "englishName": "Piercing Drill",
+    "showdownId": "piercingdrill",
+    "rating": 3,
+    "description": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal.",
+    "shortDescription": "Contact moves hit through Protect for 1/4 damage."
+  },
+  {
+    "key": 314,
+    "koreanName": "하바네로분출",
+    "japaneseName": "",
+    "englishName": "Spicy Spray",
+    "showdownId": "spicyspray",
+    "rating": 3,
+    "description": "When the Pokémon takes damage from a move, it burns the attacker.",
+    "shortDescription": "When hit by a move, burns the attacker."
+  },
+  {
+    "key": 315,
+    "koreanName": "불꽃의갈기",
+    "japaneseName": "",
+    "englishName": "Fire Mane",
+    "showdownId": "firemane",
+    "rating": 3,
+    "description": "Boosts the power of the Pokémon's Fire-type moves by 50%.",
+    "shortDescription": "Boosts this Pokémon's Fire-type moves by 50%."
+  },
+  {
+    "key": 316,
+    "koreanName": "천정부지",
+    "japaneseName": "",
+    "englishName": "Eelevate",
+    "showdownId": "eelevate",
+    "rating": 4,
+    "description": "This Pokemon is immune to Ground-type attacks and the effects of Spikes, Toxic Spikes, and Sticky Web. When this Pokemon knocks out a target with an attack, its highest stat is raised by 1 stage.",
+    "shortDescription": "Ground/hazard immunity; after this Pokemon attacks and KOes, its highest stat rises by 1."
+  }
+]

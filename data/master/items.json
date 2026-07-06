@@ -1,6 +1,4782 @@
 [
-  { "key": 275, "koreanName": "기합의띠", "japaneseName": "きあいのタスキ", "englishName": "Focus Sash", "effectType": "none", "multiplier": 1 },
-  { "key": 287, "koreanName": "구애스카프", "japaneseName": "こだわりスカーフ", "englishName": "Choice Scarf", "effectType": "choice_scarf", "multiplier": 1.5 },
-  { "key": 158, "koreanName": "자뭉열매", "japaneseName": "オボンのみ", "englishName": "Sitrus Berry", "effectType": "none", "multiplier": 1 },
-  { "key": 270, "koreanName": "생명의구슬", "japaneseName": "いのちのたま", "englishName": "Life Orb", "effectType": "life_orb", "multiplier": 1.3 }
+  {
+    "key": 1,
+    "koreanName": "마스터볼",
+    "englishName": "Master Ball",
+    "showdownId": "masterball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2,
+    "koreanName": "하이퍼볼",
+    "englishName": "Ultra Ball",
+    "showdownId": "ultraball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 3,
+    "koreanName": "수퍼볼",
+    "englishName": "Great Ball",
+    "showdownId": "greatball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 4,
+    "koreanName": "몬스터볼",
+    "englishName": "Poke Ball",
+    "showdownId": "pokeball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 5,
+    "koreanName": "사파리볼",
+    "englishName": "Safari Ball",
+    "showdownId": "safariball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 6,
+    "koreanName": "넷트볼",
+    "englishName": "Net Ball",
+    "showdownId": "netball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 7,
+    "koreanName": "다이브볼",
+    "englishName": "Dive Ball",
+    "showdownId": "diveball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 8,
+    "koreanName": "네스트볼",
+    "englishName": "Nest Ball",
+    "showdownId": "nestball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 9,
+    "koreanName": "리피드볼",
+    "englishName": "Repeat Ball",
+    "showdownId": "repeatball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 10,
+    "koreanName": "타이마볼",
+    "englishName": "Timer Ball",
+    "showdownId": "timerball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 11,
+    "koreanName": "럭셔리볼",
+    "englishName": "Luxury Ball",
+    "showdownId": "luxuryball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 12,
+    "koreanName": "프레미어볼",
+    "englishName": "Premier Ball",
+    "showdownId": "premierball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 13,
+    "koreanName": "다크볼",
+    "englishName": "Dusk Ball",
+    "showdownId": "duskball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 14,
+    "koreanName": "힐볼",
+    "englishName": "Heal Ball",
+    "showdownId": "healball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 15,
+    "koreanName": "퀵볼",
+    "englishName": "Quick Ball",
+    "showdownId": "quickball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 16,
+    "koreanName": "프레셔스볼",
+    "englishName": "Cherish Ball",
+    "showdownId": "cherishball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 43,
+    "koreanName": "나무열매쥬스",
+    "englishName": "Berry Juice",
+    "showdownId": "berryjuice",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 80,
+    "koreanName": "태양의돌",
+    "englishName": "Sun Stone",
+    "showdownId": "sunstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 81,
+    "koreanName": "달의돌",
+    "englishName": "Moon Stone",
+    "showdownId": "moonstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 82,
+    "koreanName": "불꽃의돌",
+    "englishName": "Fire Stone",
+    "showdownId": "firestone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 83,
+    "koreanName": "천둥의돌",
+    "englishName": "Thunder Stone",
+    "showdownId": "thunderstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 84,
+    "koreanName": "물의돌",
+    "englishName": "Water Stone",
+    "showdownId": "waterstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 85,
+    "koreanName": "리프의돌",
+    "englishName": "Leaf Stone",
+    "showdownId": "leafstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 99,
+    "koreanName": "뿌리화석",
+    "englishName": "Root Fossil",
+    "showdownId": "rootfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 100,
+    "koreanName": "발톱화석",
+    "englishName": "Claw Fossil",
+    "showdownId": "clawfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 101,
+    "koreanName": "조개화석",
+    "englishName": "Helix Fossil",
+    "showdownId": "helixfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 102,
+    "koreanName": "껍질화석",
+    "englishName": "Dome Fossil",
+    "showdownId": "domefossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 103,
+    "koreanName": "비밀의호박",
+    "englishName": "Old Amber",
+    "showdownId": "oldamber",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 104,
+    "koreanName": "방패의화석",
+    "englishName": "Armor Fossil",
+    "showdownId": "armorfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 105,
+    "koreanName": "두개의화석",
+    "englishName": "Skull Fossil",
+    "showdownId": "skullfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 106,
+    "koreanName": "귀중한뼈",
+    "englishName": "Rare Bone",
+    "showdownId": "rarebone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 107,
+    "koreanName": "빛의돌",
+    "englishName": "Shiny Stone",
+    "showdownId": "shinystone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 108,
+    "koreanName": "어둠의돌",
+    "englishName": "Dusk Stone",
+    "showdownId": "duskstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 109,
+    "koreanName": "각성의돌",
+    "englishName": "Dawn Stone",
+    "showdownId": "dawnstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 110,
+    "koreanName": "동글동글돌",
+    "englishName": "Oval Stone",
+    "showdownId": "ovalstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 112,
+    "koreanName": "백금옥",
+    "englishName": "Griseous Orb",
+    "showdownId": "griseousorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 116,
+    "koreanName": "아쿠아카세트",
+    "englishName": "Douse Drive",
+    "showdownId": "dousedrive",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 117,
+    "koreanName": "번개카세트",
+    "englishName": "Shock Drive",
+    "showdownId": "shockdrive",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 118,
+    "koreanName": "블레이즈카세트",
+    "englishName": "Burn Drive",
+    "showdownId": "burndrive",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 119,
+    "koreanName": "프리즈카세트",
+    "englishName": "Chill Drive",
+    "showdownId": "chilldrive",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 135,
+    "koreanName": "금강옥",
+    "englishName": "Adamant Orb",
+    "showdownId": "adamantorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 136,
+    "koreanName": "백옥",
+    "englishName": "Lustrous Orb",
+    "showdownId": "lustrousorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 137,
+    "koreanName": "Mail",
+    "englishName": "Mail",
+    "showdownId": "mail",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 149,
+    "koreanName": "버치열매",
+    "englishName": "Cheri Berry",
+    "showdownId": "cheriberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 150,
+    "koreanName": "유루열매",
+    "englishName": "Chesto Berry",
+    "showdownId": "chestoberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 151,
+    "koreanName": "복슝열매",
+    "englishName": "Pecha Berry",
+    "showdownId": "pechaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 152,
+    "koreanName": "복분열매",
+    "englishName": "Rawst Berry",
+    "showdownId": "rawstberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 153,
+    "koreanName": "배리열매",
+    "englishName": "Aspear Berry",
+    "showdownId": "aspearberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 154,
+    "koreanName": "과사열매",
+    "englishName": "Leppa Berry",
+    "showdownId": "leppaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 155,
+    "koreanName": "오랭열매",
+    "englishName": "Oran Berry",
+    "showdownId": "oranberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 156,
+    "koreanName": "시몬열매",
+    "englishName": "Persim Berry",
+    "showdownId": "persimberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 157,
+    "koreanName": "리샘열매",
+    "englishName": "Lum Berry",
+    "showdownId": "lumberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 158,
+    "koreanName": "자뭉열매",
+    "englishName": "Sitrus Berry",
+    "showdownId": "sitrusberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 159,
+    "koreanName": "무화열매",
+    "englishName": "Figy Berry",
+    "showdownId": "figyberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 160,
+    "koreanName": "위키열매",
+    "englishName": "Wiki Berry",
+    "showdownId": "wikiberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 161,
+    "koreanName": "마고열매",
+    "englishName": "Mago Berry",
+    "showdownId": "magoberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 162,
+    "koreanName": "아바열매",
+    "englishName": "Aguav Berry",
+    "showdownId": "aguavberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 163,
+    "koreanName": "파야열매",
+    "englishName": "Iapapa Berry",
+    "showdownId": "iapapaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 164,
+    "koreanName": "라즈열매",
+    "englishName": "Razz Berry",
+    "showdownId": "razzberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 165,
+    "koreanName": "블리열매",
+    "englishName": "Bluk Berry",
+    "showdownId": "blukberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 166,
+    "koreanName": "나나열매",
+    "englishName": "Nanab Berry",
+    "showdownId": "nanabberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 167,
+    "koreanName": "서배열매",
+    "englishName": "Wepear Berry",
+    "showdownId": "wepearberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 168,
+    "koreanName": "파인열매",
+    "englishName": "Pinap Berry",
+    "showdownId": "pinapberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 169,
+    "koreanName": "유석열매",
+    "englishName": "Pomeg Berry",
+    "showdownId": "pomegberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 170,
+    "koreanName": "시마열매",
+    "englishName": "Kelpsy Berry",
+    "showdownId": "kelpsyberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 171,
+    "koreanName": "파비열매",
+    "englishName": "Qualot Berry",
+    "showdownId": "qualotberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 172,
+    "koreanName": "로매열매",
+    "englishName": "Hondew Berry",
+    "showdownId": "hondewberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 173,
+    "koreanName": "또뽀열매",
+    "englishName": "Grepa Berry",
+    "showdownId": "grepaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 174,
+    "koreanName": "토망열매",
+    "englishName": "Tamato Berry",
+    "showdownId": "tamatoberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 175,
+    "koreanName": "수숙열매",
+    "englishName": "Cornn Berry",
+    "showdownId": "cornnberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 176,
+    "koreanName": "고스티열매",
+    "englishName": "Magost Berry",
+    "showdownId": "magostberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 177,
+    "koreanName": "라부탐열매",
+    "englishName": "Rabuta Berry",
+    "showdownId": "rabutaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 178,
+    "koreanName": "노멜열매",
+    "englishName": "Nomel Berry",
+    "showdownId": "nomelberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 179,
+    "koreanName": "메호키열매",
+    "englishName": "Spelon Berry",
+    "showdownId": "spelonberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 180,
+    "koreanName": "자야열매",
+    "englishName": "Pamtre Berry",
+    "showdownId": "pamtreberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 181,
+    "koreanName": "슈박열매",
+    "englishName": "Watmel Berry",
+    "showdownId": "watmelberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 182,
+    "koreanName": "두리열매",
+    "englishName": "Durin Berry",
+    "showdownId": "durinberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 183,
+    "koreanName": "루베열매",
+    "englishName": "Belue Berry",
+    "showdownId": "belueberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 184,
+    "koreanName": "오카열매",
+    "englishName": "Occa Berry",
+    "showdownId": "occaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 185,
+    "koreanName": "꼬시개열매",
+    "englishName": "Passho Berry",
+    "showdownId": "passhoberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 186,
+    "koreanName": "초나열매",
+    "englishName": "Wacan Berry",
+    "showdownId": "wacanberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 187,
+    "koreanName": "린드열매",
+    "englishName": "Rindo Berry",
+    "showdownId": "rindoberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 188,
+    "koreanName": "플카열매",
+    "englishName": "Yache Berry",
+    "showdownId": "yacheberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 189,
+    "koreanName": "로플열매",
+    "englishName": "Chople Berry",
+    "showdownId": "chopleberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 190,
+    "koreanName": "으름열매",
+    "englishName": "Kebia Berry",
+    "showdownId": "kebiaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 191,
+    "koreanName": "슈캐열매",
+    "englishName": "Shuca Berry",
+    "showdownId": "shucaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 192,
+    "koreanName": "바코열매",
+    "englishName": "Coba Berry",
+    "showdownId": "cobaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 193,
+    "koreanName": "야파열매",
+    "englishName": "Payapa Berry",
+    "showdownId": "payapaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 194,
+    "koreanName": "리체열매",
+    "englishName": "Tanga Berry",
+    "showdownId": "tangaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 195,
+    "koreanName": "루미열매",
+    "englishName": "Charti Berry",
+    "showdownId": "chartiberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 196,
+    "koreanName": "수불열매",
+    "englishName": "Kasib Berry",
+    "showdownId": "kasibberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 197,
+    "koreanName": "하반열매",
+    "englishName": "Haban Berry",
+    "showdownId": "habanberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 198,
+    "koreanName": "마코열매",
+    "englishName": "Colbur Berry",
+    "showdownId": "colburberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 199,
+    "koreanName": "바리비열매",
+    "englishName": "Babiri Berry",
+    "showdownId": "babiriberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 200,
+    "koreanName": "카리열매",
+    "englishName": "Chilan Berry",
+    "showdownId": "chilanberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 201,
+    "koreanName": "치리열매",
+    "englishName": "Liechi Berry",
+    "showdownId": "liechiberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 202,
+    "koreanName": "용아열매",
+    "englishName": "Ganlon Berry",
+    "showdownId": "ganlonberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 203,
+    "koreanName": "캄라열매",
+    "englishName": "Salac Berry",
+    "showdownId": "salacberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 204,
+    "koreanName": "야타비열매",
+    "englishName": "Petaya Berry",
+    "showdownId": "petayaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 205,
+    "koreanName": "규살열매",
+    "englishName": "Apicot Berry",
+    "showdownId": "apicotberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 206,
+    "koreanName": "랑사열매",
+    "englishName": "Lansat Berry",
+    "showdownId": "lansatberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 207,
+    "koreanName": "스타열매",
+    "englishName": "Starf Berry",
+    "showdownId": "starfberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 208,
+    "koreanName": "의문열매",
+    "englishName": "Enigma Berry",
+    "showdownId": "enigmaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 209,
+    "koreanName": "미클열매",
+    "englishName": "Micle Berry",
+    "showdownId": "micleberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 210,
+    "koreanName": "애슈열매",
+    "englishName": "Custap Berry",
+    "showdownId": "custapberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 211,
+    "koreanName": "자보열매",
+    "englishName": "Jaboca Berry",
+    "showdownId": "jabocaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 212,
+    "koreanName": "애터열매",
+    "englishName": "Rowap Berry",
+    "showdownId": "rowapberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 213,
+    "koreanName": "반짝가루",
+    "englishName": "Bright Powder",
+    "showdownId": "brightpowder",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 214,
+    "koreanName": "하양허브",
+    "englishName": "White Herb",
+    "showdownId": "whiteherb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 215,
+    "koreanName": "교정깁스",
+    "englishName": "Macho Brace",
+    "showdownId": "machobrace",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 217,
+    "koreanName": "선제공격손톱",
+    "englishName": "Quick Claw",
+    "showdownId": "quickclaw",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 219,
+    "koreanName": "멘탈허브",
+    "englishName": "Mental Herb",
+    "showdownId": "mentalherb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 220,
+    "koreanName": "구애머리띠",
+    "englishName": "Choice Band",
+    "showdownId": "choiceband",
+    "effectType": "choice_band",
+    "multiplier": 1.5
+  },
+  {
+    "key": 221,
+    "koreanName": "왕의징표석",
+    "englishName": "King's Rock",
+    "showdownId": "kingsrock",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 222,
+    "koreanName": "은빛가루",
+    "englishName": "Silver Powder",
+    "showdownId": "silverpowder",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 225,
+    "koreanName": "마음의물방울",
+    "englishName": "Soul Dew",
+    "showdownId": "souldew",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 226,
+    "koreanName": "심해의이빨",
+    "englishName": "Deep Sea Tooth",
+    "showdownId": "deepseatooth",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 227,
+    "koreanName": "심해의비늘",
+    "englishName": "Deep Sea Scale",
+    "showdownId": "deepseascale",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 230,
+    "koreanName": "기합의머리띠",
+    "englishName": "Focus Band",
+    "showdownId": "focusband",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 232,
+    "koreanName": "초점렌즈",
+    "englishName": "Scope Lens",
+    "showdownId": "scopelens",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 233,
+    "koreanName": "금속코트",
+    "englishName": "Metal Coat",
+    "showdownId": "metalcoat",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 234,
+    "koreanName": "먹다남은음식",
+    "englishName": "Leftovers",
+    "showdownId": "leftovers",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 235,
+    "koreanName": "용의비늘",
+    "englishName": "Dragon Scale",
+    "showdownId": "dragonscale",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 236,
+    "koreanName": "전기구슬",
+    "englishName": "Light Ball",
+    "showdownId": "lightball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 237,
+    "koreanName": "부드러운모래",
+    "englishName": "Soft Sand",
+    "showdownId": "softsand",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 238,
+    "koreanName": "딱딱한돌",
+    "englishName": "Hard Stone",
+    "showdownId": "hardstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 239,
+    "koreanName": "기적의씨",
+    "englishName": "Miracle Seed",
+    "showdownId": "miracleseed",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 240,
+    "koreanName": "검은안경",
+    "englishName": "Black Glasses",
+    "showdownId": "blackglasses",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 241,
+    "koreanName": "검은띠",
+    "englishName": "Black Belt",
+    "showdownId": "blackbelt",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 242,
+    "koreanName": "자석",
+    "englishName": "Magnet",
+    "showdownId": "magnet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 243,
+    "koreanName": "신비의물방울",
+    "englishName": "Mystic Water",
+    "showdownId": "mysticwater",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 244,
+    "koreanName": "예리한부리",
+    "englishName": "Sharp Beak",
+    "showdownId": "sharpbeak",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 245,
+    "koreanName": "독바늘",
+    "englishName": "Poison Barb",
+    "showdownId": "poisonbarb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 246,
+    "koreanName": "녹지않는얼음",
+    "englishName": "Never-Melt Ice",
+    "showdownId": "nevermeltice",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 247,
+    "koreanName": "저주의부적",
+    "englishName": "Spell Tag",
+    "showdownId": "spelltag",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 248,
+    "koreanName": "휘어진스푼",
+    "englishName": "Twisted Spoon",
+    "showdownId": "twistedspoon",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 249,
+    "koreanName": "목탄",
+    "englishName": "Charcoal",
+    "showdownId": "charcoal",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 250,
+    "koreanName": "용의이빨",
+    "englishName": "Dragon Fang",
+    "showdownId": "dragonfang",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 251,
+    "koreanName": "실크스카프",
+    "englishName": "Silk Scarf",
+    "showdownId": "silkscarf",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 252,
+    "koreanName": "업그레이드",
+    "englishName": "Up-Grade",
+    "showdownId": "upgrade",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 253,
+    "koreanName": "조개껍질방울",
+    "englishName": "Shell Bell",
+    "showdownId": "shellbell",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 254,
+    "koreanName": "바닷물향로",
+    "englishName": "Sea Incense",
+    "showdownId": "seaincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 255,
+    "koreanName": "무사태평향로",
+    "englishName": "Lax Incense",
+    "showdownId": "laxincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 256,
+    "koreanName": "럭키펀치",
+    "englishName": "Lucky Punch",
+    "showdownId": "luckypunch",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 257,
+    "koreanName": "금속파우더",
+    "englishName": "Metal Powder",
+    "showdownId": "metalpowder",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 258,
+    "koreanName": "굵은뼈",
+    "englishName": "Thick Club",
+    "showdownId": "thickclub",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 259,
+    "koreanName": "대파",
+    "englishName": "Leek",
+    "showdownId": "leek",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 259,
+    "koreanName": "Stick",
+    "englishName": "Stick",
+    "showdownId": "stick",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 265,
+    "koreanName": "광각렌즈",
+    "englishName": "Wide Lens",
+    "showdownId": "widelens",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 266,
+    "koreanName": "힘의머리띠",
+    "englishName": "Muscle Band",
+    "showdownId": "muscleband",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 267,
+    "koreanName": "박식안경",
+    "englishName": "Wise Glasses",
+    "showdownId": "wiseglasses",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 268,
+    "koreanName": "달인의띠",
+    "englishName": "Expert Belt",
+    "showdownId": "expertbelt",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 269,
+    "koreanName": "빛의점토",
+    "englishName": "Light Clay",
+    "showdownId": "lightclay",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 270,
+    "koreanName": "생명의구슬",
+    "englishName": "Life Orb",
+    "showdownId": "lifeorb",
+    "effectType": "life_orb",
+    "multiplier": 1.3
+  },
+  {
+    "key": 271,
+    "koreanName": "파워풀허브",
+    "englishName": "Power Herb",
+    "showdownId": "powerherb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 272,
+    "koreanName": "맹독구슬",
+    "englishName": "Toxic Orb",
+    "showdownId": "toxicorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 273,
+    "koreanName": "화염구슬",
+    "englishName": "Flame Orb",
+    "showdownId": "flameorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 274,
+    "koreanName": "스피드파우더",
+    "englishName": "Quick Powder",
+    "showdownId": "quickpowder",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 275,
+    "koreanName": "기합의띠",
+    "englishName": "Focus Sash",
+    "showdownId": "focussash",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 276,
+    "koreanName": "포커스렌즈",
+    "englishName": "Zoom Lens",
+    "showdownId": "zoomlens",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 277,
+    "koreanName": "메트로놈",
+    "englishName": "Metronome",
+    "showdownId": "metronome",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 278,
+    "koreanName": "검은철구",
+    "englishName": "Iron Ball",
+    "showdownId": "ironball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 279,
+    "koreanName": "느림보꼬리",
+    "englishName": "Lagging Tail",
+    "showdownId": "laggingtail",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 280,
+    "koreanName": "빨간실",
+    "englishName": "Destiny Knot",
+    "showdownId": "destinyknot",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 281,
+    "koreanName": "검은오물",
+    "englishName": "Black Sludge",
+    "showdownId": "blacksludge",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 282,
+    "koreanName": "차가운바위",
+    "englishName": "Icy Rock",
+    "showdownId": "icyrock",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 283,
+    "koreanName": "보송보송바위",
+    "englishName": "Smooth Rock",
+    "showdownId": "smoothrock",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 284,
+    "koreanName": "뜨거운바위",
+    "englishName": "Heat Rock",
+    "showdownId": "heatrock",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 285,
+    "koreanName": "축축한바위",
+    "englishName": "Damp Rock",
+    "showdownId": "damprock",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 286,
+    "koreanName": "끈기갈고리손톱",
+    "englishName": "Grip Claw",
+    "showdownId": "gripclaw",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 287,
+    "koreanName": "구애스카프",
+    "englishName": "Choice Scarf",
+    "showdownId": "choicescarf",
+    "effectType": "choice_scarf",
+    "multiplier": 1.5
+  },
+  {
+    "key": 288,
+    "koreanName": "끈적끈적바늘",
+    "englishName": "Sticky Barb",
+    "showdownId": "stickybarb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 289,
+    "koreanName": "파워리스트",
+    "englishName": "Power Bracer",
+    "showdownId": "powerbracer",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 290,
+    "koreanName": "파워벨트",
+    "englishName": "Power Belt",
+    "showdownId": "powerbelt",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 291,
+    "koreanName": "파워렌즈",
+    "englishName": "Power Lens",
+    "showdownId": "powerlens",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 292,
+    "koreanName": "파워밴드",
+    "englishName": "Power Band",
+    "showdownId": "powerband",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 293,
+    "koreanName": "파워앵클릿",
+    "englishName": "Power Anklet",
+    "showdownId": "poweranklet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 294,
+    "koreanName": "파워웨이트",
+    "englishName": "Power Weight",
+    "showdownId": "powerweight",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 295,
+    "koreanName": "아름다운허물",
+    "englishName": "Shed Shell",
+    "showdownId": "shedshell",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 296,
+    "koreanName": "큰뿌리",
+    "englishName": "Big Root",
+    "showdownId": "bigroot",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 297,
+    "koreanName": "구애안경",
+    "englishName": "Choice Specs",
+    "showdownId": "choicespecs",
+    "effectType": "choice_specs",
+    "multiplier": 1.5
+  },
+  {
+    "key": 298,
+    "koreanName": "불구슬플레이트",
+    "englishName": "Flame Plate",
+    "showdownId": "flameplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 299,
+    "koreanName": "물방울플레이트",
+    "englishName": "Splash Plate",
+    "showdownId": "splashplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 300,
+    "koreanName": "우뢰플레이트",
+    "englishName": "Zap Plate",
+    "showdownId": "zapplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 301,
+    "koreanName": "초록플레이트",
+    "englishName": "Meadow Plate",
+    "showdownId": "meadowplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 302,
+    "koreanName": "고드름플레이트",
+    "englishName": "Icicle Plate",
+    "showdownId": "icicleplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 303,
+    "koreanName": "주먹플레이트",
+    "englishName": "Fist Plate",
+    "showdownId": "fistplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 304,
+    "koreanName": "맹독플레이트",
+    "englishName": "Toxic Plate",
+    "showdownId": "toxicplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 305,
+    "koreanName": "대지플레이트",
+    "englishName": "Earth Plate",
+    "showdownId": "earthplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 306,
+    "koreanName": "푸른하늘플레이트",
+    "englishName": "Sky Plate",
+    "showdownId": "skyplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 307,
+    "koreanName": "이상한플레이트",
+    "englishName": "Mind Plate",
+    "showdownId": "mindplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 308,
+    "koreanName": "비단벌레플레이트",
+    "englishName": "Insect Plate",
+    "showdownId": "insectplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 309,
+    "koreanName": "암석플레이트",
+    "englishName": "Stone Plate",
+    "showdownId": "stoneplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 310,
+    "koreanName": "원령플레이트",
+    "englishName": "Spooky Plate",
+    "showdownId": "spookyplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 311,
+    "koreanName": "용의플레이트",
+    "englishName": "Draco Plate",
+    "showdownId": "dracoplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 312,
+    "koreanName": "공포플레이트",
+    "englishName": "Dread Plate",
+    "showdownId": "dreadplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 313,
+    "koreanName": "강철플레이트",
+    "englishName": "Iron Plate",
+    "showdownId": "ironplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 314,
+    "koreanName": "괴상한향로",
+    "englishName": "Odd Incense",
+    "showdownId": "oddincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 315,
+    "koreanName": "암석향로",
+    "englishName": "Rock Incense",
+    "showdownId": "rockincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 316,
+    "koreanName": "만복향로",
+    "englishName": "Full Incense",
+    "showdownId": "fullincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 317,
+    "koreanName": "잔물결향로",
+    "englishName": "Wave Incense",
+    "showdownId": "waveincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 318,
+    "koreanName": "꽃향로",
+    "englishName": "Rose Incense",
+    "showdownId": "roseincense",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 321,
+    "koreanName": "프로텍터",
+    "englishName": "Protector",
+    "showdownId": "protector",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 322,
+    "koreanName": "에레키부스터",
+    "englishName": "Electirizer",
+    "showdownId": "electirizer",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 323,
+    "koreanName": "마그마부스터",
+    "englishName": "Magmarizer",
+    "showdownId": "magmarizer",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 324,
+    "koreanName": "괴상한패치",
+    "englishName": "Dubious Disc",
+    "showdownId": "dubiousdisc",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 325,
+    "koreanName": "영계의천",
+    "englishName": "Reaper Cloth",
+    "showdownId": "reapercloth",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 326,
+    "koreanName": "예리한손톱",
+    "englishName": "Razor Claw",
+    "showdownId": "razorclaw",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 327,
+    "koreanName": "예리한이빨",
+    "englishName": "Razor Fang",
+    "showdownId": "razorfang",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 492,
+    "koreanName": "스피드볼",
+    "englishName": "Fast Ball",
+    "showdownId": "fastball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 493,
+    "koreanName": "레벨볼",
+    "englishName": "Level Ball",
+    "showdownId": "levelball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 494,
+    "koreanName": "루어볼",
+    "englishName": "Lure Ball",
+    "showdownId": "lureball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 495,
+    "koreanName": "헤비볼",
+    "englishName": "Heavy Ball",
+    "showdownId": "heavyball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 496,
+    "koreanName": "러브러브볼",
+    "englishName": "Love Ball",
+    "showdownId": "loveball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 497,
+    "koreanName": "프렌드볼",
+    "englishName": "Friend Ball",
+    "showdownId": "friendball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 498,
+    "koreanName": "문볼",
+    "englishName": "Moon Ball",
+    "showdownId": "moonball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 499,
+    "koreanName": "콤페볼",
+    "englishName": "Sport Ball",
+    "showdownId": "sportball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 500,
+    "koreanName": "파크볼",
+    "englishName": "Park Ball",
+    "showdownId": "parkball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 534,
+    "koreanName": "주홍구슬",
+    "englishName": "Red Orb",
+    "showdownId": "redorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 535,
+    "koreanName": "쪽빛구슬",
+    "englishName": "Blue Orb",
+    "showdownId": "blueorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 537,
+    "koreanName": "고운비늘",
+    "englishName": "Prism Scale",
+    "showdownId": "prismscale",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 538,
+    "koreanName": "진화의휘석",
+    "englishName": "Eviolite",
+    "showdownId": "eviolite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 539,
+    "koreanName": "가벼운돌",
+    "englishName": "Float Stone",
+    "showdownId": "floatstone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 540,
+    "koreanName": "울퉁불퉁멧",
+    "englishName": "Rocky Helmet",
+    "showdownId": "rockyhelmet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 541,
+    "koreanName": "풍선",
+    "englishName": "Air Balloon",
+    "showdownId": "airballoon",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 542,
+    "koreanName": "레드카드",
+    "englishName": "Red Card",
+    "showdownId": "redcard",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 543,
+    "koreanName": "겨냥표적",
+    "englishName": "Ring Target",
+    "showdownId": "ringtarget",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 544,
+    "koreanName": "조임밴드",
+    "englishName": "Binding Band",
+    "showdownId": "bindingband",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 545,
+    "koreanName": "구근",
+    "englishName": "Absorb Bulb",
+    "showdownId": "absorbbulb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 546,
+    "koreanName": "충전지",
+    "englishName": "Cell Battery",
+    "showdownId": "cellbattery",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 547,
+    "koreanName": "탈출버튼",
+    "englishName": "Eject Button",
+    "showdownId": "ejectbutton",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 548,
+    "koreanName": "불꽃주얼",
+    "englishName": "Fire Gem",
+    "showdownId": "firegem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 549,
+    "koreanName": "물주얼",
+    "englishName": "Water Gem",
+    "showdownId": "watergem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 550,
+    "koreanName": "전기주얼",
+    "englishName": "Electric Gem",
+    "showdownId": "electricgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 551,
+    "koreanName": "풀주얼",
+    "englishName": "Grass Gem",
+    "showdownId": "grassgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 552,
+    "koreanName": "얼음주얼",
+    "englishName": "Ice Gem",
+    "showdownId": "icegem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 553,
+    "koreanName": "격투주얼",
+    "englishName": "Fighting Gem",
+    "showdownId": "fightinggem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 554,
+    "koreanName": "독주얼",
+    "englishName": "Poison Gem",
+    "showdownId": "poisongem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 555,
+    "koreanName": "땅주얼",
+    "englishName": "Ground Gem",
+    "showdownId": "groundgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 556,
+    "koreanName": "비행주얼",
+    "englishName": "Flying Gem",
+    "showdownId": "flyinggem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 557,
+    "koreanName": "에스퍼주얼",
+    "englishName": "Psychic Gem",
+    "showdownId": "psychicgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 558,
+    "koreanName": "벌레주얼",
+    "englishName": "Bug Gem",
+    "showdownId": "buggem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 559,
+    "koreanName": "바위주얼",
+    "englishName": "Rock Gem",
+    "showdownId": "rockgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 560,
+    "koreanName": "고스트주얼",
+    "englishName": "Ghost Gem",
+    "showdownId": "ghostgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 561,
+    "koreanName": "드래곤주얼",
+    "englishName": "Dragon Gem",
+    "showdownId": "dragongem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 562,
+    "koreanName": "악주얼",
+    "englishName": "Dark Gem",
+    "showdownId": "darkgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 563,
+    "koreanName": "강철주얼",
+    "englishName": "Steel Gem",
+    "showdownId": "steelgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 564,
+    "koreanName": "노말주얼",
+    "englishName": "Normal Gem",
+    "showdownId": "normalgem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 572,
+    "koreanName": "덮개화석",
+    "englishName": "Cover Fossil",
+    "showdownId": "coverfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 573,
+    "koreanName": "날개화석",
+    "englishName": "Plume Fossil",
+    "showdownId": "plumefossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 576,
+    "koreanName": "드림볼",
+    "englishName": "Dream Ball",
+    "showdownId": "dreamball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 639,
+    "koreanName": "약점보험",
+    "englishName": "Weakness Policy",
+    "showdownId": "weaknesspolicy",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 640,
+    "koreanName": "돌격조끼",
+    "englishName": "Assault Vest",
+    "showdownId": "assaultvest",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 644,
+    "koreanName": "정령플레이트",
+    "englishName": "Pixie Plate",
+    "showdownId": "pixieplate",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 646,
+    "koreanName": "휘핑팝",
+    "englishName": "Whipped Dream",
+    "showdownId": "whippeddream",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 647,
+    "koreanName": "향기주머니",
+    "englishName": "Sachet",
+    "showdownId": "sachet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 648,
+    "koreanName": "빛이끼",
+    "englishName": "Luminous Moss",
+    "showdownId": "luminousmoss",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 649,
+    "koreanName": "눈덩이",
+    "englishName": "Snowball",
+    "showdownId": "snowball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 650,
+    "koreanName": "방진고글",
+    "englishName": "Safety Goggles",
+    "showdownId": "safetygoggles",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 656,
+    "koreanName": "팬텀나이트",
+    "englishName": "Gengarite",
+    "showdownId": "gengarite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 657,
+    "koreanName": "가디안나이트",
+    "englishName": "Gardevoirite",
+    "showdownId": "gardevoirite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 658,
+    "koreanName": "전룡나이트",
+    "englishName": "Ampharosite",
+    "showdownId": "ampharosite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 659,
+    "koreanName": "이상해꽃나이트",
+    "englishName": "Venusaurite",
+    "showdownId": "venusaurite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 660,
+    "koreanName": "리자몽나이트X",
+    "englishName": "Charizardite X",
+    "showdownId": "charizarditex",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 661,
+    "koreanName": "거북왕나이트",
+    "englishName": "Blastoisinite",
+    "showdownId": "blastoisinite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 662,
+    "koreanName": "뮤츠나이트X",
+    "englishName": "Mewtwonite X",
+    "showdownId": "mewtwonitex",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 663,
+    "koreanName": "뮤츠나이트Y",
+    "englishName": "Mewtwonite Y",
+    "showdownId": "mewtwonitey",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 664,
+    "koreanName": "번치코나이트",
+    "englishName": "Blazikenite",
+    "showdownId": "blazikenite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 665,
+    "koreanName": "요가램나이트",
+    "englishName": "Medichamite",
+    "showdownId": "medichamite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 666,
+    "koreanName": "헬가나이트",
+    "englishName": "Houndoominite",
+    "showdownId": "houndoominite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 667,
+    "koreanName": "보스로라나이트",
+    "englishName": "Aggronite",
+    "showdownId": "aggronite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 668,
+    "koreanName": "다크펫나이트",
+    "englishName": "Banettite",
+    "showdownId": "banettite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 669,
+    "koreanName": "마기라스나이트",
+    "englishName": "Tyranitarite",
+    "showdownId": "tyranitarite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 670,
+    "koreanName": "핫삼나이트",
+    "englishName": "Scizorite",
+    "showdownId": "scizorite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 671,
+    "koreanName": "쁘사이저나이트",
+    "englishName": "Pinsirite",
+    "showdownId": "pinsirite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 672,
+    "koreanName": "프테라나이트",
+    "englishName": "Aerodactylite",
+    "showdownId": "aerodactylite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 673,
+    "koreanName": "루카리오나이트",
+    "englishName": "Lucarionite",
+    "showdownId": "lucarionite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 674,
+    "koreanName": "눈설왕나이트",
+    "englishName": "Abomasite",
+    "showdownId": "abomasite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 675,
+    "koreanName": "캥카나이트",
+    "englishName": "Kangaskhanite",
+    "showdownId": "kangaskhanite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 676,
+    "koreanName": "갸라도스나이트",
+    "englishName": "Gyaradosite",
+    "showdownId": "gyaradosite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 677,
+    "koreanName": "앱솔나이트",
+    "englishName": "Absolite",
+    "showdownId": "absolite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 678,
+    "koreanName": "리자몽나이트Y",
+    "englishName": "Charizardite Y",
+    "showdownId": "charizarditey",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 679,
+    "koreanName": "후디나이트",
+    "englishName": "Alakazite",
+    "showdownId": "alakazite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 680,
+    "koreanName": "헤라크로스나이트",
+    "englishName": "Heracronite",
+    "showdownId": "heracronite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 681,
+    "koreanName": "입치트나이트",
+    "englishName": "Mawilite",
+    "showdownId": "mawilite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 682,
+    "koreanName": "썬더볼트나이트",
+    "englishName": "Manectite",
+    "showdownId": "manectite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 683,
+    "koreanName": "한카리아스나이트",
+    "englishName": "Garchompite",
+    "showdownId": "garchompite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 684,
+    "koreanName": "라티아스나이트",
+    "englishName": "Latiasite",
+    "showdownId": "latiasite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 685,
+    "koreanName": "라티오스나이트",
+    "englishName": "Latiosite",
+    "showdownId": "latiosite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 686,
+    "koreanName": "로셀열매",
+    "englishName": "Roseli Berry",
+    "showdownId": "roseliberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 687,
+    "koreanName": "악키열매",
+    "englishName": "Kee Berry",
+    "showdownId": "keeberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 688,
+    "koreanName": "타라프열매",
+    "englishName": "Maranga Berry",
+    "showdownId": "marangaberry",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 710,
+    "koreanName": "턱화석",
+    "englishName": "Jaw Fossil",
+    "showdownId": "jawfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 711,
+    "koreanName": "지느러미화석",
+    "englishName": "Sail Fossil",
+    "showdownId": "sailfossil",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 715,
+    "koreanName": "페어리주얼",
+    "englishName": "Fairy Gem",
+    "showdownId": "fairygem",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 752,
+    "koreanName": "대짱이나이트",
+    "englishName": "Swampertite",
+    "showdownId": "swampertite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 753,
+    "koreanName": "나무킹나이트",
+    "englishName": "Sceptilite",
+    "showdownId": "sceptilite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 754,
+    "koreanName": "깜까미나이트",
+    "englishName": "Sablenite",
+    "showdownId": "sablenite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 755,
+    "koreanName": "파비코리나이트",
+    "englishName": "Altarianite",
+    "showdownId": "altarianite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 756,
+    "koreanName": "엘레이드나이트",
+    "englishName": "Galladite",
+    "showdownId": "galladite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 757,
+    "koreanName": "다부니나이트",
+    "englishName": "Audinite",
+    "showdownId": "audinite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 758,
+    "koreanName": "메타그로스나이트",
+    "englishName": "Metagrossite",
+    "showdownId": "metagrossite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 759,
+    "koreanName": "샤크니아나이트",
+    "englishName": "Sharpedonite",
+    "showdownId": "sharpedonite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 760,
+    "koreanName": "야도란나이트",
+    "englishName": "Slowbronite",
+    "showdownId": "slowbronite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 761,
+    "koreanName": "강철톤나이트",
+    "englishName": "Steelixite",
+    "showdownId": "steelixite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 762,
+    "koreanName": "피죤투나이트",
+    "englishName": "Pidgeotite",
+    "showdownId": "pidgeotite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 763,
+    "koreanName": "얼음귀신나이트",
+    "englishName": "Glalitite",
+    "showdownId": "glalitite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 764,
+    "koreanName": "디안시나이트",
+    "englishName": "Diancite",
+    "showdownId": "diancite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 767,
+    "koreanName": "폭타나이트",
+    "englishName": "Cameruptite",
+    "showdownId": "cameruptite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 768,
+    "koreanName": "이어롭나이트",
+    "englishName": "Lopunnite",
+    "showdownId": "lopunnite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 769,
+    "koreanName": "보만다나이트",
+    "englishName": "Salamencite",
+    "showdownId": "salamencite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 770,
+    "koreanName": "독침붕나이트",
+    "englishName": "Beedrillite",
+    "showdownId": "beedrillite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 776,
+    "koreanName": "노말Z",
+    "englishName": "Normalium Z",
+    "showdownId": "normaliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 776,
+    "koreanName": "노말Z",
+    "englishName": "Normalium Z",
+    "showdownId": "normaliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 777,
+    "koreanName": "불꽃Z",
+    "englishName": "Firium Z",
+    "showdownId": "firiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 777,
+    "koreanName": "불꽃Z",
+    "englishName": "Firium Z",
+    "showdownId": "firiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 778,
+    "koreanName": "물Z",
+    "englishName": "Waterium Z",
+    "showdownId": "wateriumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 778,
+    "koreanName": "물Z",
+    "englishName": "Waterium Z",
+    "showdownId": "wateriumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 779,
+    "koreanName": "전기Z",
+    "englishName": "Electrium Z",
+    "showdownId": "electriumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 779,
+    "koreanName": "전기Z",
+    "englishName": "Electrium Z",
+    "showdownId": "electriumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 780,
+    "koreanName": "풀Z",
+    "englishName": "Grassium Z",
+    "showdownId": "grassiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 780,
+    "koreanName": "풀Z",
+    "englishName": "Grassium Z",
+    "showdownId": "grassiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 781,
+    "koreanName": "얼음Z",
+    "englishName": "Icium Z",
+    "showdownId": "iciumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 781,
+    "koreanName": "얼음Z",
+    "englishName": "Icium Z",
+    "showdownId": "iciumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 782,
+    "koreanName": "격투Z",
+    "englishName": "Fightinium Z",
+    "showdownId": "fightiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 782,
+    "koreanName": "격투Z",
+    "englishName": "Fightinium Z",
+    "showdownId": "fightiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 783,
+    "koreanName": "독Z",
+    "englishName": "Poisonium Z",
+    "showdownId": "poisoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 783,
+    "koreanName": "독Z",
+    "englishName": "Poisonium Z",
+    "showdownId": "poisoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 784,
+    "koreanName": "땅Z",
+    "englishName": "Groundium Z",
+    "showdownId": "groundiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 784,
+    "koreanName": "땅Z",
+    "englishName": "Groundium Z",
+    "showdownId": "groundiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 785,
+    "koreanName": "비행Z",
+    "englishName": "Flyinium Z",
+    "showdownId": "flyiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 785,
+    "koreanName": "비행Z",
+    "englishName": "Flyinium Z",
+    "showdownId": "flyiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 786,
+    "koreanName": "에스퍼Z",
+    "englishName": "Psychium Z",
+    "showdownId": "psychiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 786,
+    "koreanName": "에스퍼Z",
+    "englishName": "Psychium Z",
+    "showdownId": "psychiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 787,
+    "koreanName": "벌레Z",
+    "englishName": "Buginium Z",
+    "showdownId": "buginiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 787,
+    "koreanName": "벌레Z",
+    "englishName": "Buginium Z",
+    "showdownId": "buginiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 788,
+    "koreanName": "바위Z",
+    "englishName": "Rockium Z",
+    "showdownId": "rockiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 788,
+    "koreanName": "바위Z",
+    "englishName": "Rockium Z",
+    "showdownId": "rockiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 789,
+    "koreanName": "고스트Z",
+    "englishName": "Ghostium Z",
+    "showdownId": "ghostiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 789,
+    "koreanName": "고스트Z",
+    "englishName": "Ghostium Z",
+    "showdownId": "ghostiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 790,
+    "koreanName": "드래곤Z",
+    "englishName": "Dragonium Z",
+    "showdownId": "dragoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 790,
+    "koreanName": "드래곤Z",
+    "englishName": "Dragonium Z",
+    "showdownId": "dragoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 791,
+    "koreanName": "악Z",
+    "englishName": "Darkinium Z",
+    "showdownId": "darkiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 791,
+    "koreanName": "악Z",
+    "englishName": "Darkinium Z",
+    "showdownId": "darkiniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 792,
+    "koreanName": "강철Z",
+    "englishName": "Steelium Z",
+    "showdownId": "steeliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 792,
+    "koreanName": "강철Z",
+    "englishName": "Steelium Z",
+    "showdownId": "steeliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 793,
+    "koreanName": "페어리Z",
+    "englishName": "Fairium Z",
+    "showdownId": "fairiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 793,
+    "koreanName": "페어리Z",
+    "englishName": "Fairium Z",
+    "showdownId": "fairiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 794,
+    "koreanName": "피카츄Z",
+    "englishName": "Pikanium Z",
+    "showdownId": "pikaniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 794,
+    "koreanName": "피카츄Z",
+    "englishName": "Pikanium Z",
+    "showdownId": "pikaniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 795,
+    "koreanName": "은왕관",
+    "englishName": "Bottle Cap",
+    "showdownId": "bottlecap",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 796,
+    "koreanName": "금왕관",
+    "englishName": "Gold Bottle Cap",
+    "showdownId": "goldbottlecap",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 798,
+    "koreanName": "모크나이퍼Z",
+    "englishName": "Decidium Z",
+    "showdownId": "decidiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 798,
+    "koreanName": "모크나이퍼Z",
+    "englishName": "Decidium Z",
+    "showdownId": "decidiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 799,
+    "koreanName": "어흥염Z",
+    "englishName": "Incinium Z",
+    "showdownId": "inciniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 799,
+    "koreanName": "어흥염Z",
+    "englishName": "Incinium Z",
+    "showdownId": "inciniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 800,
+    "koreanName": "누리레느Z",
+    "englishName": "Primarium Z",
+    "showdownId": "primariumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 800,
+    "koreanName": "누리레느Z",
+    "englishName": "Primarium Z",
+    "showdownId": "primariumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 801,
+    "koreanName": "카푸Z",
+    "englishName": "Tapunium Z",
+    "showdownId": "tapuniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 801,
+    "koreanName": "카푸Z",
+    "englishName": "Tapunium Z",
+    "showdownId": "tapuniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 802,
+    "koreanName": "마샤도Z",
+    "englishName": "Marshadium Z",
+    "showdownId": "marshadiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 802,
+    "koreanName": "마샤도Z",
+    "englishName": "Marshadium Z",
+    "showdownId": "marshadiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 803,
+    "koreanName": "알로라이Z",
+    "englishName": "Aloraichium Z",
+    "showdownId": "aloraichiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 803,
+    "koreanName": "알로라이Z",
+    "englishName": "Aloraichium Z",
+    "showdownId": "aloraichiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 804,
+    "koreanName": "잠만보Z",
+    "englishName": "Snorlium Z",
+    "showdownId": "snorliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 804,
+    "koreanName": "잠만보Z",
+    "englishName": "Snorlium Z",
+    "showdownId": "snorliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 805,
+    "koreanName": "이브이Z",
+    "englishName": "Eevium Z",
+    "showdownId": "eeviumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 805,
+    "koreanName": "이브이Z",
+    "englishName": "Eevium Z",
+    "showdownId": "eeviumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 806,
+    "koreanName": "뮤Z",
+    "englishName": "Mewnium Z",
+    "showdownId": "mewniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 806,
+    "koreanName": "뮤Z",
+    "englishName": "Mewnium Z",
+    "showdownId": "mewniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 836,
+    "koreanName": "지우피카Z",
+    "englishName": "Pikashunium Z",
+    "showdownId": "pikashuniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 836,
+    "koreanName": "지우피카Z",
+    "englishName": "Pikashunium Z",
+    "showdownId": "pikashuniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 846,
+    "koreanName": "주눅구슬",
+    "englishName": "Adrenaline Orb",
+    "showdownId": "adrenalineorb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 849,
+    "koreanName": "얼음의돌",
+    "englishName": "Ice Stone",
+    "showdownId": "icestone",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 851,
+    "koreanName": "울트라볼",
+    "englishName": "Beast Ball",
+    "showdownId": "beastball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 879,
+    "koreanName": "그라운드코트",
+    "englishName": "Terrain Extender",
+    "showdownId": "terrainextender",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 880,
+    "koreanName": "방호패드",
+    "englishName": "Protective Pads",
+    "showdownId": "protectivepads",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 881,
+    "koreanName": "일렉트릭시드",
+    "englishName": "Electric Seed",
+    "showdownId": "electricseed",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 882,
+    "koreanName": "사이코시드",
+    "englishName": "Psychic Seed",
+    "showdownId": "psychicseed",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 883,
+    "koreanName": "미스트시드",
+    "englishName": "Misty Seed",
+    "showdownId": "mistyseed",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 884,
+    "koreanName": "그래스시드",
+    "englishName": "Grassy Seed",
+    "showdownId": "grassyseed",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 904,
+    "koreanName": "파이팅메모리",
+    "englishName": "Fighting Memory",
+    "showdownId": "fightingmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 905,
+    "koreanName": "플라잉메모리",
+    "englishName": "Flying Memory",
+    "showdownId": "flyingmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 906,
+    "koreanName": "포이즌메모리",
+    "englishName": "Poison Memory",
+    "showdownId": "poisonmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 907,
+    "koreanName": "그라운드메모리",
+    "englishName": "Ground Memory",
+    "showdownId": "groundmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 908,
+    "koreanName": "록메모리",
+    "englishName": "Rock Memory",
+    "showdownId": "rockmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 909,
+    "koreanName": "버그메모리",
+    "englishName": "Bug Memory",
+    "showdownId": "bugmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 910,
+    "koreanName": "고스트메모리",
+    "englishName": "Ghost Memory",
+    "showdownId": "ghostmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 911,
+    "koreanName": "스틸메모리",
+    "englishName": "Steel Memory",
+    "showdownId": "steelmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 912,
+    "koreanName": "파이어메모리",
+    "englishName": "Fire Memory",
+    "showdownId": "firememory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 913,
+    "koreanName": "워터메모리",
+    "englishName": "Water Memory",
+    "showdownId": "watermemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 914,
+    "koreanName": "그래스메모리",
+    "englishName": "Grass Memory",
+    "showdownId": "grassmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 915,
+    "koreanName": "일렉트릭메모리",
+    "englishName": "Electric Memory",
+    "showdownId": "electricmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 916,
+    "koreanName": "사이킥메모리",
+    "englishName": "Psychic Memory",
+    "showdownId": "psychicmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 917,
+    "koreanName": "아이스메모리",
+    "englishName": "Ice Memory",
+    "showdownId": "icememory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 918,
+    "koreanName": "드래곤메모리",
+    "englishName": "Dragon Memory",
+    "showdownId": "dragonmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 919,
+    "koreanName": "다크메모리",
+    "englishName": "Dark Memory",
+    "showdownId": "darkmemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 920,
+    "koreanName": "페어리메모리",
+    "englishName": "Fairy Memory",
+    "showdownId": "fairymemory",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 921,
+    "koreanName": "솔가레오Z",
+    "englishName": "Solganium Z",
+    "showdownId": "solganiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 921,
+    "koreanName": "솔가레오Z",
+    "englishName": "Solganium Z",
+    "showdownId": "solganiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 922,
+    "koreanName": "루나아라Z",
+    "englishName": "Lunalium Z",
+    "showdownId": "lunaliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 922,
+    "koreanName": "루나아라Z",
+    "englishName": "Lunalium Z",
+    "showdownId": "lunaliumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 923,
+    "koreanName": "울트라네크로Z",
+    "englishName": "Ultranecrozium Z",
+    "showdownId": "ultranecroziumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 923,
+    "koreanName": "울트라네크로Z",
+    "englishName": "Ultranecrozium Z",
+    "showdownId": "ultranecroziumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 924,
+    "koreanName": "따라큐Z",
+    "englishName": "Mimikium Z",
+    "showdownId": "mimikiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 924,
+    "koreanName": "따라큐Z",
+    "englishName": "Mimikium Z",
+    "showdownId": "mimikiumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 925,
+    "koreanName": "루가루암Z",
+    "englishName": "Lycanium Z",
+    "showdownId": "lycaniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 925,
+    "koreanName": "루가루암Z",
+    "englishName": "Lycanium Z",
+    "showdownId": "lycaniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 926,
+    "koreanName": "짜랑고우거Z",
+    "englishName": "Kommonium Z",
+    "showdownId": "kommoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 926,
+    "koreanName": "짜랑고우거Z",
+    "englishName": "Kommonium Z",
+    "showdownId": "kommoniumz",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1103,
+    "koreanName": "녹슨검",
+    "englishName": "Rusted Sword",
+    "showdownId": "rustedsword",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1104,
+    "koreanName": "녹슨방패",
+    "englishName": "Rusted Shield",
+    "showdownId": "rustedshield",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1105,
+    "koreanName": "화석새",
+    "englishName": "Fossilized Bird",
+    "showdownId": "fossilizedbird",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1106,
+    "koreanName": "화석물고기",
+    "englishName": "Fossilized Fish",
+    "showdownId": "fossilizedfish",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1107,
+    "koreanName": "화석용",
+    "englishName": "Fossilized Drake",
+    "showdownId": "fossilizeddrake",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1108,
+    "koreanName": "화석긴목",
+    "englishName": "Fossilized Dino",
+    "showdownId": "fossilizeddino",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1109,
+    "koreanName": "딸기사탕공예",
+    "englishName": "Strawberry Sweet",
+    "showdownId": "strawberrysweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1110,
+    "koreanName": "하트사탕공예",
+    "englishName": "Love Sweet",
+    "showdownId": "lovesweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1111,
+    "koreanName": "베리사탕공예",
+    "englishName": "Berry Sweet",
+    "showdownId": "berrysweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1112,
+    "koreanName": "네잎사탕공예",
+    "englishName": "Clover Sweet",
+    "showdownId": "cloversweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1113,
+    "koreanName": "꽃사탕공예",
+    "englishName": "Flower Sweet",
+    "showdownId": "flowersweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1114,
+    "koreanName": "스타사탕공예",
+    "englishName": "Star Sweet",
+    "showdownId": "starsweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1115,
+    "koreanName": "리본사탕공예",
+    "englishName": "Ribbon Sweet",
+    "showdownId": "ribbonsweet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1116,
+    "koreanName": "달콤한사과",
+    "englishName": "Sweet Apple",
+    "showdownId": "sweetapple",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1117,
+    "koreanName": "새콤한사과",
+    "englishName": "Tart Apple",
+    "showdownId": "tartapple",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1118,
+    "koreanName": "목스프레이",
+    "englishName": "Throat Spray",
+    "showdownId": "throatspray",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1119,
+    "koreanName": "탈출팩",
+    "englishName": "Eject Pack",
+    "showdownId": "ejectpack",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1120,
+    "koreanName": "통굽부츠",
+    "englishName": "Heavy-Duty Boots",
+    "showdownId": "heavydutyboots",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1121,
+    "koreanName": "허탕보험",
+    "englishName": "Blunder Policy",
+    "showdownId": "blunderpolicy",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1122,
+    "koreanName": "룸서비스",
+    "englishName": "Room Service",
+    "showdownId": "roomservice",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1123,
+    "koreanName": "만능우산",
+    "englishName": "Utility Umbrella",
+    "showdownId": "utilityumbrella",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1130,
+    "koreanName": "기술레코드00",
+    "englishName": "TR00",
+    "showdownId": "tr00",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1131,
+    "koreanName": "기술레코드01",
+    "englishName": "TR01",
+    "showdownId": "tr01",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1132,
+    "koreanName": "기술레코드02",
+    "englishName": "TR02",
+    "showdownId": "tr02",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1133,
+    "koreanName": "기술레코드03",
+    "englishName": "TR03",
+    "showdownId": "tr03",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1134,
+    "koreanName": "기술레코드04",
+    "englishName": "TR04",
+    "showdownId": "tr04",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1135,
+    "koreanName": "기술레코드05",
+    "englishName": "TR05",
+    "showdownId": "tr05",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1136,
+    "koreanName": "기술레코드06",
+    "englishName": "TR06",
+    "showdownId": "tr06",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1137,
+    "koreanName": "기술레코드07",
+    "englishName": "TR07",
+    "showdownId": "tr07",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1138,
+    "koreanName": "기술레코드08",
+    "englishName": "TR08",
+    "showdownId": "tr08",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1139,
+    "koreanName": "기술레코드09",
+    "englishName": "TR09",
+    "showdownId": "tr09",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1140,
+    "koreanName": "기술레코드10",
+    "englishName": "TR10",
+    "showdownId": "tr10",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1141,
+    "koreanName": "기술레코드11",
+    "englishName": "TR11",
+    "showdownId": "tr11",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1142,
+    "koreanName": "기술레코드12",
+    "englishName": "TR12",
+    "showdownId": "tr12",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1143,
+    "koreanName": "기술레코드13",
+    "englishName": "TR13",
+    "showdownId": "tr13",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1144,
+    "koreanName": "기술레코드14",
+    "englishName": "TR14",
+    "showdownId": "tr14",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1145,
+    "koreanName": "기술레코드15",
+    "englishName": "TR15",
+    "showdownId": "tr15",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1146,
+    "koreanName": "기술레코드16",
+    "englishName": "TR16",
+    "showdownId": "tr16",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1147,
+    "koreanName": "기술레코드17",
+    "englishName": "TR17",
+    "showdownId": "tr17",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1148,
+    "koreanName": "기술레코드18",
+    "englishName": "TR18",
+    "showdownId": "tr18",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1149,
+    "koreanName": "기술레코드19",
+    "englishName": "TR19",
+    "showdownId": "tr19",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1150,
+    "koreanName": "기술레코드20",
+    "englishName": "TR20",
+    "showdownId": "tr20",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1151,
+    "koreanName": "기술레코드21",
+    "englishName": "TR21",
+    "showdownId": "tr21",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1152,
+    "koreanName": "기술레코드22",
+    "englishName": "TR22",
+    "showdownId": "tr22",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1153,
+    "koreanName": "기술레코드23",
+    "englishName": "TR23",
+    "showdownId": "tr23",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1154,
+    "koreanName": "기술레코드24",
+    "englishName": "TR24",
+    "showdownId": "tr24",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1155,
+    "koreanName": "기술레코드25",
+    "englishName": "TR25",
+    "showdownId": "tr25",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1156,
+    "koreanName": "기술레코드26",
+    "englishName": "TR26",
+    "showdownId": "tr26",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1157,
+    "koreanName": "기술레코드27",
+    "englishName": "TR27",
+    "showdownId": "tr27",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1158,
+    "koreanName": "기술레코드28",
+    "englishName": "TR28",
+    "showdownId": "tr28",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1159,
+    "koreanName": "기술레코드29",
+    "englishName": "TR29",
+    "showdownId": "tr29",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1160,
+    "koreanName": "기술레코드30",
+    "englishName": "TR30",
+    "showdownId": "tr30",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1161,
+    "koreanName": "기술레코드31",
+    "englishName": "TR31",
+    "showdownId": "tr31",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1162,
+    "koreanName": "기술레코드32",
+    "englishName": "TR32",
+    "showdownId": "tr32",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1163,
+    "koreanName": "기술레코드33",
+    "englishName": "TR33",
+    "showdownId": "tr33",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1164,
+    "koreanName": "기술레코드34",
+    "englishName": "TR34",
+    "showdownId": "tr34",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1165,
+    "koreanName": "기술레코드35",
+    "englishName": "TR35",
+    "showdownId": "tr35",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1166,
+    "koreanName": "기술레코드36",
+    "englishName": "TR36",
+    "showdownId": "tr36",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1167,
+    "koreanName": "기술레코드37",
+    "englishName": "TR37",
+    "showdownId": "tr37",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1168,
+    "koreanName": "기술레코드38",
+    "englishName": "TR38",
+    "showdownId": "tr38",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1169,
+    "koreanName": "기술레코드39",
+    "englishName": "TR39",
+    "showdownId": "tr39",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1170,
+    "koreanName": "기술레코드40",
+    "englishName": "TR40",
+    "showdownId": "tr40",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1171,
+    "koreanName": "기술레코드41",
+    "englishName": "TR41",
+    "showdownId": "tr41",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1172,
+    "koreanName": "기술레코드42",
+    "englishName": "TR42",
+    "showdownId": "tr42",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1173,
+    "koreanName": "기술레코드43",
+    "englishName": "TR43",
+    "showdownId": "tr43",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1174,
+    "koreanName": "기술레코드44",
+    "englishName": "TR44",
+    "showdownId": "tr44",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1175,
+    "koreanName": "기술레코드45",
+    "englishName": "TR45",
+    "showdownId": "tr45",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1176,
+    "koreanName": "기술레코드46",
+    "englishName": "TR46",
+    "showdownId": "tr46",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1177,
+    "koreanName": "기술레코드47",
+    "englishName": "TR47",
+    "showdownId": "tr47",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1178,
+    "koreanName": "기술레코드48",
+    "englishName": "TR48",
+    "showdownId": "tr48",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1179,
+    "koreanName": "기술레코드49",
+    "englishName": "TR49",
+    "showdownId": "tr49",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1180,
+    "koreanName": "기술레코드50",
+    "englishName": "TR50",
+    "showdownId": "tr50",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1181,
+    "koreanName": "기술레코드51",
+    "englishName": "TR51",
+    "showdownId": "tr51",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1182,
+    "koreanName": "기술레코드52",
+    "englishName": "TR52",
+    "showdownId": "tr52",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1183,
+    "koreanName": "기술레코드53",
+    "englishName": "TR53",
+    "showdownId": "tr53",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1184,
+    "koreanName": "기술레코드54",
+    "englishName": "TR54",
+    "showdownId": "tr54",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1185,
+    "koreanName": "기술레코드55",
+    "englishName": "TR55",
+    "showdownId": "tr55",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1186,
+    "koreanName": "기술레코드56",
+    "englishName": "TR56",
+    "showdownId": "tr56",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1187,
+    "koreanName": "기술레코드57",
+    "englishName": "TR57",
+    "showdownId": "tr57",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1188,
+    "koreanName": "기술레코드58",
+    "englishName": "TR58",
+    "showdownId": "tr58",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1189,
+    "koreanName": "기술레코드59",
+    "englishName": "TR59",
+    "showdownId": "tr59",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1190,
+    "koreanName": "기술레코드60",
+    "englishName": "TR60",
+    "showdownId": "tr60",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1191,
+    "koreanName": "기술레코드61",
+    "englishName": "TR61",
+    "showdownId": "tr61",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1192,
+    "koreanName": "기술레코드62",
+    "englishName": "TR62",
+    "showdownId": "tr62",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1193,
+    "koreanName": "기술레코드63",
+    "englishName": "TR63",
+    "showdownId": "tr63",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1194,
+    "koreanName": "기술레코드64",
+    "englishName": "TR64",
+    "showdownId": "tr64",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1195,
+    "koreanName": "기술레코드65",
+    "englishName": "TR65",
+    "showdownId": "tr65",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1196,
+    "koreanName": "기술레코드66",
+    "englishName": "TR66",
+    "showdownId": "tr66",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1197,
+    "koreanName": "기술레코드67",
+    "englishName": "TR67",
+    "showdownId": "tr67",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1198,
+    "koreanName": "기술레코드68",
+    "englishName": "TR68",
+    "showdownId": "tr68",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1199,
+    "koreanName": "기술레코드69",
+    "englishName": "TR69",
+    "showdownId": "tr69",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1200,
+    "koreanName": "기술레코드70",
+    "englishName": "TR70",
+    "showdownId": "tr70",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1201,
+    "koreanName": "기술레코드71",
+    "englishName": "TR71",
+    "showdownId": "tr71",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1202,
+    "koreanName": "기술레코드72",
+    "englishName": "TR72",
+    "showdownId": "tr72",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1203,
+    "koreanName": "기술레코드73",
+    "englishName": "TR73",
+    "showdownId": "tr73",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1204,
+    "koreanName": "기술레코드74",
+    "englishName": "TR74",
+    "showdownId": "tr74",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1205,
+    "koreanName": "기술레코드75",
+    "englishName": "TR75",
+    "showdownId": "tr75",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1206,
+    "koreanName": "기술레코드76",
+    "englishName": "TR76",
+    "showdownId": "tr76",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1207,
+    "koreanName": "기술레코드77",
+    "englishName": "TR77",
+    "showdownId": "tr77",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1208,
+    "koreanName": "기술레코드78",
+    "englishName": "TR78",
+    "showdownId": "tr78",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1209,
+    "koreanName": "기술레코드79",
+    "englishName": "TR79",
+    "showdownId": "tr79",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1210,
+    "koreanName": "기술레코드80",
+    "englishName": "TR80",
+    "showdownId": "tr80",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1211,
+    "koreanName": "기술레코드81",
+    "englishName": "TR81",
+    "showdownId": "tr81",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1212,
+    "koreanName": "기술레코드82",
+    "englishName": "TR82",
+    "showdownId": "tr82",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1213,
+    "koreanName": "기술레코드83",
+    "englishName": "TR83",
+    "showdownId": "tr83",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1214,
+    "koreanName": "기술레코드84",
+    "englishName": "TR84",
+    "showdownId": "tr84",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1215,
+    "koreanName": "기술레코드85",
+    "englishName": "TR85",
+    "showdownId": "tr85",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1216,
+    "koreanName": "기술레코드86",
+    "englishName": "TR86",
+    "showdownId": "tr86",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1217,
+    "koreanName": "기술레코드87",
+    "englishName": "TR87",
+    "showdownId": "tr87",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1218,
+    "koreanName": "기술레코드88",
+    "englishName": "TR88",
+    "showdownId": "tr88",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1219,
+    "koreanName": "기술레코드89",
+    "englishName": "TR89",
+    "showdownId": "tr89",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1220,
+    "koreanName": "기술레코드90",
+    "englishName": "TR90",
+    "showdownId": "tr90",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1221,
+    "koreanName": "기술레코드91",
+    "englishName": "TR91",
+    "showdownId": "tr91",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1222,
+    "koreanName": "기술레코드92",
+    "englishName": "TR92",
+    "showdownId": "tr92",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1223,
+    "koreanName": "기술레코드93",
+    "englishName": "TR93",
+    "showdownId": "tr93",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1224,
+    "koreanName": "기술레코드94",
+    "englishName": "TR94",
+    "showdownId": "tr94",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1225,
+    "koreanName": "기술레코드95",
+    "englishName": "TR95",
+    "showdownId": "tr95",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1226,
+    "koreanName": "기술레코드96",
+    "englishName": "TR96",
+    "showdownId": "tr96",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1227,
+    "koreanName": "기술레코드97",
+    "englishName": "TR97",
+    "showdownId": "tr97",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1228,
+    "koreanName": "기술레코드98",
+    "englishName": "TR98",
+    "showdownId": "tr98",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1229,
+    "koreanName": "기술레코드99",
+    "englishName": "TR99",
+    "showdownId": "tr99",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1253,
+    "koreanName": "깨진포트",
+    "englishName": "Cracked Pot",
+    "showdownId": "crackedpot",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1254,
+    "koreanName": "이빠진포트",
+    "englishName": "Chipped Pot",
+    "showdownId": "chippedpot",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1582,
+    "koreanName": "가라두구팔찌",
+    "englishName": "Galarica Cuff",
+    "showdownId": "galaricacuff",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1592,
+    "koreanName": "가라두구머리장식",
+    "englishName": "Galarica Wreath",
+    "showdownId": "galaricawreath",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1777,
+    "koreanName": "큰금강옥",
+    "englishName": "Adamant Crystal",
+    "showdownId": "adamantcrystal",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1778,
+    "koreanName": "큰백옥",
+    "englishName": "Lustrous Globe",
+    "showdownId": "lustrousglobe",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1779,
+    "koreanName": "큰백금옥",
+    "englishName": "Griseous Core",
+    "showdownId": "griseouscore",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1785,
+    "koreanName": "Strange Ball",
+    "englishName": "Strange Ball",
+    "showdownId": "strangeball",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1861,
+    "koreanName": "저주받은갑옷",
+    "englishName": "Malicious Armor",
+    "showdownId": "maliciousarmor",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1880,
+    "koreanName": "부스트에너지",
+    "englishName": "Booster Energy",
+    "showdownId": "boosterenergy",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1881,
+    "koreanName": "특성가드",
+    "englishName": "Ability Shield",
+    "showdownId": "abilityshield",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1882,
+    "koreanName": "클리어참",
+    "englishName": "Clear Amulet",
+    "showdownId": "clearamulet",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1883,
+    "koreanName": "미러허브",
+    "englishName": "Mirror Herb",
+    "showdownId": "mirrorherb",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1884,
+    "koreanName": "펀치글러브",
+    "englishName": "Punching Glove",
+    "showdownId": "punchingglove",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1885,
+    "koreanName": "은밀망토",
+    "englishName": "Covert Cloak",
+    "showdownId": "covertcloak",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 1886,
+    "koreanName": "속임수주사위",
+    "englishName": "Loaded Dice",
+    "showdownId": "loadeddice",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2001,
+    "koreanName": "아쿠스타나이트",
+    "englishName": "Starminite",
+    "showdownId": "starminite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2003,
+    "koreanName": "메가니움나이트",
+    "englishName": "Meganiumite",
+    "showdownId": "meganiumite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2004,
+    "koreanName": "장크로다일나이트",
+    "englishName": "Feraligite",
+    "showdownId": "feraligite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2005,
+    "koreanName": "망나뇽나이트",
+    "englishName": "Dragoninite",
+    "showdownId": "dragoninite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2006,
+    "koreanName": "브리가론나이트",
+    "englishName": "Chesnaughtite",
+    "showdownId": "chesnaughtite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2007,
+    "koreanName": "마폭시나이트",
+    "englishName": "Delphoxite",
+    "showdownId": "delphoxite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2008,
+    "koreanName": "개굴닌자나이트",
+    "englishName": "Greninjite",
+    "showdownId": "greninjite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2009,
+    "koreanName": "앱솔나이트Z",
+    "englishName": "Absolite Z",
+    "showdownId": "absolitez",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2010,
+    "koreanName": "한카리아스나이트Z",
+    "englishName": "Garchompite Z",
+    "showdownId": "garchompitez",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2011,
+    "koreanName": "루카리오나이트Z",
+    "englishName": "Lucarionite Z",
+    "showdownId": "lucarionitez",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2012,
+    "koreanName": "라이츄나이트X",
+    "englishName": "Raichunite X",
+    "showdownId": "raichunitex",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2013,
+    "koreanName": "라이츄나이트Y",
+    "englishName": "Raichunite Y",
+    "showdownId": "raichunitey",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2014,
+    "koreanName": "거북손데스나이트",
+    "englishName": "Barbaracite",
+    "showdownId": "barbaracite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2015,
+    "koreanName": "드닐레이브나이트",
+    "englishName": "Baxcalibrite",
+    "showdownId": "baxcalibrite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2016,
+    "koreanName": "샹델라나이트",
+    "englishName": "Chandelurite",
+    "showdownId": "chandelurite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2017,
+    "koreanName": "치렁나이트",
+    "englishName": "Chimechite",
+    "showdownId": "chimechite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2018,
+    "koreanName": "픽시나이트",
+    "englishName": "Clefablite",
+    "showdownId": "clefablite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2019,
+    "koreanName": "모단단게나이트",
+    "englishName": "Crabominite",
+    "showdownId": "crabominite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2020,
+    "koreanName": "다크라이나이트",
+    "englishName": "Darkranite",
+    "showdownId": "darkranite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2021,
+    "koreanName": "드래캄나이트",
+    "englishName": "Dragalgite",
+    "showdownId": "dragalgite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2022,
+    "koreanName": "할비롱나이트",
+    "englishName": "Drampanite",
+    "showdownId": "drampanite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2023,
+    "koreanName": "저리더프나이트",
+    "englishName": "Eelektrossite",
+    "showdownId": "eelektrossite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2024,
+    "koreanName": "염무왕나이트",
+    "englishName": "Emboarite",
+    "showdownId": "emboarite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2025,
+    "koreanName": "몰드류나이트",
+    "englishName": "Excadrite",
+    "showdownId": "excadrite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2026,
+    "koreanName": "대여르나이트",
+    "englishName": "Falinksite",
+    "showdownId": "falinksite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2027,
+    "koreanName": "플라엣테나이트",
+    "englishName": "Floettite",
+    "showdownId": "floettite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2028,
+    "koreanName": "눈여아나이트",
+    "englishName": "Froslassite",
+    "showdownId": "froslassite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2029,
+    "koreanName": "킬라플로르나이트",
+    "englishName": "Glimmoranite",
+    "showdownId": "glimmoranite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2030,
+    "koreanName": "갑주무사나이트",
+    "englishName": "Golisopite",
+    "showdownId": "golisopite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2031,
+    "koreanName": "골루그나이트",
+    "englishName": "Golurkite",
+    "showdownId": "golurkite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2032,
+    "koreanName": "루차불나이트",
+    "englishName": "Hawluchanite",
+    "showdownId": "hawluchanite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2033,
+    "koreanName": "히드런나이트",
+    "englishName": "Heatranite",
+    "showdownId": "heatranite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2034,
+    "koreanName": "마기아나이트",
+    "englishName": "Magearnite",
+    "showdownId": "magearnite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2035,
+    "koreanName": "칼라마네로나이트",
+    "englishName": "Malamarite",
+    "showdownId": "malamarite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2036,
+    "koreanName": "냐오닉스나이트",
+    "englishName": "Meowsticite",
+    "showdownId": "meowsticite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2037,
+    "koreanName": "화염레오나이트",
+    "englishName": "Pyroarite",
+    "showdownId": "pyroarite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2038,
+    "koreanName": "펜드라나이트",
+    "englishName": "Scolipite",
+    "showdownId": "scolipite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2039,
+    "koreanName": "스코빌런나이트",
+    "englishName": "Scovillainite",
+    "showdownId": "scovillainite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2040,
+    "koreanName": "곤율거니나이트",
+    "englishName": "Scraftinite",
+    "showdownId": "scraftinite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2041,
+    "koreanName": "무장조나이트",
+    "englishName": "Skarmorite",
+    "showdownId": "skarmorite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2042,
+    "koreanName": "찌르호크나이트",
+    "englishName": "Staraptite",
+    "showdownId": "staraptite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2043,
+    "koreanName": "싸리용나이트",
+    "englishName": "Tatsugirinite",
+    "showdownId": "tatsugirinite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2044,
+    "koreanName": "우츠보트나이트",
+    "englishName": "Victreebelite",
+    "showdownId": "victreebelite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2045,
+    "koreanName": "제라오라나이트",
+    "englishName": "Zeraorite",
+    "showdownId": "zeraorite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2046,
+    "koreanName": "지가르데나이트",
+    "englishName": "Zygardite",
+    "showdownId": "zygardite",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2344,
+    "koreanName": "축복받은갑옷",
+    "englishName": "Auspicious Armor",
+    "showdownId": "auspiciousarmor",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2401,
+    "koreanName": "요정의깃털",
+    "japaneseName": "ようせいのハネ",
+    "englishName": "Fairy Feather",
+    "showdownId": "fairyfeather",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2406,
+    "koreanName": "주춧돌의가면",
+    "japaneseName": "いしずえのめん",
+    "englishName": "Cornerstone Mask",
+    "showdownId": "cornerstonemask",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2407,
+    "koreanName": "우물의가면",
+    "japaneseName": "いどのめん",
+    "englishName": "Wellspring Mask",
+    "showdownId": "wellspringmask",
+    "effectType": "none",
+    "multiplier": 1
+  },
+  {
+    "key": 2408,
+    "koreanName": "화덕의가면",
+    "japaneseName": "かまどのめん",
+    "englishName": "Hearthflame Mask",
+    "showdownId": "hearthflamemask",
+    "effectType": "none",
+    "multiplier": 1
+  }
 ]

@@ -3,10 +3,13 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "sync:pokedex": "node scripts/sync-pokemoem-data.mjs",
+    "sync:pokemoem": "node scripts/sync-pokemoem-data.mjs"
   },
   "dependencies": {
     "@next/env": "latest",
+    "@supabase/supabase-js": "^2.110.0",
     "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
