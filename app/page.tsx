@@ -652,7 +652,7 @@ function MovePressureTable({ myRows, opponentRows, weather }: { myRows: DamageRe
 
 function StageSelect({ label, value, onChange }: { label: string; value: StatStage; onChange: (value: StatStage) => void }) {
   return (
-    <label className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
+    <label className="flex w-16 items-center justify-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
       <span className="font-mono text-[9px] font-semibold text-slate-400">{label}</span>
       <select
         value={value}
@@ -666,6 +666,53 @@ function StageSelect({ label, value, onChange }: { label: string; value: StatSta
         ))}
       </select>
     </label>
+  );
+}
+
+function BattleNumberInput({
+  value,
+  onCommit,
+  min,
+  max,
+  step,
+  className
+}: {
+  value: number;
+  onCommit: (value: number) => void;
+  min?: number;
+  max?: number;
+  step?: number;
+  className?: string;
+}) {
+  const [draft, setDraft] = useState(String(value));
+
+  useEffect(() => {
+    setDraft(String(value));
+  }, [value]);
+
+  function commit(nextDraft = draft) {
+    const parsed = Number(nextDraft);
+    if (nextDraft.trim() === "" || !Number.isFinite(parsed)) {
+      setDraft(String(value));
+      return;
+    }
+    onCommit(parsed);
+  }
+
+  return (
+    <input
+      type="number"
+      min={min}
+      max={max}
+      step={step}
+      value={draft}
+      onChange={(event) => setDraft(event.target.value)}
+      onBlur={() => commit()}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") event.currentTarget.blur();
+      }}
+      className={className}
+    />
   );
 }
 
@@ -712,7 +759,7 @@ function BattleConditionPanel({
   }
 
   return (
-    <section className="flex flex-wrap items-center gap-3 border-b border-slate-200 bg-white/70 px-5 py-2.5">
+    <section className="grid justify-items-center gap-2 border-b border-slate-200 bg-white/70 px-5 py-2.5">
       <span className="font-mono text-[9px] uppercase tracking-widest text-amber-600">전투 조건</span>
       <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-100 px-2 py-1">
         <span className="font-mono text-[9px] font-semibold text-slate-400">날씨</span>
@@ -729,60 +776,57 @@ function BattleConditionPanel({
         </select>
       </label>
 
+      <div className="grid w-full max-w-6xl grid-cols-1 gap-2 xl:grid-cols-2">
       {[
         ["my", "내 랭크", myModifiers] as const,
         ["opponent", "상대 랭크", opponentModifiers] as const
       ].map(([side, title, modifiers]) => (
-        <div key={side} className="flex flex-wrap items-center gap-1 rounded-lg border border-slate-200 bg-slate-100 p-1">
-          <span className={`px-1.5 font-mono text-[9px] font-bold ${side === "my" ? "text-sky-600" : "text-rose-600"}`}>{title}</span>
+        <div key={side} className="flex min-h-10 w-full flex-wrap items-center justify-center gap-1 rounded-lg border border-slate-200 bg-slate-100 p-1">
+          <span className={`w-16 px-1.5 text-center font-mono text-[9px] font-bold ${side === "my" ? "text-sky-600" : "text-rose-600"}`}>{title}</span>
           {side === "my" ? (
-            <label className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
+            <label className="flex w-36 items-center justify-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
               <span className="font-mono text-[9px] font-semibold text-slate-400">HP</span>
-              <input
-                type="number"
+              <BattleNumberInput
                 min={1}
                 max={modifiers.hpMax ?? getDefaultHp(side)}
                 value={modifiers.hpCurrent ?? modifiers.hpMax ?? getDefaultHp(side)}
-                onChange={(event) => updateHp(side, { hpCurrent: Number(event.target.value) })}
+                onCommit={(value) => updateHp(side, { hpCurrent: value })}
                 className="w-14 bg-transparent text-right font-mono text-[10px] font-bold text-slate-700 outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
               />
               <span className="font-mono text-[9px] text-slate-400">/</span>
-              <input
-                type="number"
+              <BattleNumberInput
                 min={1}
                 value={modifiers.hpMax ?? getDefaultHp(side)}
-                onChange={(event) => updateHp(side, { hpMax: Number(event.target.value) })}
+                onCommit={(value) => updateHp(side, { hpMax: value })}
                 className="w-14 bg-transparent text-right font-mono text-[10px] font-bold text-slate-700 outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
               />
             </label>
           ) : (
-            <label className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
+            <label className="flex w-36 items-center justify-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
               <span className="font-mono text-[9px] font-semibold text-slate-400">HP</span>
-              <input
-                type="number"
+              <BattleNumberInput
                 min={1}
                 max={100}
                 value={modifiers.hpPercent ?? 100}
-                onChange={(event) => updateOpponentHpPercent(Number(event.target.value))}
+                onCommit={updateOpponentHpPercent}
                 className="w-12 bg-transparent text-right font-mono text-[10px] font-bold text-slate-700 outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
               />
               <span className="font-mono text-[9px] text-slate-400">%</span>
             </label>
           )}
-          <label className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
+          <label className="flex w-24 items-center justify-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
             <span className="font-mono text-[9px] font-semibold text-slate-400">위력</span>
-            <input
-              type="number"
+            <BattleNumberInput
               min={0.01}
               max={10}
               step={0.05}
               value={modifiers.powerMultiplier ?? 1}
-              onChange={(event) => updateSide(side, { powerMultiplier: clampMultiplier(Number(event.target.value)) })}
+              onCommit={(value) => updateSide(side, { powerMultiplier: clampMultiplier(value) })}
               className="w-14 bg-transparent text-right font-mono text-[10px] font-bold text-slate-700 outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
             />
             <span className="font-mono text-[9px] text-slate-400">x</span>
           </label>
-          <label className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
+          <label className="flex w-28 items-center justify-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1">
             <span className="font-mono text-[9px] font-semibold text-slate-400">상태</span>
             <select
               value={modifiers.status ?? "none"}
@@ -811,6 +855,7 @@ function BattleConditionPanel({
           </label>
         </div>
       ))}
+      </div>
     </section>
   );
 }
@@ -919,7 +964,7 @@ export default function Home() {
     setSelectedOpponentNatureIndex(0);
     setSelectedOpponentItemIndex(0);
     setSelectedOpponentSpIndex(0);
-    setOpponentModifiers((current) => ({ ...current, hpCurrent: undefined, hpMax: undefined }));
+    setOpponentModifiers({ ...DEFAULT_SIDE_MODIFIERS });
   }, [opponentKey]);
 
   useEffect(() => {
@@ -1030,6 +1075,7 @@ export default function Home() {
         move,
         item: myItem,
         ability: myAbility,
+        defenderAbility: opponentAbility,
         usageRate,
         modifiers: {
           weather,
@@ -1051,6 +1097,7 @@ export default function Home() {
         move,
         item: opponentItem,
         ability: opponentAbility,
+        defenderAbility: myAbility,
         usageRate,
         modifiers: {
           weather,

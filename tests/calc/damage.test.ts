@@ -378,6 +378,84 @@ describe("calculateDamage", () => {
     expect(sandRock!.maxDamage).toBeLessThan(neutralRock!.maxDamage);
     expect(snowIce!.maxDamage).toBeLessThan(neutralIce!.maxDamage);
   });
+
+  it("applies defensive abilities such as Multiscale only when their condition is met", () => {
+    const neutral = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["dragon", "flying"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "몸통박치기", englishName: "Tackle", showdownId: "tackle", type: "normal", category: "physical", power: 40 }
+    });
+    const multiscaleFullHp = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["dragon", "flying"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "몸통박치기", englishName: "Tackle", showdownId: "tackle", type: "normal", category: "physical", power: 40 },
+      defenderAbility: { key: 136, koreanName: "멀티스케일", englishName: "Multiscale", showdownId: "multiscale" }
+    });
+    const multiscaleDamaged = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["dragon", "flying"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "몸통박치기", englishName: "Tackle", showdownId: "tackle", type: "normal", category: "physical", power: 40 },
+      defenderAbility: { key: 136, koreanName: "멀티스케일", englishName: "Multiscale", showdownId: "multiscale" },
+      modifiers: {
+        weather: "none",
+        attacker: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, reflect: false, lightScreen: false },
+        defender: { atkStage: 0, defStage: 0, spaStage: 0, spdStage: 0, speStage: 0, hpPercent: 99, reflect: false, lightScreen: false }
+      }
+    });
+
+    expect(multiscaleFullHp!.maxDamage).toBeLessThan(neutral!.maxDamage);
+    expect(multiscaleFullHp?.abilityNotes?.join(" ")).toContain("멀티스케일");
+    expect(multiscaleDamaged!.maxDamage).toBe(neutral!.maxDamage);
+  });
+
+  it("applies common defensive ability damage modifiers", () => {
+    const superEffective = calculateDamage({
+      level: 50,
+      attackerTypes: ["water"],
+      defenderTypes: ["rock"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 57, koreanName: "파도타기", englishName: "Surf", showdownId: "surf", type: "water", category: "special", power: 90 }
+    });
+    const solidRock = calculateDamage({
+      level: 50,
+      attackerTypes: ["water"],
+      defenderTypes: ["rock"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 57, koreanName: "파도타기", englishName: "Surf", showdownId: "surf", type: "water", category: "special", power: 90 },
+      defenderAbility: { key: 116, koreanName: "하드록", englishName: "Solid Rock", showdownId: "solidrock" }
+    });
+    const physical = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "몸통박치기", englishName: "Tackle", showdownId: "tackle", type: "normal", category: "physical", power: 40 }
+    });
+    const furCoat = calculateDamage({
+      level: 50,
+      attackerTypes: ["normal"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 1, koreanName: "몸통박치기", englishName: "Tackle", showdownId: "tackle", type: "normal", category: "physical", power: 40 },
+      defenderAbility: { key: 169, koreanName: "퍼코트", englishName: "Fur Coat", showdownId: "furcoat" }
+    });
+
+    expect(solidRock!.maxDamage).toBeLessThan(superEffective!.maxDamage);
+    expect(furCoat!.maxDamage).toBeLessThan(physical!.maxDamage);
+  });
 });
 
 describe("summarizeKoChance", () => {

@@ -1,6 +1,6 @@
 import type { BattleModifiers, CalculatedStats, DamageResult, StatStage } from "@/types/calc";
 import type { AbilityMaster, ItemMaster, MoveMaster } from "@/types/master";
-import { getAbilityMoveEffect } from "./abilityEffects";
+import { getAbilityMoveEffect, getDefensiveAbilityEffect } from "./abilityEffects";
 import { getTypeEffectiveness } from "./typeEffectiveness";
 
 const DAMAGE_ROLLS = [85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] as const;
@@ -20,6 +20,7 @@ type CalculateDamageInput = {
   move: MoveMaster;
   item?: ItemMaster;
   ability?: AbilityMaster;
+  defenderAbility?: AbilityMaster;
   usageRate?: number;
   modifiers?: BattleModifiers;
 };
@@ -184,7 +185,7 @@ function getHitChances(move: MoveMaster): Array<{ hitCount: number; hitChance: n
 }
 
 export function calculateDamage(input: CalculateDamageInput): DamageResult | undefined {
-  const { level, attackerTypes, defenderTypes, attackerStats, defenderStats, move, item, ability, usageRate, modifiers } = input;
+  const { level, attackerTypes, defenderTypes, attackerStats, defenderStats, move, item, ability, defenderAbility, usageRate, modifiers } = input;
   if (!isDamagingMove(move)) return undefined;
 
   const abilityEffect = getAbilityMoveEffect(move, attackerTypes, ability, {
@@ -206,6 +207,14 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
   const statusAttackMultiplier = getStatusAttackMultiplier(move, modifiers, ability);
   const defenderMaxHp = getMaxHp(defenderStats.hp, modifiers?.defender);
   const defenderCurrentHp = getCurrentHp(defenderStats.hp, modifiers?.defender);
+  const defenderAbilityEffect = getDefensiveAbilityEffect(move, defenderTypes, defenderAbility, {
+    moveType: abilityEffect.moveType,
+    typeEffectiveness,
+    weather: modifiers?.weather,
+    status: modifiers?.defender.status ?? "none",
+    hpCurrent: defenderCurrentHp,
+    hpMax: defenderMaxHp
+  });
 
   if (typeEffectiveness === 0) {
     const result = {
@@ -223,7 +232,7 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
       itemMultiplier,
       offensiveStat,
       defensiveStat,
-      abilityNotes: abilityEffect.notes,
+      abilityNotes: [...abilityEffect.notes, ...defenderAbilityEffect.notes],
       koSummary: "효과 없음"
     };
     return result;
@@ -231,7 +240,9 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
 
   const effectivePower = Math.floor(move.power * abilityEffect.powerMultiplier * getPowerMultiplier(modifiers));
   const baseDamage = Math.floor(Math.floor(Math.floor((Math.floor((2 * level) / 5) + 2) * effectivePower * offensiveStat) / defensiveStat) / 50) + 2;
-  const rolls = DAMAGE_ROLLS.map((random) => Math.floor(baseDamage * (random / 100) * stab * typeEffectiveness * itemMultiplier * weatherMultiplier * screenMultiplier * statusAttackMultiplier));
+  const rolls = DAMAGE_ROLLS.map((random) =>
+    Math.floor(baseDamage * (random / 100) * stab * typeEffectiveness * itemMultiplier * weatherMultiplier * screenMultiplier * statusAttackMultiplier * defenderAbilityEffect.damageMultiplier)
+  );
   const hitChances = getHitChances(move);
   const multihitResults = hitChances.map(({ hitCount, hitChance }) => {
     const combinedRolls = combineRolls(rolls, hitCount);
@@ -268,7 +279,7 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
     itemMultiplier,
     offensiveStat,
     defensiveStat,
-    abilityNotes: abilityEffect.notes,
+    abilityNotes: [...abilityEffect.notes, ...defenderAbilityEffect.notes],
     koSummary: summarizeKoChance(rolls, defenderCurrentHp)
   };
 }

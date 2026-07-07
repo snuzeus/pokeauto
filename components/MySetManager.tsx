@@ -16,6 +16,14 @@ type MySetManagerProps = {
   onAddSet: (set: MyPokemonSet) => void | Promise<void>;
 };
 
+const STAT_LABEL: Record<string, string> = {
+  atk: "A",
+  def: "B",
+  spa: "C",
+  spd: "D",
+  spe: "S"
+};
+
 function createSetFromForm(formData: FormData, fallbackPokeKey: string): MyPokemonSet {
   const selectedMoves = formData.getAll("moves").map((value) => Number(value));
 
@@ -52,6 +60,20 @@ function pokemonMatchesQuery(pokemon: PokemonMaster, query: string): boolean {
     .some((candidate) => normalizeSearchText(String(candidate)).includes(normalized));
 }
 
+function moveMatchesQuery(move: MoveMaster, query: string): boolean {
+  const normalized = normalizeSearchText(query);
+  if (!normalized) return true;
+
+  return [move.koreanName, move.japaneseName, move.englishName, move.showdownId, move.key]
+    .filter(Boolean)
+    .some((candidate) => normalizeSearchText(String(candidate)).includes(normalized));
+}
+
+function natureModifierText(nature: NatureMaster): string {
+  if (!nature.up || !nature.down) return "보정 없음";
+  return `${STAT_LABEL[nature.up] ?? nature.up}↑ ${STAT_LABEL[nature.down] ?? nature.down}↓`;
+}
+
 function formatErrorMessage(error: unknown, fallback: string): string {
   if (error instanceof Error) return error.message;
   if (typeof error === "object" && error !== null) {
@@ -74,6 +96,8 @@ export function MySetManager({
 }: MySetManagerProps) {
   const [draftPokeKey, setDraftPokeKey] = useState(() => (pokemonList.some((entry) => entry.pokeKey === pokemon.pokeKey) ? pokemon.pokeKey : pokemonList[0]?.pokeKey ?? pokemon.pokeKey));
   const [pokemonQuery, setPokemonQuery] = useState("");
+  const [moveQuery, setMoveQuery] = useState("");
+  const [selectedMoveKeys, setSelectedMoveKeys] = useState<number[]>([]);
   const [successMessage, setSuccessMessage] = useState<string>();
   const [errorMessage, setErrorMessage] = useState<string>();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -85,6 +109,7 @@ export function MySetManager({
   const abilityRates = useMemo(() => new Map((usage?.data.abilities ?? []).map((entry) => [entry.key, entry.rate])), [usage]);
   const itemRates = useMemo(() => new Map((usage?.data.items ?? []).map((entry) => [entry.key, entry.rate])), [usage]);
   const moveRates = useMemo(() => new Map((usage?.data.moves ?? []).map((entry) => [entry.key, entry.rate])), [usage]);
+  const topStatPoint = usage?.data.stat_points.skeletons[0];
   const ratedNatures = useMemo(
     () => natures.filter((nature) => (natureRates.get(nature.key) ?? 0) > 0).sort((a, b) => (natureRates.get(b.key) ?? 0) - (natureRates.get(a.key) ?? 0)),
     [natures, natureRates]
@@ -101,6 +126,22 @@ export function MySetManager({
     () => moves.filter((move) => (moveRates.get(move.key) ?? 0) > 0).sort((a, b) => (moveRates.get(b.key) ?? 0) - (moveRates.get(a.key) ?? 0)),
     [moves, moveRates]
   );
+  const visibleMoves = useMemo(() => {
+    const selectedMoves = selectedMoveKeys.map((key) => moves.find((move) => move.key === key)).filter((move): move is MoveMaster => move !== undefined);
+    const baseMoves = moveQuery.trim()
+      ? moves
+          .filter((move) => moveMatchesQuery(move, moveQuery))
+          .sort((a, b) => {
+            const rateDiff = (moveRates.get(b.key) ?? 0) - (moveRates.get(a.key) ?? 0);
+            if (rateDiff !== 0) return rateDiff;
+            return a.koreanName.localeCompare(b.koreanName, "ko");
+          })
+          .slice(0, 50)
+      : ratedMoves;
+    const merged = new Map<number, MoveMaster>();
+    [...selectedMoves, ...baseMoves].forEach((move) => merged.set(move.key, move));
+    return [...merged.values()];
+  }, [moveQuery, moveRates, moves, ratedMoves, selectedMoveKeys]);
   const defaultAbility = Object.values(draftPokemon.abilities ?? {})
     .map((name) => abilities.find((ability) => ability.englishName === name))
     .find((ability) => ability !== undefined && (abilityRates.get(ability.key) ?? 0) > 0);
@@ -111,6 +152,11 @@ export function MySetManager({
     const timeoutId = window.setTimeout(() => setSuccessMessage(undefined), 2500);
     return () => window.clearTimeout(timeoutId);
   }, [successMessage]);
+
+  useEffect(() => {
+    setSelectedMoveKeys(ratedMoves.filter((move) => move.category !== "status").slice(0, 4).map((move) => move.key));
+    setMoveQuery("");
+  }, [draftPokemon.pokeKey, ratedMoves]);
 
   async function handleSubmit(formData: FormData) {
     const nextSet = createSetFromForm(formData, draftPokemon.pokeKey);
@@ -136,6 +182,20 @@ export function MySetManager({
     setPokemonQuery("");
   }
 
+  function toggleMove(moveKey: number) {
+    setSelectedMoveKeys((current) => {
+      if (current.includes(moveKey)) return current.filter((key) => key !== moveKey);
+      if (current.length >= 4) return current;
+      return [...current, moveKey];
+    });
+  }
+
+  function defaultEvValue(stat: "hp" | "atk" | "def" | "spa" | "spd" | "spe"): number {
+    if (!topStatPoint) return stat === "hp" ? 2 : stat === "atk" || stat === "spe" ? 32 : 0;
+    const keyMap = { hp: "H", atk: "A", def: "B", spa: "C", spd: "D", spe: "S" } as const;
+    return topStatPoint.rep_ev[keyMap[stat]];
+  }
+
   return (
     <section className="rounded-md border border-gray-200 bg-white p-4">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
@@ -155,7 +215,7 @@ export function MySetManager({
         ) : null}
       </div>
 
-      <form action={handleSubmit} className="mt-4 grid gap-4">
+      <form key={draftPokemon.pokeKey} action={handleSubmit} className="mt-4 grid gap-4">
         <div className="grid gap-3">
           <div key={`pokemon-${draftPokemon.pokeKey}`}>
             <span className="text-sm font-medium text-gray-700">포켓몬</span>
@@ -207,7 +267,7 @@ export function MySetManager({
             <span className="text-sm font-medium text-gray-700">샘플 이름</span>
             <input
               name="nickname"
-              defaultValue="새 샘플 한카리아스"
+              defaultValue={`${draftPokemon.koreanName} 샘플`}
               className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
             />
           </label>
@@ -227,6 +287,15 @@ export function MySetManager({
                 </option>
               ))}
             </select>
+            {ratedNatures.length > 0 ? (
+              <div className="mt-1 flex flex-wrap gap-1">
+                {ratedNatures.slice(0, 5).map((nature) => (
+                  <span key={nature.key} className="rounded border border-gray-200 bg-gray-50 px-2 py-0.5 text-[11px] text-gray-500">
+                    {nature.koreanName} {natureModifierText(nature)}
+                  </span>
+                ))}
+              </div>
+            ) : null}
           </label>
           <label>
             <span className="text-sm font-medium text-gray-700">아이템</span>
@@ -275,7 +344,7 @@ export function MySetManager({
                   type="number"
                   min={0}
                   max={66}
-                  defaultValue={stat === "hp" ? 2 : stat === "atk" || stat === "spe" ? 32 : 0}
+                  defaultValue={defaultEvValue(stat)}
                   className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
                 />
               </label>
@@ -283,7 +352,49 @@ export function MySetManager({
           </div>
         </div>
 
-        <fieldset key={`moves-${draftPokemon.pokeKey}`}>
+        <fieldset key={`searchable-moves-${draftPokemon.pokeKey}`}>
+          <legend className="text-sm font-medium text-gray-700">기술 최대 4개</legend>
+          {selectedMoveKeys.map((moveKey) => (
+            <input key={moveKey} type="hidden" name="moves" value={moveKey} />
+          ))}
+          <div className="mt-2 rounded-md border border-gray-200 bg-gray-50 p-2">
+            <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <input
+                value={moveQuery}
+                onChange={(event) => setMoveQuery(event.target.value)}
+                placeholder="기술명 검색"
+                aria-label="샘플 기술 검색"
+                className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 sm:max-w-xs"
+              />
+              <span className="font-mono text-xs text-gray-500">선택 {selectedMoveKeys.length}/4</span>
+            </div>
+            <div className="grid max-h-72 gap-2 overflow-y-auto pr-1">
+              {visibleMoves.length === 0 ? (
+                <p className="rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-500">검색 결과 없음</p>
+              ) : null}
+              {visibleMoves.map((move) => {
+                const rate = moveRates.get(move.key);
+                const isSelected = selectedMoveKeys.includes(move.key);
+                const isDisabled = !isSelected && selectedMoveKeys.length >= 4;
+                return (
+                  <label key={move.key} className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm transition-colors ${isSelected ? "border-gray-900 bg-white text-gray-950" : "border-gray-200 bg-white text-gray-700"}`}>
+                    <input type="checkbox" value={move.key} checked={isSelected} disabled={isDisabled} onChange={() => toggleMove(move.key)} />
+                    <span className="min-w-0">
+                      <span className="block truncate font-medium">{move.koreanName}</span>
+                      <span className="block truncate font-mono text-[10px] text-gray-400">
+                        {move.englishName ?? move.showdownId ?? `#${move.key}`} · {move.type} · {move.category}
+                      </span>
+                    </span>
+                    <span className="ml-auto shrink-0 font-mono text-xs text-gray-400">{rate ? rateText(rate) : "검색"}</span>
+                  </label>
+                );
+              })}
+            </div>
+            <p className="mt-2 text-xs text-gray-400">기본 목록은 채용률 순서로 보여주고, 검색하면 전체 기술에서 찾을 수 있습니다.</p>
+          </div>
+        </fieldset>
+
+        <fieldset className="hidden" key={`moves-${draftPokemon.pokeKey}`}>
           <legend className="text-sm font-medium text-gray-700">기술 최대 4개</legend>
           <div className="mt-2 grid gap-2">
             {ratedMoves.length === 0 ? (
@@ -291,7 +402,7 @@ export function MySetManager({
             ) : null}
             {ratedMoves.map((move, index) => (
               <label key={move.key} className="flex items-center gap-2 rounded-md border border-gray-200 px-3 py-2 text-sm">
-                <input name="moves" type="checkbox" value={move.key} defaultChecked={index < 4 && move.category !== "status"} />
+                <input type="checkbox" value={move.key} defaultChecked={index < 4 && move.category !== "status"} />
                 <span>{move.koreanName}</span>
                 <span className="ml-auto font-mono text-xs text-gray-400">{rateText(moveRates.get(move.key) ?? 0)}</span>
               </label>

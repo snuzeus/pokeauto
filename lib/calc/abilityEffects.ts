@@ -97,6 +97,11 @@ export type AbilityMoveEffect = {
   notes: string[];
 };
 
+export type DefensiveAbilityEffect = {
+  damageMultiplier: number;
+  notes: string[];
+};
+
 function isLowHp(context?: AbilityEffectContext): boolean {
   if (!context?.hpCurrent || !context.hpMax) return false;
   return context.hpCurrent * 3 <= context.hpMax;
@@ -104,6 +109,11 @@ function isLowHp(context?: AbilityEffectContext): boolean {
 
 function multiply(effect: AbilityMoveEffect, multiplier: number, note: string) {
   effect.powerMultiplier *= multiplier;
+  effect.notes.push(note);
+}
+
+function multiplyDefense(effect: DefensiveAbilityEffect, multiplier: number, note: string) {
+  effect.damageMultiplier *= multiplier;
   effect.notes.push(note);
 }
 
@@ -161,6 +171,66 @@ export function getAbilityMoveEffect(move: MoveMaster, attackerTypes: string[], 
   if (abilityId === "toxicboost" && (context?.status === "poison" || context?.status === "toxic") && move.category === "physical") multiply(effect, 1.5, "독폭주: 독/맹독 물리 기술 x1.5");
   if (abilityId === "hustle" && move.category === "physical") multiply(effect, 1.5, "의욕: 물리 기술 x1.5");
   if ((abilityId === "hugepower" || abilityId === "purepower") && move.category === "physical") multiply(effect, 2, `${ability.koreanName}: 물리 화력 x2`);
+
+  return effect;
+}
+
+export function getDefensiveAbilityEffect(
+  move: MoveMaster,
+  defenderTypes: string[],
+  defenderAbility: AbilityMaster | undefined,
+  context: {
+    moveType: string;
+    typeEffectiveness: number;
+    weather?: BattleWeather;
+    status?: BattleStatus;
+    hpCurrent: number;
+    hpMax: number;
+  }
+): DefensiveAbilityEffect {
+  const abilityId = defenderAbility?.showdownId;
+  const effect: DefensiveAbilityEffect = { damageMultiplier: 1, notes: [] };
+  if (!abilityId) return effect;
+
+  const abilityName = defenderAbility.koreanName;
+  const moveId = move.showdownId ?? "";
+  const isFullHp = context.hpCurrent >= context.hpMax;
+  const isSuperEffective = context.typeEffectiveness > 1;
+
+  if ((abilityId === "multiscale" || abilityId === "shadowshield") && isFullHp) {
+    multiplyDefense(effect, 0.5, `${abilityName}: HP 최대라 받는 데미지 x0.5`);
+  }
+  if (["filter", "solidrock", "prismarmor"].includes(abilityId) && isSuperEffective) {
+    multiplyDefense(effect, 0.75, `${abilityName}: 효과 굉장한 기술 데미지 x0.75`);
+  }
+  if (abilityId === "thickfat" && ["fire", "ice"].includes(context.moveType)) {
+    multiplyDefense(effect, 0.5, `${abilityName}: 불꽃/얼음 데미지 x0.5`);
+  }
+  if (abilityId === "heatproof" && context.moveType === "fire") {
+    multiplyDefense(effect, 0.5, `${abilityName}: 불꽃 데미지 x0.5`);
+  }
+  if (abilityId === "waterbubble" && context.moveType === "fire") {
+    multiplyDefense(effect, 0.5, `${abilityName}: 불꽃 데미지 x0.5`);
+  }
+  if (abilityId === "furcoat" && move.category === "physical") {
+    multiplyDefense(effect, 0.5, `${abilityName}: 물리 데미지 x0.5`);
+  }
+  if (abilityId === "icescales" && move.category === "special") {
+    multiplyDefense(effect, 0.5, `${abilityName}: 특수 데미지 x0.5`);
+  }
+  if (abilityId === "marvelscale" && move.category === "physical" && context.status && context.status !== "none") {
+    multiplyDefense(effect, 2 / 3, `${abilityName}: 상태이상이라 물리 데미지 x0.67`);
+  }
+  if (abilityId === "fluffy") {
+    if (CONTACT_MOVES.has(moveId)) multiplyDefense(effect, 0.5, `${abilityName}: 접촉 기술 데미지 x0.5`);
+    if (context.moveType === "fire") multiplyDefense(effect, 2, `${abilityName}: 불꽃 데미지 x2`);
+  }
+  if (abilityId === "punkrock" && SOUND_MOVES.has(moveId)) {
+    multiplyDefense(effect, 0.5, `${abilityName}: 소리 기술 데미지 x0.5`);
+  }
+  if (abilityId === "dryskin" && context.moveType === "fire") {
+    multiplyDefense(effect, 1.25, `${abilityName}: 불꽃 데미지 x1.25`);
+  }
 
   return effect;
 }
