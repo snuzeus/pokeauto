@@ -47,8 +47,14 @@ function usageWithAbility(key: number, rate = 100): PokemonUsage {
 }
 
 describe("resolveBattleAbility", () => {
-  it("keeps an explicitly saved ability", () => {
-    expect(resolveBattleAbility({ abilityKey: clearBody.key, pokemon: megaMetagross, usage: usageWithAbility(toughClaws.key), abilities })).toBe(clearBody);
+  it("keeps an explicitly saved ability for non-mega Pokemon", () => {
+    const baseMetagross = { ...megaMetagross, forme: undefined, abilities: { "0": "Clear Body" } };
+
+    expect(resolveBattleAbility({ abilityKey: clearBody.key, pokemon: baseMetagross, usage: usageWithAbility(toughClaws.key), abilities })).toBe(clearBody);
+  });
+
+  it("prefers mega form abilities over explicitly saved base-form abilities", () => {
+    expect(resolveBattleAbility({ abilityKey: clearBody.key, pokemon: megaMetagross, usage: usageWithAbility(toughClaws.key), abilities })).toBe(toughClaws);
   });
 
   it("falls back to the top usage ability when a saved sample has no ability key", () => {

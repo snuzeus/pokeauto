@@ -229,6 +229,29 @@ describe("calculateDamage", () => {
     expect(result?.maxPercent).toBeCloseTo(101.78, 2);
   });
 
+  it("applies Tough Claws to Psychic Fangs as a contact move", () => {
+    const neutral = calculateDamage({
+      level: 50,
+      attackerTypes: ["steel", "psychic"],
+      defenderTypes: ["normal"],
+      attackerStats: { hp: 155, atk: 216, def: 170, spa: 125, spd: 130, spe: 130 },
+      defenderStats: { hp: 175, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
+      move: { key: 706, koreanName: "사이코팽", englishName: "Psychic Fangs", showdownId: "psychicfangs", type: "psychic", category: "physical", power: 85 }
+    });
+    const toughClaws = calculateDamage({
+      level: 50,
+      attackerTypes: ["steel", "psychic"],
+      defenderTypes: ["normal"],
+      attackerStats: { hp: 155, atk: 216, def: 170, spa: 125, spd: 130, spe: 130 },
+      defenderStats: { hp: 175, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
+      move: { key: 706, koreanName: "사이코팽", englishName: "Psychic Fangs", showdownId: "psychicfangs", type: "psychic", category: "physical", power: 85 },
+      ability: { key: 181, koreanName: "단단한발톱", englishName: "Tough Claws", showdownId: "toughclaws" }
+    });
+
+    expect(toughClaws?.maxDamage).toBeGreaterThan(neutral!.maxDamage);
+    expect(toughClaws?.abilityNotes?.join(" ")).toContain("단단한발톱");
+  });
+
   it("matches Jolly A32 Protean Meowscarada Triple Axel into H32 B20 Primarina", () => {
     const result = calculateDamage({
       level: 50,

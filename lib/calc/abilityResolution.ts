@@ -25,14 +25,14 @@ function firstPokemonAbility(pokemon: PokemonMaster, abilities: AbilityMaster[])
 
 export function resolveBattleAbility(input: ResolveBattleAbilityInput): AbilityMaster | undefined {
   const { abilityKey, pokemon, usage, abilities } = input;
+  const pokemonAbility = firstPokemonAbility(pokemon, abilities);
+
+  if (pokemon.forme?.toLowerCase().startsWith("mega") && pokemonAbility) return pokemonAbility;
 
   if (abilityKey) {
     const explicitAbility = abilities.find((ability) => ability.key === abilityKey);
     if (explicitAbility) return explicitAbility;
   }
-
-  const pokemonAbility = firstPokemonAbility(pokemon, abilities);
-  if (pokemon.forme?.toLowerCase().startsWith("mega") && pokemonAbility) return pokemonAbility;
 
   const usageAbility = usage?.data.abilities.find((entry) => entry.rate > 0);
   if (usageAbility) {
