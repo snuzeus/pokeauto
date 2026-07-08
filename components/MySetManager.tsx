@@ -69,6 +69,21 @@ function moveMatchesQuery(move: MoveMaster, query: string): boolean {
     .some((candidate) => normalizeSearchText(String(candidate)).includes(normalized));
 }
 
+function normalizeAbilityName(name: string): string {
+  return name.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function findAbilityByName(abilities: AbilityMaster[], name: string): AbilityMaster | undefined {
+  const normalized = normalizeAbilityName(name);
+  return abilities.find((ability) => ability.englishName?.toLowerCase() === name.trim().toLowerCase() || ability.showdownId?.toLowerCase() === normalized);
+}
+
+function isSampleMoveCandidate(move: MoveMaster): boolean {
+  if (move.isZ || move.isNonstandard) return false;
+  if (move.showdownId?.startsWith("max") || move.showdownId?.startsWith("gmax")) return false;
+  return move.category !== "status" && typeof move.power === "number" && move.power > 0;
+}
+
 function natureModifierText(nature: NatureMaster): string {
   if (!nature.up || !nature.down) return "보정 없음";
   return `${STAT_LABEL[nature.up] ?? nature.up}↑ ${STAT_LABEL[nature.down] ?? nature.down}↓`;
@@ -123,13 +138,14 @@ export function MySetManager({
     [items, itemRates]
   );
   const ratedMoves = useMemo(
-    () => moves.filter((move) => (moveRates.get(move.key) ?? 0) > 0).sort((a, b) => (moveRates.get(b.key) ?? 0) - (moveRates.get(a.key) ?? 0)),
+    () => moves.filter((move) => isSampleMoveCandidate(move) && (moveRates.get(move.key) ?? 0) > 0).sort((a, b) => (moveRates.get(b.key) ?? 0) - (moveRates.get(a.key) ?? 0)),
     [moves, moveRates]
   );
   const visibleMoves = useMemo(() => {
     const selectedMoves = selectedMoveKeys.map((key) => moves.find((move) => move.key === key)).filter((move): move is MoveMaster => move !== undefined);
     const baseMoves = moveQuery.trim()
       ? moves
+          .filter(isSampleMoveCandidate)
           .filter((move) => moveMatchesQuery(move, moveQuery))
           .sort((a, b) => {
             const rateDiff = (moveRates.get(b.key) ?? 0) - (moveRates.get(a.key) ?? 0);
@@ -143,8 +159,16 @@ export function MySetManager({
     return [...merged.values()];
   }, [moveQuery, moveRates, moves, ratedMoves, selectedMoveKeys]);
   const defaultAbility = Object.values(draftPokemon.abilities ?? {})
-    .map((name) => abilities.find((ability) => ability.englishName === name))
+    .map((name) => findAbilityByName(abilities, name))
     .find((ability) => ability !== undefined && (abilityRates.get(ability.key) ?? 0) > 0);
+  const masterDefaultAbility = Object.values(draftPokemon.abilities ?? {})
+    .map((name) => findAbilityByName(abilities, name))
+    .find((ability): ability is AbilityMaster => ability !== undefined);
+  const visibleAbilities = useMemo(() => {
+    const primaryAbility = draftPokemon.forme?.toLowerCase().startsWith("mega") ? masterDefaultAbility : defaultAbility;
+    if (!primaryAbility) return ratedAbilities;
+    return ratedAbilities.some((ability) => ability.key === primaryAbility.key) ? ratedAbilities : [primaryAbility, ...ratedAbilities];
+  }, [defaultAbility, draftPokemon.forme, masterDefaultAbility, ratedAbilities]);
 
   useEffect(() => {
     if (!successMessage) return;
@@ -318,15 +342,15 @@ export function MySetManager({
             <span className="text-sm font-medium text-gray-700">특성</span>
             <select
               name="abilityKey"
-              defaultValue={defaultAbility?.key ?? ratedAbilities[0]?.key}
+              defaultValue={(draftPokemon.forme?.toLowerCase().startsWith("mega") ? masterDefaultAbility?.key : defaultAbility?.key) ?? visibleAbilities[0]?.key}
               className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
             >
-              {ratedAbilities.length === 0 ? (
+              {visibleAbilities.length === 0 ? (
                 <option value="">채용률 데이터 없음</option>
               ) : null}
-              {ratedAbilities.map((ability) => (
+              {visibleAbilities.map((ability) => (
                 <option key={ability.key} value={ability.key}>
-                  {ability.koreanName} · {rateText(abilityRates.get(ability.key) ?? 0)}
+                  {ability.koreanName} · {(abilityRates.get(ability.key) ?? 0) > 0 ? rateText(abilityRates.get(ability.key) ?? 0) : "메가 고유"}
                 </option>
               ))}
             </select>

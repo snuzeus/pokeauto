@@ -60,6 +60,7 @@ describe("calculateDamage", () => {
 
     expect(result?.multihitResults?.map((entry) => entry.hitCount)).toEqual([1, 2, 3]);
     expect(result?.multihitResults?.map((entry) => Number(entry.hitChance.toFixed(3)))).toEqual([0.09, 0.081, 0.729]);
+    expect(result!.multihitResults![2].maxDamage).toBeGreaterThan(result!.multihitResults![0].maxDamage * 3);
   });
 
   it("applies Protean and Libero style STAB to the used move type", () => {
@@ -99,6 +100,29 @@ describe("calculateDamage", () => {
 
     expect(result?.typeEffectiveness).toBe(2);
     expect(result?.stab).toBe(1.5);
+  });
+
+  it("applies Freeze-Dry water effectiveness exception", () => {
+    const freezeDry = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["water"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 573, koreanName: "프리즈드라이", englishName: "Freeze-Dry", showdownId: "freezedry", type: "ice", category: "special", power: 70 }
+    });
+    const iceBeam = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["water"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 58, koreanName: "냉동빔", englishName: "Ice Beam", showdownId: "icebeam", type: "ice", category: "special", power: 90 }
+    });
+
+    expect(freezeDry?.typeEffectiveness).toBe(2);
+    expect(iceBeam?.typeEffectiveness).toBe(0.5);
+    expect(freezeDry!.maxDamage).toBeGreaterThan(iceBeam!.maxDamage);
   });
 
   it("applies offensive ability power multipliers and Adaptability STAB", () => {
@@ -151,6 +175,77 @@ describe("calculateDamage", () => {
     expect(technician!.maxDamage).toBeGreaterThan(normalStab!.maxDamage);
     expect(ironFist!.maxDamage).toBeGreaterThan(neutralPunch!.maxDamage);
     expect(ironFist?.abilityNotes?.join(" ")).toContain("철주먹");
+  });
+
+  it("applies ice type and punching item boosts", () => {
+    const neutral = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 8, koreanName: "냉동펀치", englishName: "Ice Punch", showdownId: "icepunch", type: "ice", category: "physical", power: 75 }
+    });
+    const neverMeltIce = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 8, koreanName: "냉동펀치", englishName: "Ice Punch", showdownId: "icepunch", type: "ice", category: "physical", power: 75 },
+      item: { key: 246, koreanName: "녹지않는얼음", englishName: "Never-Melt Ice", showdownId: "nevermeltice", effectType: "none", multiplier: 1 }
+    });
+    const punchingGlove = calculateDamage({
+      level: 50,
+      attackerTypes: ["ice"],
+      defenderTypes: ["normal"],
+      attackerStats: garchompStats,
+      defenderStats: garchompStats,
+      move: { key: 8, koreanName: "냉동펀치", englishName: "Ice Punch", showdownId: "icepunch", type: "ice", category: "physical", power: 75 },
+      item: { key: 1884, koreanName: "펀치글러브", englishName: "Punching Glove", showdownId: "punchingglove", effectType: "none", multiplier: 1 }
+    });
+
+    expect(neverMeltIce!.maxDamage).toBeGreaterThan(neutral!.maxDamage);
+    expect(punchingGlove!.maxDamage).toBeGreaterThan(neutral!.maxDamage);
+    expect(neverMeltIce?.itemMultiplier).toBe(1.2);
+    expect(punchingGlove?.itemMultiplier).toBe(1.1);
+  });
+
+  it("matches Adamant A32 Mega Metagross Ice Punch into H2 Hydreigon", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["steel", "psychic"],
+      defenderTypes: ["dark", "dragon"],
+      attackerStats: { hp: 155, atk: 216, def: 170, spa: 125, spd: 130, spe: 130 },
+      defenderStats: { hp: 169, atk: 125, def: 110, spa: 157, spd: 110, spe: 118 },
+      move: { key: 8, koreanName: "냉동펀치", englishName: "Ice Punch", showdownId: "icepunch", type: "ice", category: "physical", power: 75 },
+      ability: { key: 181, koreanName: "단단한발톱", englishName: "Tough Claws", showdownId: "toughclaws" }
+    });
+
+    expect(result?.typeEffectiveness).toBe(2);
+    expect(result?.minDamage).toBe(146);
+    expect(result?.maxDamage).toBe(172);
+    expect(result?.minPercent).toBeCloseTo(86.39, 2);
+    expect(result?.maxPercent).toBeCloseTo(101.78, 2);
+  });
+
+  it("matches Jolly A32 Protean Meowscarada Triple Axel into H32 B20 Primarina", () => {
+    const result = calculateDamage({
+      level: 50,
+      attackerTypes: ["grass", "dark"],
+      defenderTypes: ["water", "fairy"],
+      attackerStats: { hp: 151, atk: 162, def: 90, spa: 101, spd: 90, spe: 179 },
+      defenderStats: { hp: 187, atk: 94, def: 114, spa: 146, spd: 136, spe: 80 },
+      move: { key: 813, koreanName: "트리플악셀", englishName: "Triple Axel", showdownId: "tripleaxel", type: "ice", category: "physical", power: 20, accuracy: 90, multihit: 3 },
+      ability: { key: 168, koreanName: "변환자재", englishName: "Protean", showdownId: "protean" }
+    });
+
+    const fullHit = result?.multihitResults?.find((entry) => entry.hitCount === 3);
+
+    expect(result?.stab).toBe(1.5);
+    expect(result?.typeEffectiveness).toBe(0.5);
+    expect(fullHit?.minDamage).toBe(48);
+    expect(fullHit?.maxDamage).toBe(59);
   });
 
   it("applies HP, weather, and status-gated offensive abilities", () => {

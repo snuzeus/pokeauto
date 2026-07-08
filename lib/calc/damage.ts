@@ -10,6 +10,44 @@ const TWO_TO_FIVE_HIT_CHANCE: Record<number, number> = {
   4: 15 / 100,
   5: 15 / 100
 };
+const PUNCH_MOVES = new Set(["bulletpunch", "cometpunch", "dizzypunch", "doubleironbash", "drainpunch", "dynamicpunch", "firepunch", "focuspunch", "hammerarm", "headlongrush", "icehammer", "icepunch", "jetpunch", "machpunch", "megapunch", "meteormash", "plasmafists", "poweruppunch", "ragefist", "shadowpunch", "skyuppercut", "surgingstrikes", "thunderpunch", "wickedblow"]);
+const TYPE_BOOST_ITEMS: Record<string, string> = {
+  blackbelt: "fighting",
+  blackglasses: "dark",
+  charcoal: "fire",
+  dragonfang: "dragon",
+  hardstone: "rock",
+  magnet: "electric",
+  metalcoat: "steel",
+  miracleseed: "grass",
+  mysticwater: "water",
+  nevermeltice: "ice",
+  poisonbarb: "poison",
+  sharpbeak: "flying",
+  silkscarf: "normal",
+  silverpowder: "bug",
+  softsand: "ground",
+  spelltag: "ghost",
+  twistedspoon: "psychic",
+  icicleplate: "ice",
+  pixieplate: "fairy",
+  skyplate: "flying",
+  splashplate: "water",
+  spookyplate: "ghost",
+  stoneplate: "rock",
+  toxicplate: "poison",
+  zapplate: "electric",
+  dracoplate: "dragon",
+  dreadplate: "dark",
+  earthplate: "ground",
+  fistplate: "fighting",
+  flameplate: "fire",
+  insectplate: "bug",
+  ironplate: "steel",
+  meadowplate: "grass",
+  mindplate: "psychic",
+  iciumz: "ice"
+};
 
 type CalculateDamageInput = {
   level: number;
@@ -29,11 +67,13 @@ function isDamagingMove(move: MoveMaster): move is MoveMaster & { power: number 
   return move.category !== "status" && typeof move.power === "number" && move.power > 0;
 }
 
-function getItemMultiplier(move: MoveMaster, item?: ItemMaster): number {
+function getItemMultiplier(move: MoveMaster, moveType: string, item?: ItemMaster): number {
   if (!item) return 1;
   if (item.effectType === "life_orb") return 1.3;
   if (item.effectType === "choice_band" && move.category === "physical") return 1.5;
   if (item.effectType === "choice_specs" && move.category === "special") return 1.5;
+  if (item.showdownId === "punchingglove" && PUNCH_MOVES.has(move.showdownId ?? "")) return 1.1;
+  if (item.showdownId && TYPE_BOOST_ITEMS[item.showdownId] === moveType) return 1.2;
   return 1;
 }
 
@@ -93,6 +133,16 @@ function getPowerMultiplier(modifiers?: BattleModifiers): number {
   return Number.isFinite(multiplier) && multiplier > 0 ? multiplier : 1;
 }
 
+function applyDamageModifier(damage: number, multiplier: number): number {
+  return Math.floor(damage * multiplier + 0.5);
+}
+
+function applyFinalModifiers(baseDamage: number, random: number, stab: number, typeEffectiveness: number, multipliers: number[]): number {
+  const randomDamage = Math.floor(baseDamage * (random / 100));
+  const typedDamage = Math.floor(randomDamage * stab * typeEffectiveness);
+  return multipliers.reduce((damage, multiplier) => applyDamageModifier(damage, multiplier), typedDamage);
+}
+
 function getKoChance(rolls: number[], targetHp: number, hits: number): number {
   let total = 0;
   let ko = 0;
@@ -125,6 +175,10 @@ function combineRolls(rolls: number[], hits: number): number[] {
   }
 
   return totals;
+}
+
+function combineVariableRolls(rollGroups: number[][]): number[] {
+  return rollGroups.reduce((totals, rolls) => totals.flatMap((total) => rolls.map((roll) => total + roll)), [0]);
 }
 
 function getMinMax(values: number[]): { min: number; max: number } {
@@ -184,6 +238,22 @@ function getHitChances(move: MoveMaster): Array<{ hitCount: number; hitChance: n
   return [{ hitCount: 1, hitChance: 1 }];
 }
 
+function getMoveTypeEffectiveness(move: MoveMaster, moveType: string, defenderTypes: string[]): number {
+  let effectiveness = getTypeEffectiveness(moveType, defenderTypes);
+  if ((move.englishName === "Freeze-Dry" || move.showdownId === "freezedry") && defenderTypes.includes("water")) {
+    effectiveness *= 4;
+  }
+  return effectiveness;
+}
+
+function getVariableHitPowers(move: MoveMaster, hitCount: number): number[] | undefined {
+  if (move.englishName === "Triple Axel" || move.showdownId === "tripleaxel" || move.englishName === "Triple Kick" || move.showdownId === "triplekick") {
+    return Array.from({ length: hitCount }, (_, index) => move.power! * (index + 1));
+  }
+
+  return undefined;
+}
+
 export function calculateDamage(input: CalculateDamageInput): DamageResult | undefined {
   const { level, attackerTypes, defenderTypes, attackerStats, defenderStats, move, item, ability, defenderAbility, usageRate, modifiers } = input;
   if (!isDamagingMove(move)) return undefined;
@@ -200,8 +270,8 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
   const stagedDefensiveStat = applyStage(rawDefensiveStat, move.category === "physical" ? modifiers?.defender.defStage ?? 0 : modifiers?.defender.spdStage ?? 0);
   const defensiveStat = Math.floor(stagedDefensiveStat * getWeatherDefenseMultiplier(move, defenderTypes, modifiers?.weather));
   const stab = abilityEffect.attackerTypes.includes(abilityEffect.moveType) ? abilityEffect.stabMultiplier : 1;
-  const typeEffectiveness = getTypeEffectiveness(abilityEffect.moveType, defenderTypes);
-  const itemMultiplier = getItemMultiplier(move, item);
+  const typeEffectiveness = getMoveTypeEffectiveness(move, abilityEffect.moveType, defenderTypes);
+  const itemMultiplier = getItemMultiplier(move, abilityEffect.moveType, item);
   const weatherMultiplier = getWeatherMultiplier(abilityEffect.moveType, modifiers?.weather);
   const screenMultiplier = getScreenMultiplier(move, modifiers);
   const statusAttackMultiplier = getStatusAttackMultiplier(move, modifiers, ability);
@@ -238,14 +308,18 @@ export function calculateDamage(input: CalculateDamageInput): DamageResult | und
     return result;
   }
 
-  const effectivePower = Math.floor(move.power * abilityEffect.powerMultiplier * getPowerMultiplier(modifiers));
-  const baseDamage = Math.floor(Math.floor(Math.floor((Math.floor((2 * level) / 5) + 2) * effectivePower * offensiveStat) / defensiveStat) / 50) + 2;
-  const rolls = DAMAGE_ROLLS.map((random) =>
-    Math.floor(baseDamage * (random / 100) * stab * typeEffectiveness * itemMultiplier * weatherMultiplier * screenMultiplier * statusAttackMultiplier * defenderAbilityEffect.damageMultiplier)
-  );
+  const finalMultipliers = [itemMultiplier, weatherMultiplier, screenMultiplier, statusAttackMultiplier, abilityEffect.powerMultiplier, defenderAbilityEffect.damageMultiplier];
+  const customPowerMultiplier = getPowerMultiplier(modifiers);
+  const getRollsForPower = (basePower: number) => {
+    const effectivePower = Math.floor(basePower * customPowerMultiplier);
+    const baseDamage = Math.floor(Math.floor(Math.floor((Math.floor((2 * level) / 5) + 2) * effectivePower * offensiveStat) / defensiveStat) / 50) + 2;
+    return DAMAGE_ROLLS.map((random) => applyFinalModifiers(baseDamage, random, stab, typeEffectiveness, finalMultipliers));
+  };
+  const rolls = getRollsForPower(move.power);
   const hitChances = getHitChances(move);
   const multihitResults = hitChances.map(({ hitCount, hitChance }) => {
-    const combinedRolls = combineRolls(rolls, hitCount);
+    const variableHitPowers = getVariableHitPowers(move, hitCount);
+    const combinedRolls = variableHitPowers ? combineVariableRolls(variableHitPowers.map(getRollsForPower)) : combineRolls(rolls, hitCount);
     const { min: minDamage, max: maxDamage } = getMinMax(combinedRolls);
 
     return {

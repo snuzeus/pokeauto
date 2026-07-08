@@ -4,11 +4,12 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, BarChart2, ChevronDown, Clock, Shield, Swords, Zap } from "lucide-react";
 import { MySetManager } from "@/components/MySetManager";
 import { calculateBulk } from "@/lib/calc/bulk";
+import { resolveBattleAbility } from "@/lib/calc/abilityResolution";
 import { calculateDamage } from "@/lib/calc/damage";
 import { calculateMovePower } from "@/lib/calc/power";
 import { applyChoiceScarf } from "@/lib/calc/speed";
 import { calculateStats } from "@/lib/calc/stats";
-import { findAbilityByKey, listAbilities } from "@/lib/data/abilityRepository";
+import { findAbilityByEnglishName, findAbilityByKey, listAbilities } from "@/lib/data/abilityRepository";
 import { findItemByKey, listItems } from "@/lib/data/itemRepository";
 import { getCurrentAccount, signInLocalAccount, signOutLocalAccount, signUpLocalAccount, type LocalAccount } from "@/lib/data/localAuthRepository";
 import { findMoveByKey, listMoves } from "@/lib/data/moveRepository";
@@ -20,7 +21,7 @@ import { findUsageByPokeKey } from "@/lib/data/usageRepository";
 import type { BattleStatus, BattleWeather, BulkResult, CalculatedStats, DamageResult, DamageSideModifiers, MovePowerResult, StatStage } from "@/types/calc";
 import type { AbilityMaster, ItemMaster, MoveMaster, PokemonMaster } from "@/types/master";
 import type { EffortValues, MyPokemonSet } from "@/types/team";
-import type { UsageStatPoint } from "@/types/usage";
+import type { UsageRankEntry, UsageStatPoint } from "@/types/usage";
 
 const STAT_STAGES = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6] as const;
 
@@ -992,9 +993,17 @@ export default function Home() {
 
   const myNature = findNatureByKey(mySet.natureKey);
   const myItem = findItemByKey(mySet.itemKey);
-  const myAbility = findAbilityByKey(mySet.abilityKey ?? 0);
   const usage = findUsageByPokeKey(opponentPokemon.pokeKey);
-  const opponentAbilityOptions = usage?.data.abilities.slice(0, 3) ?? [];
+  const myUsage = findUsageByPokeKey(myPokemon.pokeKey);
+  const opponentMegaAbilityOptions = opponentPokemon.forme?.toLowerCase().startsWith("mega")
+    ? Object.values(opponentPokemon.abilities ?? {})
+        .map((name, index) => {
+          const ability = findAbilityByEnglishName(name);
+          return ability ? { rank: index + 1, key: ability.key, name: ability.koreanName, rate: 100 } : undefined;
+        })
+        .filter((entry): entry is UsageRankEntry => entry !== undefined)
+    : [];
+  const opponentAbilityOptions = opponentMegaAbilityOptions.length > 0 ? opponentMegaAbilityOptions : usage?.data.abilities.slice(0, 3) ?? [];
   const opponentNatureOptions = usage?.data.natures.slice(0, 3) ?? [];
   const opponentItemOptions = usage?.data.items.slice(0, 3) ?? [];
   const opponentSpOptions = usage?.data.stat_points.skeletons.slice(0, 3) ?? [];
@@ -1002,7 +1011,8 @@ export default function Home() {
   const selectedOpponentNatureEntry = opponentNatureOptions[selectedOpponentNatureIndex] ?? opponentNatureOptions[0];
   const selectedOpponentItemEntry = opponentItemOptions[selectedOpponentItemIndex] ?? opponentItemOptions[0];
   const selectedOpponentSpEntry = opponentSpOptions[selectedOpponentSpIndex] ?? opponentSpOptions[0];
-  const opponentAbility = findAbilityByKey(selectedOpponentAbilityEntry?.key);
+  const myAbility = resolveBattleAbility({ abilityKey: mySet.abilityKey, pokemon: myPokemon, usage: myUsage, abilities });
+  const opponentAbility = resolveBattleAbility({ abilityKey: selectedOpponentAbilityEntry?.key, pokemon: opponentPokemon, usage, abilities });
   const opponentNature = findNatureByKey(selectedOpponentNatureEntry?.key ?? 13);
   const opponentItem = findItemByKey(selectedOpponentItemEntry?.key);
   const opponentStatPoint = selectedOpponentSpEntry;
@@ -1022,6 +1032,10 @@ export default function Home() {
   const opponentBulk = calculateBulk(opponentStats);
 
   const myMoves = mySet.moves.map((key) => ({ move: findMoveByKey(key), usageRate: 100 })).filter(hasMove);
+  const opponentMoveRanks = (usage?.data.moves ?? [])
+    .slice(0, 12)
+    .map((entry) => ({ entry, move: findMoveByKey(entry.key) }))
+    .filter((rank): rank is { entry: UsageRankEntry; move: MoveMaster } => rank.move !== undefined);
   const opponentMoves = (usage?.data.moves ?? [])
     .slice(0, 10)
     .map((entry) => ({ move: findMoveByKey(entry.key), usageRate: entry.rate }))
@@ -1560,6 +1574,29 @@ export default function Home() {
             ) : (
               <span className="px-2.5 py-1 font-mono text-[9px] text-slate-400">데이터 없음</span>
             )}
+          </div>
+
+          <div className="flex max-w-full items-center gap-1 rounded-lg border border-slate-200 bg-slate-100 p-0.5">
+            <span className="px-2 font-mono text-[9px] font-semibold text-slate-400">기술</span>
+            <div className="flex max-w-full flex-wrap items-center gap-1">
+              {opponentMoveRanks.length > 0 ? (
+                opponentMoveRanks.map(({ entry, move }) => (
+                  <span
+                    key={`${entry.key}-${entry.rank}`}
+                    title={`${move.koreanName} / ${move.englishName ?? move.showdownId ?? ""}`}
+                    className="rounded-md border border-slate-200 bg-white px-2.5 py-1 font-mono text-[9px] font-semibold text-slate-600 shadow-sm"
+                  >
+                    #{entry.rank} {move.koreanName}
+                    <span className={move.category === "status" ? "ml-1 text-amber-600" : "ml-1 text-slate-400"}>
+                      {move.category === "status" ? "변화" : move.category === "physical" ? "물리" : "특수"}
+                    </span>
+                    <span className="ml-1 text-rose-500">{entry.rate.toFixed(1)}%</span>
+                  </span>
+                ))
+              ) : (
+                <span className="px-2.5 py-1 font-mono text-[9px] text-slate-400">데이터 없음</span>
+              )}
+            </div>
           </div>
         </div>
         {opponentAbility ? (
