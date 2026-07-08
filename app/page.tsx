@@ -969,7 +969,7 @@ export default function Home() {
   }, [opponentKey]);
 
   useEffect(() => {
-    setMyModifiers((current) => ({ ...current, hpCurrent: undefined, hpMax: undefined }));
+    setMyModifiers({ ...DEFAULT_SIDE_MODIFIERS });
   }, [selectedSetId]);
 
   useEffect(() => {
