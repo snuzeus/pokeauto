@@ -15,6 +15,7 @@ const baseUsageKeyByMegaKey = new Map(
     .map((entry) => [entry.pokeKey, `${String(entry.dexNo).padStart(4, "0")}-00`])
 );
 const itemKeySet = new Set(items.map((item) => item.key));
+const normalizedUsageCache = new Map<string, PokemonUsage | undefined>();
 
 function megaSuffix(entry: PokemonMaster): string {
   const suffix = entry.forme?.replace(/^Mega/u, "").replace(/^-/, "") ?? "";
@@ -78,14 +79,23 @@ function normalizeUsageForPokemon(usage: PokemonUsage | undefined, pokeKey: stri
 }
 
 export function findUsageByPokeKey(pokeKey: string): PokemonUsage | undefined {
+  if (normalizedUsageCache.has(pokeKey)) return normalizedUsageCache.get(pokeKey);
+
   const directUsage = usageByKey[pokeKey];
   const baseKey = baseUsageKeyByMegaKey.get(pokeKey);
   const baseUsage = baseKey ? usageByKey[baseKey] : undefined;
+  let normalizedUsage: PokemonUsage | undefined;
 
-  if (directUsage?.source === "pokemoem") return normalizeUsageForPokemon(directUsage, pokeKey);
-  if (baseUsage?.source === "pokemoem") return normalizeUsageForPokemon(baseUsage, baseKey ?? pokeKey);
+  if (directUsage?.source === "pokemoem") {
+    normalizedUsage = normalizeUsageForPokemon(directUsage, pokeKey);
+  } else if (baseUsage?.source === "pokemoem") {
+    normalizedUsage = normalizeUsageForPokemon(baseUsage, baseKey ?? pokeKey);
+  } else {
+    normalizedUsage = normalizeUsageForPokemon(usageByKey[pokeKey], pokeKey);
+  }
 
-  return normalizeUsageForPokemon(usageByKey[pokeKey], pokeKey);
+  normalizedUsageCache.set(pokeKey, normalizedUsage);
+  return normalizedUsage;
 }
 
 export function listChampionUsageEntries(): PokemonUsage[] {

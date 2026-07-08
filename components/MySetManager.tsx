@@ -180,7 +180,7 @@ export function MySetManager({
   useEffect(() => {
     setSelectedMoveKeys(ratedMoves.filter((move) => move.category !== "status").slice(0, 4).map((move) => move.key));
     setMoveQuery("");
-  }, [draftPokemon.pokeKey, ratedMoves]);
+  }, [draftPokemon.pokeKey]);
 
   async function handleSubmit(formData: FormData) {
     const nextSet = createSetFromForm(formData, draftPokemon.pokeKey);
