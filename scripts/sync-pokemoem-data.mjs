@@ -139,6 +139,69 @@ function parseArray(source, marker) {
   return Function(`"use strict"; return (${literal});`)();
 }
 
+function extractBalancedLiteral(source, start, opening, closing) {
+  let depth = 0;
+  let inString = false;
+  let quote = "";
+  let escaped = false;
+
+  for (let index = start; index < source.length; index += 1) {
+    const char = source[index];
+
+    if (inString) {
+      if (escaped) {
+        escaped = false;
+      } else if (char === "\\") {
+        escaped = true;
+      } else if (char === quote) {
+        inString = false;
+      }
+      continue;
+    }
+
+    if (char === '"' || char === "'" || char === "`") {
+      inString = true;
+      quote = char;
+      continue;
+    }
+
+    if (char === opening) {
+      depth += 1;
+    } else if (char === closing) {
+      depth -= 1;
+      if (depth === 0) {
+        return source.slice(start, index + 1);
+      }
+    }
+  }
+
+  throw new Error(`Could not extract ${opening}${closing} literal at ${start}`);
+}
+
+function findAssignmentStartBeforeToken(source, token, literalPrefix) {
+  const tokenIndex = source.indexOf(token);
+  if (tokenIndex < 0) {
+    throw new Error(`Could not find token: ${token}`);
+  }
+
+  const assignmentIndex = source.lastIndexOf(literalPrefix, tokenIndex);
+  if (assignmentIndex < 0) {
+    throw new Error(`Could not find assignment before token: ${token}`);
+  }
+
+  return assignmentIndex + 1;
+}
+
+function parseArrayBeforeToken(source, token) {
+  const start = findAssignmentStartBeforeToken(source, token, "=[{");
+  return Function(`"use strict"; return (${extractBalancedLiteral(source, start, "[", "]")});`)();
+}
+
+function parseObjectBeforeToken(source, token) {
+  const start = findAssignmentStartBeforeToken(source, token, "={");
+  return Function(`"use strict"; return (${extractBalancedLiteral(source, start, "{", "}")});`)();
+}
+
 function extractObjectLiteral(source, marker) {
   const markerIndex = source.indexOf(marker);
   if (markerIndex < 0) {
@@ -488,29 +551,29 @@ async function main() {
   const bundleUrl = findMainAsset(html);
   const bundle = await fetchText(bundleUrl);
 
-  const pokemon = parseArray(bundle, "const que=")
+  const pokemon = parseArrayBeforeToken(bundle, "basestats:")
     .map(normalizePokemon)
     .sort((a, b) => (a.dexNo === b.dexNo ? a.formNo - b.formNo : a.dexNo - b.dexNo));
-  const moves = parseArray(bundle, "HSe=")
+  const moves = parseArrayBeforeToken(bundle, "basepower:")
     .map(normalizeMove)
     .filter((move) => Number.isFinite(move.key))
     .sort((a, b) => a.key - b.key);
-  const items = parseArray(bundle, "$Se=")
+  const items = parseArrayBeforeToken(bundle, "choicescarf")
     .map(normalizeItem)
     .filter((item) => Number.isFinite(item.key))
     .sort((a, b) => a.key - b.key);
-  const abilities = parseArray(bundle, "USe=")
+  const abilities = parseArrayBeforeToken(bundle, "toughclaws")
     .map(normalizeAbility)
     .filter((ability) => Number.isFinite(ability.key))
     .sort((a, b) => a.key - b.key);
-  const natures = parseArray(bundle, "qSe=")
+  const natures = parseArrayBeforeToken(bundle, 'name:"Hardy"')
     .map(normalizeNature)
     .sort((a, b) => a.key - b.key);
-  const learnsets = parseArray(bundle, "iBe=")
+  const learnsets = parseArrayBeforeToken(bundle, "learnset:{")
     .map(normalizeLearnset)
     .sort((a, b) => a.showdownId.localeCompare(b.showdownId));
-  const legalPokemonRules = parseObject(bundle, "sBe=");
-  const legalItemRules = parseObject(bundle, "uBe=");
+  const legalPokemonRules = parseObjectBeforeToken(bundle, "included_formtuples");
+  const legalItemRules = parseObjectBeforeToken(bundle, "included:[");
   const championsLegal = {
     season: SEASON,
     rule: RULE,
