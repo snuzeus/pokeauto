@@ -28,9 +28,6 @@ jobs:
 
       - name: Sync Pokemoem data
         run: npm run sync:pokemoem
-        env:
-          POKEMOEM_SEASON: 3
-          POKEMOEM_RULE: 10
 
       - name: Verify
         run: |

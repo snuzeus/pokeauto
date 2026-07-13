@@ -1,11 +1,14 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
+import { selectLatestSinglesSeason } from "./lib/pokemoemSeason.mjs";
 
 const SITE_URL = "https://pokemoem.com/pokedex";
 const SITE_ORIGIN = "https://pokemoem.com";
 const API_ORIGIN = "https://api.pokemoem.com";
-const SEASON = Number(process.env.POKEMOEM_SEASON ?? 3);
-const RULE = Number(process.env.POKEMOEM_RULE ?? 10);
+const configuredSeason = process.env.POKEMOEM_SEASON ? Number(process.env.POKEMOEM_SEASON) : undefined;
+const configuredRule = process.env.POKEMOEM_RULE ? Number(process.env.POKEMOEM_RULE) : undefined;
+let SEASON;
+let RULE;
 const POKE_KEY_OVERRIDES = {
   "0670-05": "0670-01"
 };
@@ -547,6 +550,21 @@ async function writeJson(path, value) {
 }
 
 async function main() {
+  if ((configuredSeason === undefined) !== (configuredRule === undefined)) {
+    throw new Error("Set both POKEMOEM_SEASON and POKEMOEM_RULE together, or leave both unset.");
+  }
+
+  const seasonsResponse = await fetchJson(`${API_ORIGIN}/champions/battlestat/seasons`);
+  const selectedSeason = selectLatestSinglesSeason(seasonsResponse, {
+    season: configuredSeason,
+    rule: configuredRule
+  });
+  SEASON = selectedSeason.season;
+  RULE = selectedSeason.rule;
+
+  const rankingUrl = `${API_ORIGIN}/champions/battlestat/ranking?season=${SEASON}&rule=${RULE}`;
+  const rankingResponse = await fetchJson(rankingUrl);
+
   const html = await fetchText(SITE_URL);
   const bundleUrl = findMainAsset(html);
   const bundle = await fetchText(bundleUrl);
@@ -593,6 +611,9 @@ async function main() {
   const detailsUrl = `${API_ORIGIN}/champions/battlestat/details?season=${SEASON}&rule=${RULE}&top=300`;
   const detailsResponse = await fetchJson(detailsUrl);
   const details = Array.isArray(detailsResponse.details) ? detailsResponse.details : [];
+  if (details.length === 0) {
+    throw new Error(`No Pokemoem singles usage details are available for season ${SEASON}, rule ${RULE}.`);
+  }
   const enrichedDetails = await mapWithConcurrency(details, 8, async (detail) => {
     try {
       const pokemonUrl = `${API_ORIGIN}/champions/battlestat/pokemon/${detail.poke_key}?season=${SEASON}&rule=${RULE}`;
@@ -624,6 +645,9 @@ async function main() {
   await writeJson(OUTPUTS.usageIndex, usageIndex);
 
   console.log(`Bundle: ${bundleUrl}`);
+  console.log(`Pokemoem singles season: ${SEASON}, rule: ${RULE}`);
+  console.log(`Pokemoem ranking source updated at: ${rankingResponse.source_updated_at ?? "unknown"}`);
+  console.log(`Pokemoem ranking entries: ${Array.isArray(rankingResponse.data) ? rankingResponse.data.length : 0}`);
   console.log(`Pokemon: ${pokemon.length}`);
   console.log(`Moves: ${moves.length}`);
   console.log(`Items: ${items.length}`);
