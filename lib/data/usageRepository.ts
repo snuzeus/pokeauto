@@ -6,7 +6,14 @@ import type { ItemMaster, PokemonMaster } from "@/types/master";
 import type { PokemonUsage, UsageRankEntry } from "@/types/usage";
 
 const usageByKey = usageIndexData as unknown as Record<string, PokemonUsage>;
-const championsLegal = championsLegalData as { pokemonKeys?: string[] };
+type ChampionsLegalMetadata = {
+  season?: number;
+  rule?: number;
+  source_updated_at?: string | null;
+  pokemonKeys?: string[];
+};
+
+const championsLegal = championsLegalData as ChampionsLegalMetadata;
 const pokemon = pokemonData as PokemonMaster[];
 const items = itemData as ItemMaster[];
 const baseUsageKeyByMegaKey = new Map(
@@ -114,4 +121,29 @@ export function listChampionUsageKeys(): string[] {
   const legalOnlyKeys = legalKeys.filter((pokeKey) => !usageOrderedKeySet.has(pokeKey));
 
   return [...usageOrderedKeys, ...legalOnlyKeys];
+}
+
+export function getChampionUsageMetadata(): { season?: number; rule?: number; sourceUpdatedAt?: string } {
+  return {
+    season: championsLegal.season,
+    rule: championsLegal.rule,
+    sourceUpdatedAt: championsLegal.source_updated_at ?? undefined
+  };
+}
+
+export function formatChampionUsageSourceUpdatedAt(value?: string): string | undefined {
+  if (!value) return undefined;
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return undefined;
+
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23"
+  }).format(date);
 }

@@ -17,7 +17,7 @@ import { deleteMyPokemonSet, loadMyPokemonSets, replaceMyPokemonSets, saveMyPoke
 import { listMyPokemonSets } from "@/lib/data/myTeamRepository";
 import { findNatureByKey, listNatures } from "@/lib/data/natureRepository";
 import { findChampionPokemonByName, findPokemonByKey, listChampionPokemon, searchChampionPokemon } from "@/lib/data/pokemonRepository";
-import { findUsageByPokeKey } from "@/lib/data/usageRepository";
+import { findUsageByPokeKey, formatChampionUsageSourceUpdatedAt, getChampionUsageMetadata } from "@/lib/data/usageRepository";
 import type { BattleStatus, BattleWeather, BulkResult, CalculatedStats, DamageResult, DamageSideModifiers, MovePowerResult, StatStage } from "@/types/calc";
 import type { AbilityMaster, ItemMaster, MoveMaster, PokemonMaster } from "@/types/master";
 import type { EffortValues, MyPokemonSet } from "@/types/team";
@@ -862,6 +862,8 @@ function BattleConditionPanel({
 }
 
 export default function Home() {
+  const usageMetadata = getChampionUsageMetadata();
+  const usageSourceUpdatedAt = formatChampionUsageSourceUpdatedAt(usageMetadata.sourceUpdatedAt);
   const [account, setAccount] = useState<LocalAccount>();
   const [authMode, setAuthMode] = useState<"login" | "signup">("login");
   const [authError, setAuthError] = useState<string>();
@@ -1240,7 +1242,15 @@ export default function Home() {
         <div className="hidden shrink-0 items-center gap-3 font-mono text-[10px] text-slate-400 lg:flex">
           <span>챔피언스</span>
           <span className="h-3 w-px bg-slate-200" />
-          <span>시즌 3</span>
+          <span>시즌 {usageMetadata.season ?? "-"}</span>
+          <span className="h-3 w-px bg-slate-200" />
+          <span>싱글</span>
+          {usageSourceUpdatedAt ? (
+            <>
+              <span className="h-3 w-px bg-slate-200" />
+              <span>원본 갱신 {usageSourceUpdatedAt} KST</span>
+            </>
+          ) : null}
           <span className="h-3 w-px bg-slate-200" />
           <span>{account ? `${account.nickname} 샘플` : "로컬 샘플"}</span>
         </div>

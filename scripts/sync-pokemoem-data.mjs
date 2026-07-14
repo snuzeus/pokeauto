@@ -596,6 +596,7 @@ async function main() {
     season: SEASON,
     rule: RULE,
     regulation: "M-B",
+    source_updated_at: rankingResponse.source_updated_at ?? null,
     pokemonKeys: [...new Set((legalPokemonRules.included_formtuples ?? []).map(toPokeKeyFromFormTuple))],
     itemShowdownIds: legalItemRules.included ?? [],
     synced_at: new Date().toISOString()
