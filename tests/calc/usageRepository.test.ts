@@ -22,8 +22,14 @@ describe("usageRepository item normalization", () => {
 });
 
 describe("Champions usage metadata", () => {
-  it("exposes the bundled singles season and rule", () => {
-    expect(getChampionUsageMetadata()).toMatchObject({ season: 4, rule: 10 });
+  it("exposes valid bundled singles metadata without pinning a season", () => {
+    const metadata = getChampionUsageMetadata();
+
+    expect(metadata.rule).toBe(10);
+    expect(metadata.season).toEqual(expect.any(Number));
+    expect(metadata.season).toBeGreaterThan(0);
+    expect(metadata.sourceUpdatedAt).toEqual(expect.any(String));
+    expect(Number.isNaN(Date.parse(metadata.sourceUpdatedAt!))).toBe(false);
   });
 
   it("formats source updates in Korea time", () => {
