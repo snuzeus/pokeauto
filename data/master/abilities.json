@@ -3158,5 +3158,15 @@
     "rating": 4,
     "description": "This Pokemon is immune to Ground-type attacks and the effects of Spikes, Toxic Spikes, and Sticky Web. When this Pokemon knocks out a target with an attack, its highest stat is raised by 1 stage.",
     "shortDescription": "Ground/hazard immunity; after this Pokemon attacks and KOes, its highest stat rises by 1."
+  },
+  {
+    "key": 317,
+    "koreanName": "파동의방호",
+    "japaneseName": "",
+    "englishName": "Aura Guard",
+    "showdownId": "auraguard",
+    "rating": 4,
+    "description": "Reduces the damage this Pokémon takes from moves that make physical contact by 50%.",
+    "shortDescription": "Halves damage taken from contact moves."
   }
 ]

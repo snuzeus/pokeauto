@@ -15380,7 +15380,7 @@
       "spe": 151
     },
     "abilities": {
-      "0": "Magic Bounce"
+      "0": "Sharpness"
     },
     "heightm": 1.2,
     "weightkg": 49,
@@ -18662,7 +18662,7 @@
       "spe": 151
     },
     "abilities": {
-      "0": "Sand Force"
+      "0": "Levitate"
     },
     "heightm": 1.9,
     "weightkg": 99,
@@ -18821,7 +18821,7 @@
       "spe": 151
     },
     "abilities": {
-      "0": "Adaptability"
+      "0": "Aura Guard"
     },
     "heightm": 1.3,
     "weightkg": 49.4,
@@ -32482,7 +32482,7 @@
       "spe": 40
     },
     "abilities": {
-      "0": "Emergency Exit"
+      "0": "Tough Claws"
     },
     "heightm": 2.3,
     "weightkg": 148,
@@ -42461,8 +42461,7 @@
       "spe": 87
     },
     "abilities": {
-      "0": "Thermal Exchange",
-      "H": "Ice Body"
+      "0": "Thermal Exchange"
     },
     "heightm": 2.1,
     "weightkg": 315,
