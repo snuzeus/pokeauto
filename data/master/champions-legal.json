@@ -2,7 +2,7 @@
   "season": 8,
   "rule": 10,
   "regulation": "M-B",
-  "source_updated_at": "2026-11-26",
+  "source_updated_at": "2026-11-27",
   "pokemonKeys": [
     "0003-00",
     "0003-01",
@@ -527,5 +527,5 @@
     "yacheberry",
     "zoomlens"
   ],
-  "synced_at": "2026-11-27T01:39:43.658Z"
+  "synced_at": "2026-11-28T01:19:22.409Z"
 }
